@@ -1,2 +1,3 @@
 # shiftshelf-front
-ShiftShelfのフロントエンド
+
+ShiftShelf のフロントエンド
