@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: ./docker/nodejs/Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - '3000:3000'

@@ -1,0 +1,6 @@
+/.circleci
+.git/
+node_modules/
+.editorconfig
+.env*
+readme.md
