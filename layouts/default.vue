@@ -24,13 +24,14 @@ html {
   margin: 0;
 }
 
-.button--green {
+.button1 {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+  border: 1px solid #00675b;
+  color: #fff;
   text-decoration: none;
   padding: 10px 30px;
+  background-color: #00675b;
 }
 
 .button--green:hover {
