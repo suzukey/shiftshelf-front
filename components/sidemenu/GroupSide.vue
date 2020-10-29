@@ -1,5 +1,5 @@
 <template>
-  <div class="sidemenu home-sidemenu">
+  <div class="sidemenu group-sidemenu">
     <div class="sidemenu-content">
       <div class="profile">
         <b-list-group-item class="d-flex align-items-center">
