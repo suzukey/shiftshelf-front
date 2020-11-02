@@ -40,6 +40,7 @@ export default {
   max-height: clac(100vh - 70px);
   min-width: 350px;
   width: 350px;
+  z-index: 4;
 }
 
 .sidemenu-content {

@@ -13,6 +13,7 @@ header {
   color: #fff;
   height: 70px;
   width: 100%;
+  z-index: 5;
 }
 
 .hwrapper {
