@@ -1,20 +1,29 @@
 <template>
   <header>
     <div class="hwrapper">
-      <h1>ヘッダーくん</h1>
+      <h1 class="title">ヘッダーくん</h1>
     </div>
   </header>
 </template>
 
 <style scoped>
 header {
-  height: 70px;
+  background-color: #00675b;
   color: #fff;
+  height: 70px;
+  height: 100%;
+  width: 100%;
 }
 
 .hwrapper {
   height: 100%;
-  width: 100%;
-  background-color: #00675b;
+  margin: 0 20px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 70px;
+  margin: 0;
 }
 </style>

@@ -1,73 +1,67 @@
 <template>
   <div class="sidemenu group-sidemenu">
     <div class="sidemenu-content">
-      <div class="profile">
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar class="mr-3"></b-avatar>
-          <span class="mr-auto">プロフィール（仮）</span>
-        </b-list-group-item>
+      <SideProfile :userinfo="user" />
+      <div class="group">
+        <nuxt-link to="/home">←</nuxt-link>
+        <span class="group-name">ミスタードーナツ</span>
       </div>
-      <b-list-group-item class="d-flex align-items-center">
-        <b-avatar class="mr-3"></b-avatar>
-        <span class="mr-auto">給与計算</span>
-      </b-list-group-item>
-      <div class="groups"></div>
-      <b-list-group>
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar class="mr-3"></b-avatar>
-          <span class="mr-auto">ドミノピザ</span>
-        </b-list-group-item>
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar variant="primary" text="BV" class="mr-3"></b-avatar>
-          <span class="mr-auto">ミスタードーナツ</span>
-        </b-list-group-item>
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar
-            variant="info"
-            src="https://placekitten.com/300/300"
-            class="mr-3"
-          ></b-avatar>
-          <span class="mr-auto">未来屋書店</span>
-        </b-list-group-item>
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar
-            variant="success"
-            icon="people-fill"
-            class="mr-3"
-          ></b-avatar>
-          <span class="mr-auto">グループ追加</span>
-        </b-list-group-item>
-      </b-list-group>
+      <SideBar />
+      <div class="menus">
+        <SideIconMenu />
+        <SideIconMenu />
+        <SideIconMenu />
+      </div>
     </div>
-    <HomeFooter />
+    <SideFooter />
   </div>
 </template>
 
-<style scoped>
-.list-group-item {
-  height: 75px;
+<script>
+export default {
+  data() {
+    return {
+      user: {
+        name: '電波太郎',
+        email: 'aaa@aaa.email',
+      },
+    }
+  },
 }
+</script>
 
+<style scoped>
 .sidemenu {
-  height: 100%;
+  height: clac(100vh - 70px);
+  max-height: clac(100vh - 70px);
+  min-width: 350px;
   width: 350px;
   background-color: #9b9b9b;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidemenu-content {
-  height: calc(100% - 76px);
+  width: 100%;
 }
 
-.sidemenu-content .profile {
-  border-bottom: 1px solid #9b9b9b;
+.group {
+  align-items: center;
+  background-color: #373737;
+  color: #fff;
+  display: flex;
+  height: 50px;
+  padding: 0 20px;
 }
 
-.sidemenu-content .profile .list-group-item {
-  height: 100px;
+.group a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
 }
 
-.sidemenu-content .groups {
-  height: 30px;
-  background-color: #616161;
+.group .group-name {
+  font-size: 18px;
+  margin-left: 15px;
 }
 </style>

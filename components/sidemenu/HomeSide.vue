@@ -1,73 +1,57 @@
 <template>
   <div class="sidemenu home-sidemenu">
     <div class="sidemenu-content">
-      <div class="profile">
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar class="mr-3"></b-avatar>
-          <span class="mr-auto">プロフィール（仮）</span>
-        </b-list-group-item>
+      <SideProfile :userinfo="user" />
+      <SideDivider />
+      <SideIconMenu />
+      <SideBar />
+      <div class="groups">
+        <SideIconMenu />
+        <SideIconMenu />
+        <SideIconMenu />
+        <SideIconMenu />
       </div>
-      <b-list-group-item class="d-flex align-items-center">
-        <b-avatar class="mr-3"></b-avatar>
-        <span class="mr-auto">給与計算</span>
-      </b-list-group-item>
-      <div class="groups"></div>
-      <b-list-group>
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar class="mr-3"></b-avatar>
-          <span class="mr-auto">ドミノピザ</span>
-        </b-list-group-item>
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar variant="primary" text="BV" class="mr-3"></b-avatar>
-          <span class="mr-auto">ミスタードーナツ</span>
-        </b-list-group-item>
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar
-            variant="info"
-            src="https://placekitten.com/300/300"
-            class="mr-3"
-          ></b-avatar>
-          <span class="mr-auto">未来屋書店</span>
-        </b-list-group-item>
-        <b-list-group-item class="d-flex align-items-center">
-          <b-avatar
-            variant="success"
-            icon="people-fill"
-            class="mr-3"
-          ></b-avatar>
-          <span class="mr-auto">グループ追加</span>
-        </b-list-group-item>
-      </b-list-group>
     </div>
-    <HomeFooter />
+    <SideFooter />
   </div>
 </template>
 
-<style scoped>
-.list-group-item {
-  height: 75px;
+<script>
+export default {
+  data() {
+    return {
+      user: {
+        name: '電波太郎',
+        email: 'aaa@aaa.email',
+      },
+      groups: [
+        {
+          name: 'ドミノピザ',
+        },
+        {
+          name: 'ミスタードーナツ',
+        },
+        {
+          name: '未来屋書店',
+        },
+      ],
+    }
+  },
 }
+</script>
 
+<style scoped>
 .sidemenu {
-  height: 100%;
+  height: clac(100vh - 70px);
+  max-height: clac(100vh - 70px);
+  min-width: 350px;
   width: 350px;
   background-color: #9b9b9b;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidemenu-content {
-  height: calc(100% - 76px);
-}
-
-.sidemenu-content .profile {
-  border-bottom: 1px solid #9b9b9b;
-}
-
-.sidemenu-content .profile .list-group-item {
-  height: 100px;
-}
-
-.sidemenu-content .groups {
-  height: 30px;
-  background-color: #616161;
+  width: 100%;
 }
 </style>

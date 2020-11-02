@@ -47,7 +47,7 @@
 export default {}
 </script>
 
-<style>
+<style scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -105,5 +105,35 @@ export default {}
   content: '';
   filter: brightness(90%);
   z-index: -1;
+}
+
+.button1 {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #00675b;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #00675b;
+}
+
+.button--green:hover {
+  color: #fff;
+  background-color: #3b8070;
+}
+
+.button--grey {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #35495e;
+  color: #35495e;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--grey:hover {
+  color: #fff;
+  background-color: #35495e;
 }
 </style>
