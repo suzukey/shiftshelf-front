@@ -36,8 +36,8 @@ export default {
   box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  height: clac(100vh - 70px);
-  max-height: clac(100vh - 70px);
+  height: calc(100vh - 70px);
+  max-height: calc(100vh - 70px);
   min-width: 350px;
   width: 350px;
   z-index: 4;
