@@ -32,13 +32,14 @@ export default {
 
 <style scoped>
 .sidemenu {
+  background-color: #9b9b9b;
+  box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
   height: clac(100vh - 70px);
   max-height: clac(100vh - 70px);
   min-width: 350px;
   width: 350px;
-  background-color: #9b9b9b;
-  display: flex;
-  flex-direction: column;
 }
 
 .sidemenu-content {

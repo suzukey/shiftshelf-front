@@ -9,9 +9,9 @@
 <style scoped>
 header {
   background-color: #00675b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   color: #fff;
   height: 70px;
-  height: 100%;
   width: 100%;
 }
 
