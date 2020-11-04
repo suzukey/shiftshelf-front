@@ -39,11 +39,13 @@ export default {
   height: calc(100vh - 70px);
   max-height: calc(100vh - 70px);
   min-width: 350px;
+  position: relative;
   width: 350px;
   z-index: 4;
 }
 
 .sidemenu-content {
+  flex: 1;
   width: 100%;
 }
 
@@ -65,5 +67,27 @@ export default {
 .group .group-name {
   font-size: 18px;
   margin-left: 15px;
+}
+
+.menus {
+  max-height: calc(100vh - calc(70px + 120px + 100px + 50px + 30px));
+  min-height: 150px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.menus::-webkit-scrollbar {
+  width: 10px;
+}
+
+.menus::-webkit-scrollbar-track {
+  background: #fff;
+  border-left: solid 1px #ececec;
+}
+
+.menus::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #fff;
 }
 </style>

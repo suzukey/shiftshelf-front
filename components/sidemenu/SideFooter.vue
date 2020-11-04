@@ -14,16 +14,16 @@
 </template>
 
 <style scoped>
-footer {
+.sidefooter {
   background-color: #616161;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-between;
   padding: 25px 20px 15px 20px;
   text-align: center;
   width: 100%;
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .links a {
