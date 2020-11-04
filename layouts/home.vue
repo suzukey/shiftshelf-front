@@ -18,6 +18,7 @@
 }
 
 main {
-  width: 100%;
+  flex: 1;
+  height: 100%;
 }
 </style>
