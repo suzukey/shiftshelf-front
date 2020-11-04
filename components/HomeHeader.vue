@@ -4,9 +4,27 @@
       <h1 class="title">
         <nuxt-link to="/home">ヘッダーくん</nuxt-link>
       </h1>
+
+      <div class="menu" @click="isActive = !isActive">
+        <b-avatar></b-avatar>
+        <span v-if="!isActive" class="chevron">▼</span>
+        <span v-else class="chevron">▲</span>
+      </div>
+
+      <HomeHeaderMenu :is-active="isActive" />
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isActive: false,
+    }
+  },
+}
+</script>
 
 <style scoped>
 header {
@@ -20,19 +38,30 @@ header {
 }
 
 .hwrapper {
+  align-items: center;
+  display: flex;
   height: 100%;
+  justify-content: space-between;
   margin: 0 20px;
 }
 
 .title {
   font-size: 30px;
   font-weight: 700;
-  line-height: 70px;
   margin: 0;
 }
 
 .title a {
   color: #fff;
   text-decoration: none;
+}
+
+.menu {
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu .chevron {
+  font-size: 10px;
 }
 </style>
