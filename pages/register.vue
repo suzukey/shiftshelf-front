@@ -15,31 +15,25 @@
               <div class="login-links">
                 <h3>
                   <div class="login">
-                    <span style="font-size: 1.2em;"> ログイン</span>
+                    <a href="/login" rel="noopener noreferrer" class="login">
+                      ログイン</a
+                    >
                   </div>
                 </h3>
                 <h3>
-                  <a
-                    href="/register"
-                    rel="noopener noreferrer"
-                    class="register"
-                  >
-                    新規登録
-                  </a>
+                  <div class="register">
+                    <span style="font-size: 1.2em;"> 新規登録</span>
+                  </div>
                 </h3>
               </div>
               <form action="post">
+                <p>名前</p>
+                <p class="nm"><input type="name" name="nm" /></p>
                 <p>メールアドレス</p>
                 <p class="mail"><input type="email" name="mail" /></p>
                 <p>パスワード</p>
                 <p class="pass"><input type="password" name="pass" /></p>
-                <p class="check">
-                  <input type="checkbox" name="checkbox" />パスワードを保存
-                </p>
-                <!-- <p class="submit"><input type="submit" value="ログイン" /></p> -->
-                <a href="/home" class="login-button">
-                  はじめる
-                </a>
+                <p class="submit"><input type="submit" value="登録" /></p>
               </form>
             </div>
           </body>
@@ -119,12 +113,14 @@ form p {
 }
 
 .mail,
-.pass {
+.pass,
+.nm {
   margin-bottom: 20px;
 }
 
 input[type='email'],
-input[type='password'] {
+input[type='password'],
+input[type='name'] {
   width: 350px;
   padding: 4px;
   font-size: 14px;
@@ -165,8 +161,7 @@ input[type='password'] {
 }
 
 /* ログインボタン  */
-
-/* .submit input {
+.submit input {
   color: #fff;
   font-size: 16px;
   padding-top: 10px;
@@ -184,15 +179,6 @@ input[type='password'] {
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#61c7e0), to(#418da8));
   background: -moz-linear-gradient(top, #61c7e0, #418da8);
   background: #00897b;
-} */
-/* ログインボタン */
-.login-button {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #00675b;
-  color: #fff;
-  padding: 10px 30px;
-  background-color: #00675b;
 }
 .submit input:hover {
   background: #37a4bf;
@@ -206,12 +192,12 @@ input[type='password'] {
   align-items: flex-end;
 }
 
-.login-links .login {
+.login-links .register {
   display: inline;
   color: #077685;
   font-weight: bold;
 }
-.login-links .register {
+.login-links .login {
   display: inline;
   color: #a0a0a0;
   font-weight: bold;
