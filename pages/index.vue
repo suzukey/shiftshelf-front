@@ -8,7 +8,7 @@
               SHIFSHEL
             </a>
           </h1>
-          <div>
+          <div class="intro">
             <p>
               このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキスト
             </p>
@@ -18,7 +18,6 @@
               はじめる
             </a>
           </div>
-          <img src="~/assets/download.jpg" />
         </div>
       </div>
     </div>
@@ -58,13 +57,6 @@ export default {}
 }
 
 .back {
-  background-image: url('~@/assets/Top1.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  /* background-attachment: fixed; */
-  background-size: cover;
-  background-color: #464646;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -96,15 +88,20 @@ export default {}
 }
 
 .back::before {
-  /* 自由に位置指定 */
+  background-color: #616161;
+  background-image: url('~@/assets/eye-catching.jpg');
+  background-size: cover;
+  background-position: 50%;
+  border-radius: inherit;
+  content: '';
+  filter: brightness(0.9);
+  height: 100%;
+  left: 0;
+  pointer-events: none;
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  filter: brightness(90%);
-  z-index: -1;
+  width: 100%;
+  z-index: -2;
 }
 
 .button1 {
