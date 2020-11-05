@@ -12,6 +12,14 @@
       </div>
 
       <HomeHeaderMenu :is-active="isActive" />
+
+      <transition name="dropdown-bg">
+        <div
+          v-if="isActive"
+          class="dropdown-bg"
+          @click="isActive = false"
+        ></div>
+      </transition>
     </div>
   </header>
 </template>
@@ -63,5 +71,14 @@ header {
 
 .menu .chevron {
   font-size: 10px;
+}
+
+.dropdown-bg {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
 }
 </style>

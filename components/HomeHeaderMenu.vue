@@ -1,6 +1,6 @@
 <template>
   <transition name="menu-list">
-    <div v-if="isActive" class="list-items">
+    <div v-if="isActive" class="home-header-menu list-items">
       <router-link class="list-item" to="/settings">
         設定
       </router-link>
@@ -55,6 +55,7 @@ export default {
   line-height: 50px;
   padding: 0 20px;
   text-decoration: none;
+  transition: 400ms;
 }
 
 .list-item:hover {
