@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "yarn mock:build && nuxt && yarn mock:watch",
     "build": "nuxt build",
     "start": "nuxt start",
     "export": "nuxt export",
@@ -11,6 +11,8 @@
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
+    "mock:build": "axios-mock-server --build",
+    "mock:watch": "axios-mock-server --watch",
     "test": "jest"
   },
   "lint-staged": {
@@ -33,6 +35,7 @@
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@vue/test-utils": "^1.0.3",
+    "axios-mock-server": "^0.19.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.0.1",
