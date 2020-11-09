@@ -51,6 +51,7 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'nuxt-webfontloader',
   ],
   /*
    ** Axios module configuration
@@ -62,4 +63,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  webfontloader: {
+    google: {
+      families: ['Lato:100,300,400,700,900', 'Noto+Sans+JP'],
+    },
+  },
 }
