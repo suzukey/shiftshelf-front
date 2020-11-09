@@ -1,43 +1,38 @@
 <template>
   <div class="home">
-    <div class="back">
+    <div class="top">
       <div class="container">
-        <div>
+        <div class="infomations">
           <h1 class="title">
-            <a rel="noopener noreferrer">
-              SHIFSHEL
-            </a>
+            SHIFSHEL
           </h1>
           <div class="intro">
             <p>
               このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキスト
             </p>
           </div>
-          <div class="links">
-            <a href="/login" rel="noopener noreferrer" class="button1">
+          <div class="buttons">
+            <nuxt-link to="/login" class="btn-start">
               はじめる
-            </a>
+            </nuxt-link>
           </div>
+        </div>
+        <div class="down">
+          <div class="desc">SHIFSHELとは</div>
+          <div class="icon">↓</div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div>
-        <Logo />
-        <h1 class="title">
-          app
-        </h1>
-        <div class="links">
-          <nuxt-link
-            to="/login"
-            rel="noopener noreferrer"
-            class="button--green"
-          >
-            Documentation
-          </nuxt-link>
+    <div class="about">
+      <header>
+        <div class="content">
+          <h1 class="title">
+            SHIFSHEL
+          </h1>
+          <div class="buttons"></div>
         </div>
-        <img src="~/assets/download.jpg" />
-      </div>
+      </header>
+      <div class="container"></div>
     </div>
   </div>
 </template>
@@ -47,47 +42,25 @@ export default {}
 </script>
 
 <style scoped>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home {
   text-align: center;
 }
 
-.back {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  z-index: 0;
+.container {
+  height: 100%;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.top {
   color: #fff;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  z-index: 0;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 777;
-  font-size: 100px;
-
-  /* color: #fff; */
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-.back::before {
+.top::before {
   background-color: #616161;
   background-image: url('~@/assets/eye-catching.jpg');
   background-size: cover;
@@ -104,33 +77,97 @@ export default {}
   z-index: -2;
 }
 
-.button1 {
-  display: inline-block;
+.top .infomations {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.top .down {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+  margin-top: -80px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 72px;
+}
+
+.intro {
+  font-size: 15px;
+  margin-top: 40px;
+  max-width: 500px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.btn-start {
+  display: block;
   border-radius: 4px;
-  border: 1px solid #00675b;
   color: #fff;
   text-decoration: none;
-  padding: 10px 30px;
-  background-color: #00675b;
+  font-size: 20px;
+  line-height: 45px;
+  padding: 0 40px;
+  background-color: #00897b;
+  transition-duration: 400ms;
 }
 
-.button--green:hover {
+.btn-start:hover {
+  filter: brightness(0.9);
+}
+
+.down .desc {
+  font-size: 20px;
+}
+
+.down .icon {
+  font-size: 24px;
+}
+
+.about {
+  height: 200vh;
+}
+
+.about header {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.35) 19%,
+    rgba(0, 0, 0, 0.05) 87%,
+    rgba(0, 0, 0, 0)
+  );
+  height: 70px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+header .content {
+  align-items: center;
   color: #fff;
-  background-color: #3b8070;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+header .title {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
 }
 </style>
