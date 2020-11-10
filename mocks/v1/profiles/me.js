@@ -1,5 +1,5 @@
 export default {
-  get({ values }) {
+  get() {
     return [
       200,
       {
