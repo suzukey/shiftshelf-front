@@ -8,7 +8,8 @@
       <input v-model="password" type="password" placeholder="パスワード" />
     </div>
     <div class="remember-me">
-      <span>ログインしたままにする</span>
+      <input v-model="remember" type="checkbox" name="remember" id="remember" />
+      <label for="remember">ログインしたままにする</label>
     </div>
     <button class="auth-btn" @click="signIn">ログイン</button>
     <div class="forgot-password">
@@ -26,14 +27,16 @@ export default {
     return {
       email: 'ks1875@mailg.denpa.ac.jp',
       password: '1234567890',
+      remember: false,
     }
   },
   methods: {
     signIn() {
       const email = this.email
       const password = this.password
+      const persistence = this.remember ? 'local' : 'session'
 
-      auth.setPersistence('session').then(() => {
+      auth.setPersistence(persistence).then(() => {
         auth.signInWithEmailAndPassword(email, password).then((cred) => {
           console.log(cred)
           this.$router.replace({ path: '/home' })
@@ -73,8 +76,9 @@ export default {
   margin-top: 50px;
 }
 
-.remember-me span {
+.remember-me label {
   font-size: 15px;
+  margin: 0 0 0 10px;
 }
 
 .auth-btn {

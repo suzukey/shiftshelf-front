@@ -16,6 +16,7 @@
           <nuxt />
         </div>
       </div>
+      <div class="spacer" />
       <footer>
         <div class="links">
           <nuxt-link to="terms">利用規約</nuxt-link>
@@ -47,8 +48,9 @@ export default {
   align-items: center;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   min-width: 320px;
-  padding: 40px 0;
+  padding-top: 40px;
 }
 
 .titles {
@@ -87,15 +89,24 @@ export default {
   width: 100%;
 }
 
-.footer {
+.spacer {
+  flex: 1;
+}
+
+footer {
+  align-items: center;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
 }
 
 footer .links {
   display: flex;
   font-size: 16px;
   justify-content: space-evenly;
-  padding: 10px 0;
+  margin-bottom: 10px;
   width: 440px;
 }
 
