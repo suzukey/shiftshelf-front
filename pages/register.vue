@@ -1,53 +1,25 @@
 <template>
-  <div class="home">
-    <div class="back">
-      <div class="container">
-        <div>
-          <h1 class="title">
-            SHIFSHEL
-          </h1>
-          <h2>
-            a
-          </h2>
-          <body>
-            <!-- ログイン機能 -->
-            <div id="form">
-              <div class="login-links">
-                <h3>
-                  <div class="login">
-                    <a href="/login" rel="noopener noreferrer" class="login">
-                      ログイン
-                    </a>
-                  </div>
-                </h3>
-                <h3>
-                  <div class="register">
-                    <span style="font-size: 1.2em;"> 新規登録</span>
-                  </div>
-                </h3>
-              </div>
-              <form action="post">
-                <p>名前</p>
-                <p class="nm">
-                  <input v-model="name" />
-                </p>
-                <p>メールアドレス</p>
-                <p class="mail">
-                  <input type="email" v-model="email" />
-                </p>
-                <p>パスワード</p>
-                <p class="pass">
-                  <input type="password" v-model="password" />
-                </p>
-                <div class="submit">
-                  <div @click="handleRegister()">登録</div>
-                </div>
-              </form>
-            </div>
-          </body>
-        </div>
-      </div>
+  <div class="register">
+    <PageSelector />
+    <div class="input-box">
+      <input v-model="name" type="text" placeholder="名前" />
     </div>
+    <div class="input-box">
+      <input v-model="email" type="email" placeholder="メールアドレス" />
+    </div>
+    <div class="input-box">
+      <input v-model="password" type="password" placeholder="パスワード" />
+    </div>
+    <div class="announcement">
+      <p>
+        アカウントを登録することにより、
+        <nuxt-link to="/terms">利用規約</nuxt-link>
+        および
+        <nuxt-link to="/privacy">プライバシーポリシー</nuxt-link>
+        に同意するものとします。
+      </p>
+    </div>
+    <button class="auth-btn" @click="register">登録する</button>
   </div>
 </template>
 
@@ -55,15 +27,16 @@
 import { auth } from '../plugins/firebase'
 
 export default {
+  layout: 'auth',
   data() {
     return {
+      name: '',
       email: '',
       password: '',
-      name: '',
     }
   },
   methods: {
-    handleRegister() {
+    register() {
       const email = this.email
       const password = this.password
 
@@ -74,158 +47,56 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.input-box {
+  height: 50px;
+  margin-bottom: 30px;
 }
 
-.back {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #00897b;
-  height: 100vh;
+.input-box input {
+  border: solid 2px #cfcfcf;
+  height: 100%;
+  padding: 0 10px;
   width: 100%;
-  position: relative;
-  z-index: 0;
-  color: #fff;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 777;
-  font-size: 100px;
-  letter-spacing: 1px;
+.input-box input::placeholder {
+  color: #8e8e8e;
 }
 
-.links {
-  padding-top: 15px;
+.input-box input:focus {
+  border: solid 2px #8e8e8e;
+  outline: none;
 }
 
-.back::before {
-  /* 自由に位置指定 */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  filter: brightness(90%);
-  z-index: -1;
+.announcement {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  min-height: 50px;
 }
 
-/* ここから下はログインフォームのデザイン */
-
-body,
-p,
-form,
-input {
+.announcement p {
   margin: 0;
 }
-#form {
-  width: 400px;
-  margin: 30px auto;
-  padding: 20px;
-}
 
-form p {
-  font-size: 14px;
-}
-
-.mail,
-.pass,
-.nm {
-  margin-bottom: 20px;
-}
-
-input[type='email'],
-input[type='password'],
-input[type='name'] {
-  width: 350px;
-  padding: 4px;
-  font-size: 14px;
-}
-
-.submit {
-  text-align: right;
-}
-
-/* font */
-#form p {
-  color: #077685;
-  font-weight: bold;
-}
-
-#form .form-title {
-  /* font-family: Arial; */
-  font-size: 30px;
-  color: #4eb4c2;
-}
-
-/* skin */
-#form1 {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -webkit-box-shadow: 1px 10px #488a9e;
-  -moz-box-shadow: 1px 10px #488a9e;
-  box-shadow: 1px 10px #488a9e;
-  border: solid #4eb4c2 1px;
-  background: #fafafa;
-}
-
-#form2 .form-title {
-  padding-bottom: 6px;
-  border-bottom: 2px solid #4eb4c2;
-  margin-bottom: 20px;
-}
-
-/* ログインボタン  */
-.submit input {
-  color: #fff;
-  font-size: 16px;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 20px;
+.announcement a {
+  color: #00897b;
   text-decoration: none;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: 8px 6px #e3e3e3;
-  -moz-box-shadow: 8px 6px #e3e3e3;
-  box-shadow: 8px 6px #e3e3e3;
-  border: solid #f5fdff 4px;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#61c7e0), to(#418da8));
-  background: -moz-linear-gradient(top, #61c7e0, #418da8);
-  background: #00897b;
-}
-.submit input:hover {
-  background: #37a4bf;
 }
 
-.login-links {
-  padding: 20px 30px;
+.auth-btn {
+  background-color: #00897b;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  height: 55px;
+  line-height: 55px;
+  margin: 10px 0 20px 0;
+  text-align: center;
+  outline: none;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.login-links .register {
-  display: inline;
-  color: #077685;
-  font-weight: bold;
-}
-.login-links .login {
-  display: inline;
-  color: #a0a0a0;
-  font-weight: bold;
 }
 </style>
