@@ -11,12 +11,14 @@
         お問い合わせ
       </router-link>
       <div class="list-separator" />
-      <div class="list-item" @click="logout">ログアウト</div>
+      <div class="list-item" @click="signOut">ログアウト</div>
     </div>
   </transition>
 </template>
 
 <script>
+import { auth } from '../plugins/firebase'
+
 export default {
   props: {
     isActive: {
@@ -25,8 +27,10 @@ export default {
     },
   },
   methods: {
-    logout() {
-      this.$router.push({ path: '/' })
+    signOut() {
+      auth.signOut().then(() => {
+        this.$router.push({ path: '/' })
+      })
     },
   },
 }

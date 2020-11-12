@@ -16,8 +16,8 @@
                 <h3>
                   <div class="login">
                     <a href="/login" rel="noopener noreferrer" class="login">
-                      ログイン</a
-                    >
+                      ログイン
+                    </a>
                   </div>
                 </h3>
                 <h3>
@@ -28,12 +28,20 @@
               </div>
               <form action="post">
                 <p>名前</p>
-                <p class="nm"><input type="name" name="nm" /></p>
+                <p class="nm">
+                  <input v-model="name" />
+                </p>
                 <p>メールアドレス</p>
-                <p class="mail"><input type="email" name="mail" /></p>
+                <p class="mail">
+                  <input type="email" v-model="email" />
+                </p>
                 <p>パスワード</p>
-                <p class="pass"><input type="password" name="pass" /></p>
-                <p class="submit"><input type="submit" value="登録" /></p>
+                <p class="pass">
+                  <input type="password" v-model="password" />
+                </p>
+                <div class="submit">
+                  <div @click="handleRegister()">登録</div>
+                </div>
               </form>
             </div>
           </body>
@@ -44,7 +52,25 @@
 </template>
 
 <script>
-export default {}
+import { auth } from '../plugins/firebase'
+
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+      name: '',
+    }
+  },
+  methods: {
+    handleRegister() {
+      const email = this.email
+      const password = this.password
+
+      auth.createUserWithEmailAndPassword(email, password).catch(() => {})
+    },
+  },
+}
 </script>
 
 <style scoped>

@@ -30,16 +30,15 @@
               </div>
               <form action="post">
                 <p>メールアドレス</p>
-                <p class="mail"><input type="email" name="mail" /></p>
+                <p class="mail"><input type="email" v-model="email" /></p>
                 <p>パスワード</p>
-                <p class="pass"><input type="password" name="pass" /></p>
+                <p class="pass"><input type="password" v-model="password" /></p>
                 <p class="check">
                   <input type="checkbox" name="checkbox" />パスワードを保存
                 </p>
-                <!-- <p class="submit"><input type="submit" value="ログイン" /></p> -->
-                <a href="/home" class="login-button">
-                  はじめる
-                </a>
+                <div class="submit">
+                  <div class="login-btn" @click="handleSignIn()">ログイン</div>
+                </div>
               </form>
             </div>
           </body>
@@ -50,7 +49,27 @@
 </template>
 
 <script>
-export default {}
+import { auth } from '../plugins/firebase'
+
+export default {
+  data() {
+    return {
+      email: 'ks1875@mailg.denpa.ac.jp',
+      password: '1234567890',
+    }
+  },
+  methods: {
+    handleSignIn() {
+      const email = this.email
+      const password = this.password
+
+      auth.signInWithEmailAndPassword(email, password).then((cred) => {
+        console.log(cred)
+        this.$router.replace({ path: '/home' })
+      })
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -165,9 +184,10 @@ input[type='password'] {
 }
 
 /* ログインボタン  */
-
-/* .submit input {
+.login-btn {
   color: #fff;
+  width: 150px;
+  text-align: center;
   font-size: 16px;
   padding-top: 10px;
   padding-right: 20px;
@@ -184,7 +204,8 @@ input[type='password'] {
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#61c7e0), to(#418da8));
   background: -moz-linear-gradient(top, #61c7e0, #418da8);
   background: #00897b;
-} */
+}
+
 /* ログインボタン */
 .login-button {
   display: inline-block;
