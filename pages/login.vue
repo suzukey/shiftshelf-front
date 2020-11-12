@@ -1,49 +1,18 @@
 <template>
-  <div class="home">
-    <div class="back">
-      <div class="container">
-        <div>
-          <h1 class="title">
-            SHIFSHEL
-          </h1>
-          <h2>
-            a
-          </h2>
-          <body>
-            <!-- ログイン機能 -->
-            <div id="form">
-              <div class="login-links">
-                <h3>
-                  <div class="login">
-                    <span style="font-size: 1.2em;"> ログイン</span>
-                  </div>
-                </h3>
-                <h3>
-                  <a
-                    href="/register"
-                    rel="noopener noreferrer"
-                    class="register"
-                  >
-                    新規登録
-                  </a>
-                </h3>
-              </div>
-              <form action="post">
-                <p>メールアドレス</p>
-                <p class="mail"><input type="email" v-model="email" /></p>
-                <p>パスワード</p>
-                <p class="pass"><input type="password" v-model="password" /></p>
-                <p class="check">
-                  <input type="checkbox" name="checkbox" />パスワードを保存
-                </p>
-                <div class="submit">
-                  <div class="login-btn" @click="handleSignIn()">ログイン</div>
-                </div>
-              </form>
-            </div>
-          </body>
-        </div>
-      </div>
+  <div class="login">
+    <PageSelector />
+    <div class="input-box">
+      <input v-model="email" type="email" placeholder="メールアドレス" />
+    </div>
+    <div class="input-box">
+      <input v-model="password" type="password" placeholder="パスワード" />
+    </div>
+    <div class="remember-me">
+      <span>ログインしたままにする</span>
+    </div>
+    <button class="auth-btn" @click="signIn">ログイン</button>
+    <div class="forgot-password">
+      <nuxt-link to="/forgot">パスワードを忘れた場合</nuxt-link>
     </div>
   </div>
 </template>
@@ -52,6 +21,7 @@
 import { auth } from '../plugins/firebase'
 
 export default {
+  layout: 'auth',
   data() {
     return {
       email: 'ks1875@mailg.denpa.ac.jp',
@@ -59,13 +29,15 @@ export default {
     }
   },
   methods: {
-    handleSignIn() {
+    signIn() {
       const email = this.email
       const password = this.password
 
-      auth.signInWithEmailAndPassword(email, password).then((cred) => {
-        console.log(cred)
-        this.$router.replace({ path: '/home' })
+      auth.setPersistence('session').then(() => {
+        auth.signInWithEmailAndPassword(email, password).then((cred) => {
+          console.log(cred)
+          this.$router.replace({ path: '/home' })
+        })
       })
     },
   },
@@ -73,168 +45,64 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.input-box {
+  height: 50px;
+  margin-bottom: 30px;
 }
 
-.back {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #00897b;
-  height: 100vh;
+.input-box input {
+  border: solid 2px #cfcfcf;
+  height: 100%;
+  padding: 0 10px;
   width: 100%;
-  position: relative;
-  z-index: 0;
+}
+
+.input-box input::placeholder {
+  color: #8e8e8e;
+}
+
+.input-box input:focus {
+  border: solid 2px #8e8e8e;
+  outline: none;
+}
+
+.remember-me {
+  align-items: center;
+  display: flex;
+  height: 35px;
+  margin-top: 50px;
+}
+
+.remember-me span {
+  font-size: 15px;
+}
+
+.auth-btn {
+  background-color: #00897b;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
   color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  height: 55px;
+  line-height: 55px;
+  margin: 10px 0 20px 0;
+  text-align: center;
+  outline: none;
+  width: 100%;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 777;
-  font-size: 100px;
-  letter-spacing: 1px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-.back::before {
-  /* 自由に位置指定 */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  filter: brightness(90%);
-  z-index: -1;
-}
-
-/* ここから下はログインフォームのデザイン */
-
-body,
-p,
-form,
-input {
-  margin: 0;
-}
-#form {
-  width: 400px;
-  margin: 30px auto;
-  padding: 20px;
-}
-
-form p {
-  font-size: 14px;
-}
-
-.mail,
-.pass {
-  margin-bottom: 20px;
-}
-
-input[type='email'],
-input[type='password'] {
-  width: 350px;
-  padding: 4px;
-  font-size: 14px;
-}
-
-.submit {
+.forgot-password {
+  color: #00897b;
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
   text-align: right;
 }
 
-/* font */
-#form p {
-  color: #077685;
-  font-weight: bold;
-}
-
-#form .form-title {
-  /* font-family: Arial; */
-  font-size: 30px;
-  color: #4eb4c2;
-}
-
-/* skin */
-#form1 {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -webkit-box-shadow: 1px 10px #488a9e;
-  -moz-box-shadow: 1px 10px #488a9e;
-  box-shadow: 1px 10px #488a9e;
-  border: solid #4eb4c2 1px;
-  background: #fafafa;
-}
-
-#form2 .form-title {
-  padding-bottom: 6px;
-  border-bottom: 2px solid #4eb4c2;
-  margin-bottom: 20px;
-}
-
-/* ログインボタン  */
-.login-btn {
-  color: #fff;
-  width: 150px;
-  text-align: center;
-  font-size: 16px;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 20px;
+.forgot-password a {
+  color: inherit;
   text-decoration: none;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: 8px 6px #e3e3e3;
-  -moz-box-shadow: 8px 6px #e3e3e3;
-  box-shadow: 8px 6px #e3e3e3;
-  border: solid #f5fdff 4px;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#61c7e0), to(#418da8));
-  background: -moz-linear-gradient(top, #61c7e0, #418da8);
-  background: #00897b;
-}
-
-/* ログインボタン */
-.login-button {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #00675b;
-  color: #fff;
-  padding: 10px 30px;
-  background-color: #00675b;
-}
-.submit input:hover {
-  background: #37a4bf;
-}
-
-.login-links {
-  padding: 20px 30px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.login-links .login {
-  display: inline;
-  color: #077685;
-  font-weight: bold;
-}
-.login-links .register {
-  display: inline;
-  color: #a0a0a0;
-  font-weight: bold;
 }
 </style>
