@@ -13,10 +13,12 @@ export default {
     title: {
       type: String,
       reqired: true,
+      default: '',
     },
     icon: {
       type: String,
       reqired: true,
+      default: '',
     },
   },
 }

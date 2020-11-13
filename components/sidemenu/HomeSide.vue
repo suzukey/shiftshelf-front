@@ -7,9 +7,9 @@
       <SideBar title="グループ" icon="mdi-account-multiple" />
       <div class="groups">
         <nuxt-link
-          :to="`/groups/${group.id}`"
           v-for="group in groups"
           :key="group.id"
+          :to="`/groups/${group.id}`"
         >
           <SideIconMenu :title="group.name" />
         </nuxt-link>

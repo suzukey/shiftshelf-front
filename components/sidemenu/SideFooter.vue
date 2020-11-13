@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="copyright">
-      <p>&copy;2020 SHIFSHEL</p>
+      <p>&copy; 2020 SHIFSHEL</p>
     </div>
   </footer>
 </template>
