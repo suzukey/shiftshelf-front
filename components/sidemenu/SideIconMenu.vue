@@ -5,13 +5,20 @@
     </div>
 
     <div class="menu">
-      <div></div>
+      <div>{{ title }}</div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -19,8 +26,13 @@ export default {}
   background-color: #fff;
   display: flex;
   height: 75px;
+  transition: 400ms;
 
   /* min-height: 100px; */
+}
+
+.side-icon-menu:hover {
+  background-color: #eee;
 }
 
 .side-icon-menu .icon {
@@ -29,5 +41,10 @@ export default {}
   height: 100%;
   justify-content: center;
   width: 100px;
+}
+
+.side-icon-menu .menu {
+  font-size: 20px;
+  line-height: 75px;
 }
 </style>

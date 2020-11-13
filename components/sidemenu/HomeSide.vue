@@ -3,22 +3,16 @@
     <div class="sidemenu-content">
       <SideProfile :userinfo="user" />
       <SideDivider />
-      <SideIconMenu />
+      <SideIconMenu title="給与計算" />
       <SideBar />
       <div class="groups">
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
+        <nuxt-link
+          :to="`/groups/${group.id}`"
+          v-for="group in groups"
+          :key="group.id"
+        >
+          <SideIconMenu :title="group.name" />
+        </nuxt-link>
       </div>
     </div>
     <SideFooter />
@@ -35,12 +29,15 @@ export default {
       },
       groups: [
         {
+          id: 1,
           name: 'ドミノピザ',
         },
         {
+          id: 2,
           name: 'ミスタードーナツ',
         },
         {
+          id: 3,
           name: '未来屋書店',
         },
       ],
@@ -88,5 +85,10 @@ export default {
   background: #ccc;
   border-radius: 10px;
   box-shadow: inset 0 0 0 2px #fff;
+}
+
+.groups a {
+  color: inherit;
+  text-decoration: none;
 }
 </style>
