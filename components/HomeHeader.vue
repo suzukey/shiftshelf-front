@@ -2,7 +2,7 @@
   <header>
     <div class="hwrapper">
       <h1 class="title">
-        <nuxt-link to="/home">ヘッダーくん</nuxt-link>
+        <nuxt-link to="/home">SHIFSHEL</nuxt-link>
       </h1>
 
       <div class="menu" @click="isActive = !isActive">
@@ -56,6 +56,7 @@ header {
 .title {
   font-size: 30px;
   font-weight: 700;
+  letter-spacing: 2px;
   margin: 0;
 }
 

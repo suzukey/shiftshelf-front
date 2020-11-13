@@ -8,7 +8,7 @@
       <input v-model="password" type="password" placeholder="パスワード" />
     </div>
     <div class="remember-me">
-      <input v-model="remember" type="checkbox" name="remember" id="remember" />
+      <input id="remember" v-model="remember" type="checkbox" name="remember" />
       <label for="remember">ログインしたままにする</label>
     </div>
     <button class="auth-btn" @click="signIn">ログイン</button>
@@ -38,7 +38,6 @@ export default {
 
       auth.setPersistence(persistence).then(() => {
         auth.signInWithEmailAndPassword(email, password).then((cred) => {
-          console.log(cred)
           this.$router.replace({ path: '/home' })
         })
       })

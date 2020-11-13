@@ -98,6 +98,7 @@ export default {}
 .title {
   font-weight: 900;
   font-size: 72px;
+  letter-spacing: 0.05em;
 }
 
 .intro {
