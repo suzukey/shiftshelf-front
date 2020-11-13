@@ -93,6 +93,11 @@ export default {
   justify-content: center;
   margin-top: 45px;
   text-decoration: none;
+  transition: 300ms;
   width: 240px;
+}
+
+.links a:hover {
+  background-color: #f6f6f6;
 }
 </style>
