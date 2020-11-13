@@ -8,9 +8,15 @@
       </div>
       <SideBar title="メニュー" icon="mdi-apps" />
       <div class="menus">
-        <SideIconMenu />
-        <SideIconMenu />
-        <SideIconMenu />
+        <nuxt-link :to="`/groups/${groupId}/shifts`">
+          <SideIconMenu title="シフト" icon="mdi-calendar-range" />
+        </nuxt-link>
+        <nuxt-link :to="`/groups/${groupId}/survay`">
+          <SideIconMenu title="シフト希望提出" icon="mdi-file" />
+        </nuxt-link>
+        <nuxt-link :to="`/groups/${groupId}/admin`">
+          <SideIconMenu title="管理画面" icon="mdi-clipboard-account" />
+        </nuxt-link>
       </div>
     </div>
     <SideFooter />
@@ -26,6 +32,11 @@ export default {
         email: 'aaa@aaa.email',
       },
     }
+  },
+  computed: {
+    groupId() {
+      return this.$route.params.group_id
+    },
   },
 }
 </script>
@@ -89,5 +100,10 @@ export default {
   background: #ccc;
   border-radius: 10px;
   box-shadow: inset 0 0 0 2px #fff;
+}
+
+.menus a {
+  color: inherit;
+  text-decoration: none;
 }
 </style>

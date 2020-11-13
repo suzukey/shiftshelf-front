@@ -6,7 +6,7 @@
     </div>
 
     <div class="menu">
-      <div>{{ title }}</div>
+      {{ title }}
     </div>
   </div>
 </template>
@@ -32,8 +32,7 @@ export default {
   display: flex;
   height: 75px;
   transition: 400ms;
-
-  /* min-height: 100px; */
+  padding: 0 10px;
 }
 
 .side-icon-menu:hover {
@@ -45,7 +44,7 @@ export default {
   display: flex;
   height: 100%;
   justify-content: center;
-  width: 100px;
+  width: 75px;
 }
 
 .side-icon-menu .icon i {
@@ -54,7 +53,9 @@ export default {
 }
 
 .side-icon-menu .menu {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
   font-size: 20px;
-  line-height: 75px;
 }
 </style>

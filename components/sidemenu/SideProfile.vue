@@ -30,6 +30,7 @@ export default {
   display: flex;
   height: 100px;
   min-height: 100px;
+  padding: 0 10px;
 }
 
 .side-profile .icon {
@@ -37,8 +38,8 @@ export default {
   display: flex;
   height: 100%;
   justify-content: center;
-  min-width: 100px;
-  width: 100px;
+  min-width: 75px;
+  width: 75px;
 }
 
 .side-profile .info {
