@@ -3,7 +3,7 @@
     <div class="sidemenu-content">
       <SideProfile :userinfo="user" />
       <SideDivider />
-      <SideIconMenu title="給与計算" />
+      <SideIconMenu title="給与計算" icon="mdi-chart-box" />
       <SideBar />
       <div class="groups">
         <nuxt-link

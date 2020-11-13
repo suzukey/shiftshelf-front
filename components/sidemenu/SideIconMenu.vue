@@ -1,7 +1,8 @@
 <template>
   <div class="side-icon-menu">
     <div class="icon">
-      <b-avatar></b-avatar>
+      <i v-if="icon" class="mdi" :class="icon" />
+      <b-avatar v-else></b-avatar>
     </div>
 
     <div class="menu">
@@ -16,6 +17,10 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    icon: {
+      type: String,
+      default: '',
     },
   },
 }
@@ -41,6 +46,11 @@ export default {
   height: 100%;
   justify-content: center;
   width: 100px;
+}
+
+.side-icon-menu .icon i {
+  color: #8e8e8e;
+  font-size: 32px;
 }
 
 .side-icon-menu .menu {
