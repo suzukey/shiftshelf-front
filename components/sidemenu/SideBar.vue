@@ -38,6 +38,6 @@ export default {
 
 .side-bar .title {
   font-size: 15px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 </style>

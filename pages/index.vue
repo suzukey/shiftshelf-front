@@ -19,7 +19,7 @@
         </div>
         <div class="down">
           <div class="desc">SHIFSHELとは</div>
-          <div class="icon">↓</div>
+          <div class="icon"><i class="mdi mdi-arrow-down" /></div>
         </div>
       </div>
     </div>

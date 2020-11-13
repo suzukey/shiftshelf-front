@@ -3,7 +3,7 @@
     <div class="sidemenu-content">
       <SideProfile :userinfo="user" />
       <div class="group">
-        <nuxt-link to="/home">←</nuxt-link>
+        <nuxt-link to="/home"><i class="icon mdi mdi-arrow-left" /></nuxt-link>
         <span class="group-name">ミスタードーナツ</span>
       </div>
       <SideBar title="メニュー" icon="mdi-apps" />

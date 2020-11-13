@@ -7,8 +7,12 @@
 
       <div class="menu" @click="isActive = !isActive">
         <b-avatar></b-avatar>
-        <span v-if="!isActive" class="chevron">▼</span>
-        <span v-else class="chevron">▲</span>
+        <span v-if="!isActive" class="chevron">
+          <i class="mdi mdi-menu-down" />
+        </span>
+        <span v-else class="chevron">
+          <i class="mdi mdi-menu-up" />
+        </span>
       </div>
 
       <HomeHeaderMenu :is-active="isActive" />
@@ -71,7 +75,7 @@ header {
 }
 
 .menu .chevron {
-  font-size: 10px;
+  font-size: 24px;
 }
 
 .dropdown-bg {
