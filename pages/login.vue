@@ -92,7 +92,6 @@ export default {
   line-height: 55px;
   margin: 10px 0 20px 0;
   text-align: center;
-  outline: none;
   width: 100%;
 }
 
