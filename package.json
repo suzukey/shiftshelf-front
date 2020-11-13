@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn mock:build && nuxt && yarn mock:watch",
-    "build": "nuxt build",
+    "build": "yarn mock:build && nuxt build",
     "start": "nuxt start",
     "export": "nuxt export",
     "serve": "nuxt serve",
