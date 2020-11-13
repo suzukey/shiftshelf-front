@@ -1,25 +1,43 @@
 <template>
   <div class="side-bar">
-    <div class="side-bar-title">
-      <span>グループ</span>
+    <i class="mdi icon" :class="icon" />
+    <div class="title">
+      <span>{{ title }}</span>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    title: {
+      type: String,
+      reqired: true,
+    },
+    icon: {
+      type: String,
+      reqired: true,
+    },
+  },
+}
 </script>
 
 <style>
-.side-bar-title {
+.side-bar {
+  align-items: center;
   background-color: #616161;
   color: #fff;
+  display: flex;
   height: 30px;
   padding: 0 20px;
 }
 
-.side-bar-title span {
+.side-bar .icon {
+  font-size: 20px;
+}
+
+.side-bar .title {
   font-size: 15px;
-  line-height: 30px;
+  margin-left: 10px;
 }
 </style>

@@ -6,7 +6,7 @@
         <nuxt-link to="/home">←</nuxt-link>
         <span class="group-name">ミスタードーナツ</span>
       </div>
-      <SideBar />
+      <SideBar title="メニュー" icon="mdi-apps" />
       <div class="menus">
         <SideIconMenu />
         <SideIconMenu />

@@ -4,7 +4,7 @@
       <SideProfile :userinfo="user" />
       <SideDivider />
       <SideIconMenu title="給与計算" icon="mdi-chart-box" />
-      <SideBar />
+      <SideBar title="グループ" icon="mdi-account-multiple" />
       <div class="groups">
         <nuxt-link
           :to="`/groups/${group.id}`"
