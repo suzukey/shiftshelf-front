@@ -80,7 +80,7 @@
 </template>
 <script>
 export default {
-  layout: 'home',
+  layout: 'group',
   data() {
     return {
       selected: 'first',

@@ -7,38 +7,38 @@
           <a href="/survey" rel="noopener noreferrer" class="one">
             <div class="btnsize" size="lg" squared variant="outline-secondary">
               希望調査
-            </div></a
-          >
+            </div>
+          </a>
 
           <a href="/shift" rel="noopener noreferrer" class="one">
             <div class="btnsize" size="lg" squared variant="outline-secondary">
               シフト作成
-            </div></a
-          >
+            </div>
+          </a>
 
           <a href="/survey" rel="noopener noreferrer" class="one">
             <div class="btnsize" size="lg" squared variant="outline-secondary">
               希望閲覧
-            </div></a
-          >
+            </div>
+          </a>
         </div>
         <div class="bara2"></div>
         <div class="wrapper">
           <a href="/survey" rel="noopener noreferrer" class="one">
             <div class="btnsize" size="lg" squared variant="outline-secondary">
               権限付与
-            </div></a
-          >
+            </div>
+          </a>
           <a href="/survey" rel="noopener noreferrer" class="one">
             <div class="btnsize" size="lg" squared variant="outline-secondary">
               メンバー
-            </div></a
-          >
+            </div>
+          </a>
           <a href="/survey" rel="noopener noreferrer" class="one">
             <div class="btnsize" size="lg" squared variant="outline-secondary">
               グループ
-            </div></a
-          >
+            </div>
+          </a>
         </div>
       </main>
     </div>
@@ -46,12 +46,7 @@
 </template>
 <script>
 export default {
-  layout: 'home',
-  data() {
-    return {
-      text: '',
-    }
-  },
+  layout: 'group',
 }
 </script>
 
