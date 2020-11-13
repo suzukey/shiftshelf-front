@@ -1,10 +1,10 @@
 <template>
   <footer class="sidefooter">
     <div class="links">
-      <nuxt-link to="/">お問い合わせ</nuxt-link>
+      <nuxt-link to="/contact">お問い合わせ</nuxt-link>
       <div>
-        <nuxt-link to="/">利用規約</nuxt-link>
-        <nuxt-link to="/">プライバシー</nuxt-link>
+        <nuxt-link to="/terms">利用規約</nuxt-link>
+        <nuxt-link to="/privacy">プライバシー</nuxt-link>
       </div>
     </div>
     <div class="copyright">
