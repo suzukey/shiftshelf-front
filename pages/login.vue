@@ -38,6 +38,7 @@ export default {
 
       auth.setPersistence(persistence).then(() => {
         auth.signInWithEmailAndPassword(email, password).then((cred) => {
+          this.$store.dispatch('user/getProfile')
           this.$router.replace({ path: '/home' }).catch(() => {})
         })
       })

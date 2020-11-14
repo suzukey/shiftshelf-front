@@ -15,10 +15,9 @@
 
 <script>
 export default {
-  props: {
-    userinfo: {
-      type: Object,
-      required: true,
+  computed: {
+    userinfo() {
+      return this.$store.getters['user/userinfo']
     },
   },
 }

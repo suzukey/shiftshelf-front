@@ -1,7 +1,7 @@
 <template>
   <div class="sidemenu home-sidemenu">
     <div class="sidemenu-content">
-      <SideProfile :userinfo="user" />
+      <SideProfile />
       <SideDivider />
       <div class="payroll">
         <nuxt-link to="/payroll">
@@ -27,10 +27,6 @@
 export default {
   data() {
     return {
-      user: {
-        name: '電波太郎',
-        email: 'aaa@aaa.email',
-      },
       groups: [
         {
           id: 1,

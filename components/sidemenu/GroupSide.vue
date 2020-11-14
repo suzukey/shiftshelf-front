@@ -1,7 +1,7 @@
 <template>
   <div class="sidemenu group-sidemenu">
     <div class="sidemenu-content">
-      <SideProfile :userinfo="user" />
+      <SideProfile />
       <div class="group">
         <nuxt-link to="/home"><i class="icon mdi mdi-arrow-left" /></nuxt-link>
         <span class="group-name">ミスタードーナツ</span>
@@ -25,14 +25,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      user: {
-        name: '電波太郎',
-        email: 'aaa@aaa.email',
-      },
-    }
-  },
   computed: {
     groupId() {
       return this.$route.params.group_id
