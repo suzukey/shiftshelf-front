@@ -48,9 +48,9 @@
             <td>
               <i class="calendar-day-number">{{ day.day }}</i>
               <div
-                class="calendar-labels"
                 v-for="event in day.events"
                 :key="event"
+                class="calendar-labels"
               >
                 <span class="calender-label-blue">{{ event }}</span>
               </div>

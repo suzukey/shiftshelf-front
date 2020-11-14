@@ -7,9 +7,9 @@
         <td
           v-for="(user_shift, shift_idx) in shift.shift"
           :key="shift_idx"
-          @click="toggle_switch(user_idx, shift_idx)"
           :class="{ wht: !user_shift, red: user_shift }"
           class="timebox"
+          @click="toggle_switch(user_idx, shift_idx)"
         ></td>
       </tr>
     </table>
