@@ -27,12 +27,60 @@
         <div class="sat">土</div>
       </div>
       <div class="weeks">
-        <div class="week"></div>
-        <div class="week"></div>
-        <div class="week"></div>
-        <div class="week"></div>
-        <div class="week"></div>
-        <div class="week"></div>
+        <div class="week">
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+        </div>
+        <div class="week">
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+        </div>
+        <div class="week">
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+        </div>
+        <div class="week">
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+        </div>
+        <div class="week">
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+        </div>
+        <div class="week">
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -105,7 +153,6 @@ export default {
 .calendar .day-of-week {
   align-items: center;
   color: #8e8e8e;
-  border-bottom: 2px solid #cfcfcf;
   display: flex;
   font-size: 14px;
   font-weight: 700;
@@ -113,12 +160,31 @@ export default {
   justify-content: space-around;
 }
 
+.calendar .day-of-week .sat {
+  color: #39f;
+}
+
+.calendar .day-of-week .sun {
+  color: #f36;
+}
+
 .calendar .weeks {
   height: calc(100% - 40px);
 }
 
 .calendar .week {
-  border-bottom: 2px solid #cfcfcf;
+  display: flex;
+  border-top: 2px solid #cfcfcf;
   height: calc(100% / 6);
+}
+
+.calendar .day {
+  border-right: 2px solid #cfcfcf;
+  height: 100%;
+  width: calc(100% / 7);
+}
+
+.calendar .day:last-child {
+  border: none;
 }
 </style>
