@@ -2,13 +2,13 @@
   <div class="home">
     <div class="main-header">
       <div class="center-actions">
-        <div class="arrow">
+        <div class="arrow" @click="prevMonth">
           <i class="mdi mdi-chevron-left" />
         </div>
         <div class="calendar-month">
-          2020年 11月
+          {{ targetMonth }}
         </div>
-        <div class="arrow">
+        <div class="arrow" @click="nextMonth">
           <i class="mdi mdi-chevron-right" />
         </div>
       </div>
@@ -16,72 +16,8 @@
         <i class="mdi mdi-printer" />
       </div>
     </div>
-    <div class="calendar">
-      <div class="day-of-week">
-        <div class="sun">日</div>
-        <div class="mon">月</div>
-        <div class="tue">火</div>
-        <div class="wed">水</div>
-        <div class="thu">木</div>
-        <div class="fri">金</div>
-        <div class="sat">土</div>
-      </div>
-      <div class="weeks">
-        <div class="week">
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-        </div>
-        <div class="week">
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-        </div>
-        <div class="week">
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-        </div>
-        <div class="week">
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-        </div>
-        <div class="week">
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-        </div>
-        <div class="week">
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-          <div class="day"></div>
-        </div>
-      </div>
+    <div class="calendar-canvas">
+      <FullCalendar :target="target" />
     </div>
   </div>
 </template>
@@ -89,6 +25,24 @@
 <script>
 export default {
   layout: 'home',
+  asyncData({ $dayjs }) {
+    return {
+      target: $dayjs(),
+    }
+  },
+  computed: {
+    targetMonth() {
+      return this.target.format('YYYY年 MM月')
+    },
+  },
+  methods: {
+    nextMonth() {
+      this.target = this.target.add(1, 'month')
+    },
+    prevMonth() {
+      this.target = this.target.subtract(1, 'month')
+    },
+  },
 }
 </script>
 
@@ -145,46 +99,8 @@ export default {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.calendar {
+.calendar-canvas {
   height: 100vh;
   max-height: calc(100vh - 70px - 65px);
-}
-
-.calendar .day-of-week {
-  align-items: center;
-  color: #8e8e8e;
-  display: flex;
-  font-size: 14px;
-  font-weight: 700;
-  height: 40px;
-  justify-content: space-around;
-}
-
-.calendar .day-of-week .sat {
-  color: #39f;
-}
-
-.calendar .day-of-week .sun {
-  color: #f36;
-}
-
-.calendar .weeks {
-  height: calc(100% - 40px);
-}
-
-.calendar .week {
-  display: flex;
-  border-top: 2px solid #cfcfcf;
-  height: calc(100% / 6);
-}
-
-.calendar .day {
-  border-right: 2px solid #cfcfcf;
-  height: 100%;
-  width: calc(100% / 7);
-}
-
-.calendar .day:last-child {
-  border: none;
 }
 </style>
