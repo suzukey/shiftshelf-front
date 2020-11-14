@@ -3,7 +3,11 @@
     <div class="sidemenu-content">
       <SideProfile :userinfo="user" />
       <SideDivider />
-      <SideIconMenu title="給与計算" icon="mdi-chart-box" />
+      <div class="payroll">
+        <nuxt-link to="/payroll">
+          <SideIconMenu title="給与計算" icon="mdi-chart-box" />
+        </nuxt-link>
+      </div>
       <SideBar title="グループ" icon="mdi-account-multiple" />
       <div class="groups">
         <nuxt-link
@@ -87,7 +91,8 @@ export default {
   box-shadow: inset 0 0 0 2px #fff;
 }
 
-.groups a {
+.groups a,
+.payroll a {
   color: inherit;
   text-decoration: none;
 }

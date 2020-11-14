@@ -91,7 +91,6 @@ export default {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
   color: #fff;
   font-size: 20px;
-  font-weight: 700;
   height: 55px;
   line-height: 55px;
   margin: 10px 0 20px 0;
