@@ -52,6 +52,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'nuxt-webfontloader',
+    '@nuxtjs/dayjs',
   ],
   /*
    ** Axios module configuration
@@ -67,5 +68,10 @@ export default {
     google: {
       families: ['Lato:100,300,400,700,900', 'Noto+Sans+JP'],
     },
+  },
+  dayjs: {
+    locales: ['en', 'ja'],
+    defaultLocale: 'ja',
+    plugins: [], // Your Day.js plugin
   },
 }
