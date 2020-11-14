@@ -15,10 +15,14 @@
           v-for="(day, dayIdx) in week"
           :key="dayIdx"
           class="day"
-          :class="{ prev: day.prevMonth, next: day.nextMonth }"
+          :class="{
+            prev: day.prevMonth,
+            next: day.nextMonth,
+            today: day.isToday,
+          }"
         >
           <div class="date">
-            {{ day.date }}
+            <span>{{ day.date }}</span>
           </div>
         </div>
       </div>
@@ -33,11 +37,6 @@ export default {
       type: Object,
       required: true,
     },
-  },
-  asyncData({ $dayjs }) {
-    return {
-      now: $dayjs(),
-    }
   },
   computed: {
     range() {
@@ -55,6 +54,7 @@ export default {
     weeks() {
       const weeks = []
 
+      const now = this.$dayjs()
       const start = this.range.start
       const end = this.range.end
       const rangeDays = end.diff(start, 'day') + 1
@@ -69,12 +69,14 @@ export default {
           weekIdx++
         }
 
+        const isToday = currentDay.isSame(now, 'day')
         const diffOfMonth = currentDay
           .startOf('month')
           .diff(this.target.startOf('month'), 'month')
 
         weeks[weekIdx].push({
           date: currentDay.get('date'),
+          isToday,
           prevMonth: diffOfMonth < 0,
           nextMonth: diffOfMonth > 0,
         })
@@ -97,7 +99,7 @@ export default {
   width: 100%;
 }
 
-.calendar .day-of-week {
+.day-of-week {
   align-items: center;
   color: #8e8e8e;
   display: flex;
@@ -105,51 +107,66 @@ export default {
   font-weight: 700;
   height: 40px;
   justify-content: space-around;
+  user-select: none;
 }
 
-.calendar .day-of-week .sat {
+.day-of-week .sat {
   color: #39f;
 }
 
-.calendar .day-of-week .sun {
+.day-of-week .sun {
   color: #f36;
 }
 
-.calendar .weeks {
+.weeks {
   height: calc(100% - 40px);
 }
 
-.calendar .week {
+.week {
   display: flex;
   border-top: 2px solid #cfcfcf;
   height: calc(100% / 5);
 }
 
-.calendar .weeks.long .week {
+.weeks.long .week {
   height: calc(100% / 6);
 }
 
-.calendar .day {
+.day {
   border-right: 2px solid #cfcfcf;
   height: 100%;
   text-align: center;
   width: calc(100% / 7);
 }
 
-.calendar .day .date {
-  align-items: center;
-  display: flex;
-  font-size: 20px;
-  height: 35px;
-  justify-content: center;
-}
-
-.calendar .day:last-child {
+.day:last-child {
   border: none;
 }
 
-.calendar .day.prev .date,
-.calendar .day.next .date {
+.day .date {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  height: 45px;
+  justify-content: center;
+  user-select: none;
+}
+
+.day .date span {
+  border-radius: 50%;
+  height: 35px;
+  line-height: 35px;
+  width: 35px;
+}
+
+.day.today .date span {
+  background-color: #00897b;
+  color: #fff;
+}
+
+.day.prev .date,
+.day.next .date {
   color: #cfcfcf;
 }
 </style>
