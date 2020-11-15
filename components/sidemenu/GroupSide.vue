@@ -4,7 +4,7 @@
       <SideProfile />
       <div class="group">
         <nuxt-link to="/home"><i class="icon mdi mdi-arrow-left" /></nuxt-link>
-        <span class="group-name">ミスタードーナツ</span>
+        <span class="group-name">{{ group.name }}</span>
       </div>
       <SideBar title="メニュー" icon="mdi-apps" />
       <div class="menus">
@@ -25,6 +25,23 @@
 
 <script>
 export default {
+  fetch() {
+    const groupId = this.groupId
+    this.$axios.get(`/v1/groups/${groupId}`).then((res) => {
+      const group = {
+        name: res.data.group_name,
+      }
+
+      this.group = group
+    })
+  },
+  data() {
+    return {
+      group: {
+        name: '',
+      },
+    }
+  },
   computed: {
     groupId() {
       return this.$route.params.group_id
