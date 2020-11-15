@@ -25,22 +25,20 @@
 
 <script>
 export default {
+  fetch() {
+    this.$axios.get('/v1/groups/me').then((res) => {
+      const groups = res.data.map((group) => ({
+        id: group.group_id,
+        name: group.group_name,
+        icon_url: group.icon_url,
+      }))
+
+      this.groups = groups
+    })
+  },
   data() {
     return {
-      groups: [
-        {
-          id: 1,
-          name: 'ドミノピザ',
-        },
-        {
-          id: 2,
-          name: 'ミスタードーナツ',
-        },
-        {
-          id: 3,
-          name: '未来屋書店',
-        },
-      ],
+      groups: [],
     }
   },
 }
