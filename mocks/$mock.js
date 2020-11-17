@@ -5,6 +5,7 @@ import mock1 from './v1/groups/me'
 import mock2 from './v1/groups/_group_id/survey/_survey_id'
 import mock3 from './v1/groups/_group_id/survey'
 import mock4 from './v1/groups/_group_id/index'
+import mock5 from './v1/calendar/me'
 
 export default (client) => mockServer([
   {
@@ -26,5 +27,9 @@ export default (client) => mockServer([
   {
     path: '/v1/groups/_group_id',
     methods: mock4
+  },
+  {
+    path: '/v1/calendar/me',
+    methods: mock5
   }
 ], client, '')
