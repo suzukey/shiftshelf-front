@@ -22,7 +22,16 @@
           }"
         >
           <div class="date">
-            <span>{{ day.date }}</span>
+            <span>{{ day.date.get('date') }}</span>
+          </div>
+          <div class="datas">
+            <div
+              v-for="(data, idx) in getDatasOfDay(day.date)"
+              :key="idx"
+              class="data"
+            >
+              {{ data.group_name }}
+            </div>
           </div>
         </div>
       </div>
@@ -35,6 +44,10 @@ export default {
   props: {
     target: {
       type: Object,
+      required: true,
+    },
+    calendarData: {
+      type: Array,
       required: true,
     },
   },
@@ -75,7 +88,7 @@ export default {
           .diff(this.target.startOf('month'), 'month')
 
         weeks[weekIdx].push({
-          date: currentDay.get('date'),
+          date: currentDay,
           isToday,
           prevMonth: diffOfMonth < 0,
           nextMonth: diffOfMonth > 0,
@@ -85,6 +98,14 @@ export default {
       }
 
       return weeks
+    },
+  },
+  methods: {
+    getDatasOfDay(day) {
+      const datasOfDay = this.calendarData.filter((data) =>
+        day.isSame(this.$dayjs(data.date), 'day')
+      )
+      return datasOfDay
     },
   },
 }
@@ -134,6 +155,8 @@ export default {
 
 .day {
   border-right: 2px solid #cfcfcf;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   text-align: center;
   width: calc(100% / 7);
@@ -168,5 +191,31 @@ export default {
 .day.prev .date,
 .day.next .date {
   color: #cfcfcf;
+}
+
+.day .datas {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  padding-top: 5px;
+}
+
+.day .datas .data {
+  background-color: #8e8e8e;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  margin-top: 3px;
+  overflow: hidden;
+  padding: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.day .datas .data:first-child {
+  margin-top: 0;
 }
 </style>

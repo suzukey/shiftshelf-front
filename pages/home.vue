@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="calendar-canvas">
-      <FullCalendar :target="target" />
+      <FullCalendar :target="target" :calendar-data="calendarData" />
     </div>
   </div>
 </template>
@@ -25,9 +25,13 @@
 <script>
 export default {
   layout: 'home',
-  asyncData({ $dayjs }) {
+  async asyncData({ $dayjs, $axios }) {
+    const res = await $axios.get('/v1/calendar/me')
+    const calendarData = res.data
+
     return {
       target: $dayjs(),
+      calendarData,
     }
   },
   computed: {
