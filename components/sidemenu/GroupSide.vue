@@ -11,7 +11,7 @@
         <nuxt-link :to="`/groups/${groupId}/shifts`">
           <SideIconMenu title="シフト" icon="mdi-calendar-range" />
         </nuxt-link>
-        <nuxt-link :to="`/groups/${groupId}/survay`">
+        <nuxt-link :to="`/groups/${groupId}/posts`">
           <SideIconMenu title="シフト希望提出" icon="mdi-file" />
         </nuxt-link>
         <nuxt-link :to="`/groups/${groupId}/admin`">

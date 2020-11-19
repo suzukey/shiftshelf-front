@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="post in posts" :key="post">
-      <nuxt-link :to="`/groups/1/survays/${post.shift_wish_id}`">{{
+      <nuxt-link :to="`/groups/1/posts/${post.shift_wish_id}`">{{
         post.shift_wish_name
       }}</nuxt-link>
     </div>
