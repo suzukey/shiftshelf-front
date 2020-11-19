@@ -18,13 +18,20 @@ export default {
 
 <style scoped>
 .content {
+  bottom: 0;
   display: flex;
-  height: calc(100vh - 70px);
-  max-height: calc(100vh - 70px);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 70px;
 }
 
 main {
-  flex: 1;
-  height: 100%;
+  bottom: 0;
+  left: 350px;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 </style>
