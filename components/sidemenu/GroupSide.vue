@@ -8,7 +8,7 @@
       </div>
       <SideBar title="メニュー" icon="mdi-apps" />
       <div class="menus">
-        <nuxt-link :to="`/groups/${groupId}/shifts`">
+        <nuxt-link :to="`/groups/${groupId}`">
           <SideIconMenu title="シフト" icon="mdi-calendar-range" />
         </nuxt-link>
         <nuxt-link :to="`/groups/${groupId}/survay`">
