@@ -327,7 +327,4 @@ td {
   border: solid 1px;
   padding: 1.3em;
 }
-.hyou tr :active {
-  background-color: red;
-}
 </style>

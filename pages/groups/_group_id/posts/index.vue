@@ -25,4 +25,9 @@ export default {
   height: 100vh;
   max-height: calc(100vh - 70px - 65px);
 }
+
+a {
+  font-size: 25px;
+  padding: 10px 20px;
+}
 </style>
