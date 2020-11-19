@@ -25,7 +25,7 @@ export default {
   layout: 'auth',
   data() {
     return {
-      email: 'ks1875@mailg.denpa.ac.jp',
+      email: 'test@example.com',
       password: '1234567890',
       remember: false,
     }
