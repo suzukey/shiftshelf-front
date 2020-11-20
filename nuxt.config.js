@@ -68,6 +68,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  generate: {
+    fallback: true,
+  },
   webfontloader: {
     google: {
       families: ['Lato:100,300,400,700,900', 'Noto+Sans+JP'],
