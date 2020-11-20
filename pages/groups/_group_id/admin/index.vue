@@ -8,7 +8,7 @@
     <div class="links">
       <div class="link">
         <nuxt-link :to="`/groups/${groupId}/admin/surveys`">
-          希望調査
+          シフト希望調査
         </nuxt-link>
       </div>
       <div class="link">
@@ -18,7 +18,7 @@
       </div>
       <div class="link">
         <nuxt-link :to="`/groups/${groupId}/admin/wishes`">
-          希望閲覧
+          シフト希望閲覧
         </nuxt-link>
       </div>
       <div class="link">
