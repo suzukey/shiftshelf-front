@@ -18,11 +18,9 @@ export default {
 
 <style scoped>
 .base {
-  bottom: 0;
-  left: 0;
+  height: 100%;
   position: absolute;
-  right: 0;
-  top: 0;
+  width: 100%;
 }
 
 .content {
