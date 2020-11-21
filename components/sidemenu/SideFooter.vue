@@ -21,6 +21,7 @@
   flex-direction: column;
   height: 120px;
   justify-content: space-between;
+  min-height: 120px;
   padding: 25px 20px 15px 20px;
   text-align: center;
   width: 100%;

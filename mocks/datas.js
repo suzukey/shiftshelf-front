@@ -8,4 +8,9 @@ export const groups = [
   { group_id: '1', group_name: 'ドミノピザ', group_icon_url: '' },
   { group_id: '2', group_name: 'ミスタードーナツ', group_icon_url: '' },
   { group_id: '3', group_name: '未来屋書店', group_icon_url: '' },
+  { group_id: '4', group_name: '未来屋書店', group_icon_url: '' },
+  { group_id: '5', group_name: '未来屋書店', group_icon_url: '' },
+  { group_id: '6', group_name: '未来屋書店', group_icon_url: '' },
+  { group_id: '7', group_name: '未来屋書店', group_icon_url: '' },
+  { group_id: '8', group_name: '未来屋書店', group_icon_url: '' },
 ]
