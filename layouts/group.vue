@@ -19,7 +19,7 @@ export default {
 <style scoped>
 .base {
   height: 100%;
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
