@@ -20,7 +20,7 @@
           v-text="text"
         ></option>
       </select>
-      <input :name="name" type="hidden" v-model="value" />
+      <input v-model="value" :name="name" type="hidden" />
     </span>
   </div>
 </template>
