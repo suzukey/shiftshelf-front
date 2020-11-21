@@ -21,14 +21,6 @@ body {
     'MS PGothic', sans-serif;
 }
 
-html,
-body,
-#__nuxt,
-#__layout {
-  width: 100%;
-  height: 100%;
-}
-
 *,
 *::before,
 *::after {

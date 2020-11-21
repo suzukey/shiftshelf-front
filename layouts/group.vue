@@ -11,14 +11,18 @@
 </template>
 
 <script>
+import windowSize from '~/mixins/windowSize.js'
+
 export default {
   middleware: ['authenticatable'],
+  mixins: [windowSize],
 }
 </script>
 
 <style scoped>
 .base {
-  height: 100%;
+  height: 100vh;
+  height: calc(var(--wh, 1vh) * 100);
   position: relative;
   width: 100%;
 }
