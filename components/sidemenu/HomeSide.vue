@@ -47,13 +47,15 @@ export default {
 <style scoped>
 .sidemenu {
   background-color: #9b9b9b;
+  bottom: 0;
   box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 70px);
-  max-height: calc(100vh - 70px);
+  left: 0;
   min-width: 350px;
-  position: relative;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
   width: 350px;
   z-index: 4;
 }
