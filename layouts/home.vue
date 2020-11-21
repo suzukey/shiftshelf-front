@@ -11,11 +11,8 @@
 </template>
 
 <script>
-import windowSize from '~/mixins/windowSize.js'
-
 export default {
   middleware: ['authenticatable'],
-  mixins: [windowSize],
 }
 </script>
 
