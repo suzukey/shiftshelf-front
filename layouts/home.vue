@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="base">
     <HomeHeader />
     <div class="content">
       <HomeSide />
@@ -17,6 +17,14 @@ export default {
 </script>
 
 <style scoped>
+.base {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .content {
   bottom: 0;
   display: flex;
