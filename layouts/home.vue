@@ -21,10 +21,7 @@ export default {
 
 <style scoped>
 .base {
-  height: 100vh;
-  height: calc(var(--wh, 1vh) * 100);
-  position: relative;
-  width: 100%;
+  position: absolute;
 }
 
 .content {
