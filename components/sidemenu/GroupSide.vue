@@ -93,7 +93,7 @@ export default {
 
 .menus {
   max-height: calc(100vh - calc(70px + 120px + 100px + 50px + 30px));
-  min-height: 150px;
+  min-height: 187.5px;
   overflow-y: auto;
   scrollbar-width: thin;
 }
