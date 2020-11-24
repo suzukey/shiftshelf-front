@@ -34,6 +34,23 @@ body,
 *::before,
 *::after {
   box-sizing: border-box;
+  scrollbar-width: thin;
   margin: 0;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border: solid 1px #ececec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #fff;
 }
 </style>

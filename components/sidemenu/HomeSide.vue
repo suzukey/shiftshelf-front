@@ -69,22 +69,6 @@ export default {
   max-height: calc(100vh - calc(70px + 120px + 100px + 1px + 75px + 30px));
   min-height: 187.5px;
   overflow-y: auto;
-  scrollbar-width: thin;
-}
-
-.groups::-webkit-scrollbar {
-  width: 10px;
-}
-
-.groups::-webkit-scrollbar-track {
-  background: #fff;
-  border-left: solid 1px #ececec;
-}
-
-.groups::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-  box-shadow: inset 0 0 0 2px #fff;
 }
 
 .groups a,

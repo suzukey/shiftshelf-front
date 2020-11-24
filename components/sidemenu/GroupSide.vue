@@ -95,22 +95,6 @@ export default {
   max-height: calc(100vh - calc(70px + 120px + 100px + 50px + 30px));
   min-height: 187.5px;
   overflow-y: auto;
-  scrollbar-width: thin;
-}
-
-.menus::-webkit-scrollbar {
-  width: 10px;
-}
-
-.menus::-webkit-scrollbar-track {
-  background: #fff;
-  border-left: solid 1px #ececec;
-}
-
-.menus::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-  box-shadow: inset 0 0 0 2px #fff;
 }
 
 .menus a {
