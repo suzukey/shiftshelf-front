@@ -68,12 +68,12 @@ export default {
   data() {
     return {
       days: [
-        { day: '1', events: ['イベント1'] },
-        { day: '2', events: ['イベント1', 'イベント2'] },
-        { day: '3', events: ['イベント1'] },
-        { day: '4', events: ['イベント3'] },
-        { day: '5', events: [] },
-        { day: '6', events: ['イベント1'] },
+        { day: '1', events: ['〇'] },
+        { day: '2', events: ['✕'] },
+        { day: '3', events: ['〇'] },
+        { day: '4', events: ['✕'] },
+        { day: '5', events: ['〇'] },
+        { day: '6', events: ['〇'] },
       ],
     }
   },

@@ -56,7 +56,7 @@
 
 <script>
 export default {
-  layout: 'home',
+  layout: 'group',
   data() {
     return {
       text: '',
