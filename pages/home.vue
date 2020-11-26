@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="main-header">
+    <MainHeader :is-side="true">
       <div class="center-actions">
         <div class="arrow" @click="prevMonth">
           <i class="mdi mdi-chevron-left" />
@@ -15,7 +15,7 @@
       <div class="print">
         <i class="mdi mdi-printer" />
       </div>
-    </div>
+    </MainHeader>
     <div class="calendar-canvas">
       <FullCalendar :target="target" :calendar-data="calendarData" />
     </div>
@@ -51,18 +51,6 @@ export default {
 </script>
 
 <style scoped>
-.main-header {
-  align-items: center;
-  background-color: #00897b;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  display: flex;
-  height: 65px;
-  padding: 0 30px;
-  position: relative;
-  z-index: 3;
-}
-
 .main-header .center-actions {
   align-items: center;
   display: flex;
