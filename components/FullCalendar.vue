@@ -36,6 +36,11 @@
         </div>
       </div>
     </div>
+    <div class="overlay">
+      <div class="overlay-wrapper">
+        <div class="day-card"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -217,5 +222,32 @@ export default {
 
 .day .datas .data:first-child {
   margin-top: 0;
+}
+</style>
+
+<style scoped>
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.overlay .overlay-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.overlay .day-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: 600px;
 }
 </style>
