@@ -75,10 +75,11 @@ export default {
     google: {
       families: ['Lato:100,300,400,700,900', 'Noto+Sans+JP'],
     },
+    classes: false,
   },
   dayjs: {
     locales: ['en', 'ja'],
     defaultLocale: 'ja',
-    plugins: [], // Your Day.js plugin
+    plugins: [], // Day.js plugin
   },
 }
