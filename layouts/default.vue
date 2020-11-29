@@ -16,9 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN',
-    'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック',
-    'MS PGothic', sans-serif;
+  font-family: 'Lato', 'Noto Sans JP', Helvetica, Arial, sans-serif;
 }
 
 html,
