@@ -5,5 +5,6 @@ module.exports = {
   rules: {
     // コメントの前に改行はいらない
     'comment-empty-line-before': null,
+    'value-keyword-case': ['lower', { ignoreKeywords: ['Meiryo', 'Arial'] }],
   },
 }

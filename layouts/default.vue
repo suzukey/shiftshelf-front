@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', 'Noto Sans JP', Helvetica, Arial, sans-serif;
+  font-family: var(--font-base);
 }
 
 html,
@@ -50,5 +50,11 @@ body,
   background: #ccc;
   border-radius: 10px;
   box-shadow: inset 0 0 0 2px #fff;
+}
+
+:root {
+  --font-base: 'Lato', 'Helvetica Neue', Arial, 'Noto Sans JP',
+    'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 </style>

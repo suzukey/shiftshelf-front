@@ -73,7 +73,7 @@ export default {
   },
   webfontloader: {
     google: {
-      families: ['Lato:100,300,400,700,900', 'Noto+Sans+JP'],
+      families: ['Lato:300,400,700', 'Noto+Sans+JP:300,400,500,700'],
     },
     classes: false,
   },
