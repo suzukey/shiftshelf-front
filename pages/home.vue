@@ -17,7 +17,12 @@
       </div>
     </MainHeader>
     <div class="calendar-canvas">
-      <FullCalendar :target="target" :calendar-data="calendarData" />
+      <FullCalendar
+        :target="target"
+        :calendar-data="calendarData"
+        @select-day="setCalendarOverlay($event)"
+      />
+      <CalendarOverlay :target="selectedDay" @close="closeCalendarOverlay" />
     </div>
   </div>
 </template>
@@ -34,6 +39,11 @@ export default {
       calendarData,
     }
   },
+  data() {
+    return {
+      selectedDay: {},
+    }
+  },
   computed: {
     targetMonth() {
       return this.target.format('YYYY年 MM月')
@@ -45,6 +55,12 @@ export default {
     },
     prevMonth() {
       this.target = this.target.subtract(1, 'month')
+    },
+    setCalendarOverlay(day) {
+      this.selectedDay = day
+    },
+    closeCalendarOverlay() {
+      this.selectedDay = {}
     },
   },
 }
