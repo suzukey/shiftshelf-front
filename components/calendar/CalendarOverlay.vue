@@ -96,10 +96,10 @@ export default {
   border-bottom: 2px solid #cfcfcf;
   color: #707070;
   align-items: center;
-  height: 50px;
+  /* height: 50px; */
   display: flex;
   justify-content: space-between;
-  padding: 10px 15px;
+  padding: 8px 16px;
 }
 
 .day-card .header .date {
@@ -120,16 +120,15 @@ export default {
 .day-card .header .prev-btn,
 .day-card .header .next-btn {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .day-card .header .close-btn {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .card-body {
-  height: 100%;
   padding: 20px;
 }
 
