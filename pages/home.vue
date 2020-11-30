@@ -22,7 +22,7 @@
         :calendar-data="calendarData"
         @select-day="setCalendarOverlay($event)"
       />
-      <CalendarOverlay :target="selectedDay" @close="closeCalendarOverlay" />
+      <CalendarOverlay v-model="selectedDay" :data-of-day="sameDayData" />
     </div>
   </div>
 </template>
@@ -48,6 +48,15 @@ export default {
     targetMonth() {
       return this.target.format('YYYY年 MM月')
     },
+    sameDayData() {
+      let datasOfDay = []
+      if (this.$dayjs.isDayjs(this.selectedDay)) {
+        datasOfDay = this.calendarData.filter((data) =>
+          this.selectedDay.isSame(this.$dayjs(data.date), 'day')
+        )
+      }
+      return datasOfDay
+    },
   },
   methods: {
     nextMonth() {
@@ -58,9 +67,6 @@ export default {
     },
     setCalendarOverlay(day) {
       this.selectedDay = day
-    },
-    closeCalendarOverlay() {
-      this.selectedDay = {}
     },
   },
 }

@@ -9,10 +9,10 @@
                 target.format('YYYY/MM/DD')
               }}</time>
               <div class="actions">
-                <div class="prev-btn">
+                <div class="prev-btn" @click="prevDay">
                   <i class="mdi mdi-chevron-left"></i>
                 </div>
-                <div class="next-btn">
+                <div class="next-btn" @click="nextDay">
                   <i class="mdi mdi-chevron-right"></i>
                 </div>
               </div>
@@ -23,6 +23,7 @@
               </div>
             </div>
           </div>
+          <div class="card-body">{{ dataOfDay }}</div>
         </div>
       </div>
     </div>
@@ -31,9 +32,17 @@
 
 <script>
 export default {
+  model: {
+    prop: 'target',
+    event: 'change',
+  },
   props: {
     target: {
       type: Object,
+      required: true,
+    },
+    dataOfDay: {
+      type: Array,
       required: true,
     },
   },
@@ -42,7 +51,13 @@ export default {
       return day.format('YYYY-M-D')
     },
     close() {
-      this.$emit('close')
+      this.$emit('change', {})
+    },
+    prevDay() {
+      this.$emit('change', this.target.subtract(1, 'day'))
+    },
+    nextDay() {
+      this.$emit('change', this.target.add(1, 'day'))
     },
   },
 }
@@ -71,8 +86,10 @@ export default {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
-  width: 400px;
   height: 600px;
+  max-height: 90%;
+  max-width: 90%;
+  width: 400px;
 }
 
 .day-card .header {
@@ -109,6 +126,11 @@ export default {
 .day-card .header .close-btn {
   cursor: pointer;
   font-size: 24px;
+}
+
+.card-body {
+  height: 100%;
+  padding: 20px;
 }
 
 .show-overlay-enter-active,
