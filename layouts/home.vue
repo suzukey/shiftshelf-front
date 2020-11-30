@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .base {
-  position: absolute;
+  position: relative;
 }
 
 .content {
