@@ -5,13 +5,15 @@
         <div class="day-card" @click.stop>
           <div class="header">
             <div class="date">
-              <time :datetime="getDateTime(target)">{{
-                target.format('YYYY/MM/DD')
-              }}</time>
               <div class="actions">
                 <div class="prev-btn" @click="prevDay">
                   <i class="mdi mdi-chevron-left"></i>
                 </div>
+              </div>
+              <time :datetime="getDateTime(target)">{{
+                target.format('YYYY/MM/DD')
+              }}</time>
+              <div class="actions">
                 <div class="next-btn" @click="nextDay">
                   <i class="mdi mdi-chevron-right"></i>
                 </div>
@@ -120,7 +122,8 @@ export default {
 
 .day-card .header .date time {
   font-weight: 700;
-  margin-right: 10px;
+  margin: 0 10px;
+  /* margin-right: 10px; */
 }
 
 .day-card .header .actions {
