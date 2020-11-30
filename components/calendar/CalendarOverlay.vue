@@ -143,12 +143,18 @@ export default {
 }
 
 .card-body {
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .event {
   align-items: center;
   display: flex;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.event:last-child {
+  margin-bottom: 0;
 }
 
 .event .times {
