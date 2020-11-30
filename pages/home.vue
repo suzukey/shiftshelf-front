@@ -22,7 +22,7 @@
         :calendar-data="calendarData"
         @select-day="setCalendarOverlay($event)"
       />
-      <CalendarOverlay v-model="selectedDay" :data-of-day="sameDayData" />
+      <CalendarOverlay v-model="selectedDay" :datas-of-day="sameDayData" />
     </div>
   </div>
 </template>

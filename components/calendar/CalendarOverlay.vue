@@ -23,7 +23,18 @@
               </div>
             </div>
           </div>
-          <div class="card-body">{{ dataOfDay }}</div>
+          <div class="card-body">
+            <div class="events">
+              <div v-for="(data, idx) in datasOfDay" :key="idx" class="event">
+                <div class="times">
+                  <div class="start">{{ data.shift_start_time }}</div>
+                  <div class="end">{{ data.shift_end_time }}</div>
+                </div>
+                <div class="divider" />
+                <div class="name">{{ data.group_name }}</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -41,7 +52,7 @@ export default {
       type: Object,
       required: true,
     },
-    dataOfDay: {
+    datasOfDay: {
       type: Array,
       required: true,
     },
@@ -130,6 +141,34 @@ export default {
 
 .card-body {
   padding: 20px;
+}
+
+.event {
+  align-items: center;
+  display: flex;
+}
+
+.event .times {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.event .times .end {
+  color: #8e8e8e;
+}
+
+.event .divider {
+  background-color: #00897b;
+  height: 40px;
+  margin: 0 12px;
+  width: 3px;
+}
+
+.event .name {
+  font-weight: 700;
 }
 
 .show-overlay-enter-active,
