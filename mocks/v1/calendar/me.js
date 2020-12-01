@@ -51,12 +51,12 @@ export default {
           shift_start_time: '17:30',
           shift_end_time: '21:00',
         },
-        // {
-        //   group_name: 'マスタードーナツ',
-        //   date: '2020/12/7',
-        //   shift_start_time: '9:00',
-        //   shift_end_time: '12:00',
-        // },
+        {
+          group_name: 'マスタードーナツ',
+          date: '2020/12/7',
+          shift_start_time: '9:00',
+          shift_end_time: '12:00',
+        },
         {
           group_name: 'トランプピザ',
           date: '2020/12/7',

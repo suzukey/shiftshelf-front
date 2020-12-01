@@ -126,6 +126,7 @@ export default {
 
 .day-of-week {
   align-items: center;
+  border-bottom: 2px solid #cfcfcf;
   color: #8e8e8e;
   display: flex;
   font-size: 14px;
@@ -149,7 +150,7 @@ export default {
 
 .week {
   display: flex;
-  border-top: 2px solid #cfcfcf;
+  border-bottom: 2px solid #cfcfcf;
   height: calc(100% / 5);
 }
 
@@ -163,6 +164,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden auto;
   text-align: center;
   width: calc(100% / 7);
 }
@@ -204,7 +206,6 @@ export default {
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  overflow: hidden scroll;
   padding: 10px;
   padding-top: 5px;
 }
