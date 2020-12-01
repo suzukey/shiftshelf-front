@@ -118,9 +118,9 @@ export default {
 <style scoped>
 .calendar {
   color: #373737;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  max-height: 100%;
-  max-width: 100%;
   width: 100%;
 }
 
@@ -144,7 +144,7 @@ export default {
 }
 
 .weeks {
-  height: calc(100% - 40px);
+  flex: 1;
 }
 
 .week {
