@@ -12,9 +12,9 @@
           <i class="mdi mdi-chevron-right" />
         </div>
       </div>
-      <div class="print">
+      <!-- <div class="print">
         <i class="mdi mdi-printer" />
-      </div>
+      </div> -->
     </MainHeader>
     <div class="calendar-canvas">
       <FullCalendar

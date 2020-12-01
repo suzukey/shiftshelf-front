@@ -35,7 +35,7 @@ export default {
 main {
   bottom: 0;
   left: 350px;
-  overflow: auto;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
