@@ -11,7 +11,7 @@
                 </div>
               </div>
               <time :datetime="getDateTime(target)">{{
-                target.format('YYYY/MM/DD')
+                target.format('YYYY年MM月DD日(ddd)')
               }}</time>
               <div class="actions">
                 <div class="next-btn" @click="nextDay">
@@ -26,16 +26,21 @@
             </div>
           </div>
           <div class="card-body">
-            <div class="events">
-              <div v-for="(data, idx) in datasOfDay" :key="idx" class="event">
-                <div class="times">
-                  <div class="start">{{ data.shift_start_time }}</div>
-                  <div class="end">{{ data.shift_end_time }}</div>
+            <template v-if="datasOfDay.length">
+              <div class="events">
+                <div v-for="(data, idx) in datasOfDay" :key="idx" class="event">
+                  <div class="times">
+                    <div class="start">{{ data.shift_start_time }}</div>
+                    <div class="end">{{ data.shift_end_time }}</div>
+                  </div>
+                  <div class="divider" />
+                  <div class="name">{{ data.group_name }}</div>
                 </div>
-                <div class="divider" />
-                <div class="name">{{ data.group_name }}</div>
               </div>
-            </div>
+            </template>
+            <template v-else>
+              <div class="no-event">予定がありません</div>
+            </template>
           </div>
         </div>
       </div>
@@ -99,6 +104,8 @@ export default {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
   height: 600px;
   max-height: 90%;
   max-width: 90%;
@@ -143,7 +150,17 @@ export default {
 }
 
 .card-body {
+  height: 100%;
   padding: 10px 20px;
+}
+
+.no-event {
+  align-items: center;
+  color: #8e8e8e;
+  display: flex;
+  font-weight: 300;
+  height: 100%;
+  justify-content: center;
 }
 
 .event {
@@ -171,7 +188,7 @@ export default {
 
 .event .divider {
   background-color: #00897b;
-  height: 40px;
+  height: 80%;
   margin: 0 12px;
   width: 3px;
 }
