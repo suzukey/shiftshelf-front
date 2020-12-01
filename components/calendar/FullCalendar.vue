@@ -204,6 +204,7 @@ export default {
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
   padding: 10px;
   padding-top: 5px;
 }
