@@ -1,9 +1,14 @@
 <template>
   <header>
     <div class="hwrapper">
-      <h1 class="title">
-        <nuxt-link to="/home">SHIFSHEL</nuxt-link>
-      </h1>
+      <div class="left-side">
+        <div class="side-menu">
+          <i class="mdi mdi-menu"></i>
+        </div>
+        <h1 class="title">
+          <nuxt-link to="/home">SHIFSHEL</nuxt-link>
+        </h1>
+      </div>
 
       <div class="menu" @click="isActive = !isActive">
         <b-avatar></b-avatar>
@@ -55,6 +60,34 @@ header {
   height: 100%;
   justify-content: space-between;
   margin: 0 20px;
+}
+
+.left-side {
+  align-items: center;
+  display: flex;
+}
+
+.side-menu {
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 26px;
+  height: 50px;
+  justify-content: center;
+  margin-right: 10px;
+  transition: 300ms;
+  width: 50px;
+}
+
+.side-menu:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 1024px) {
+  .side-menu {
+    display: none;
+  }
 }
 
 .title {
