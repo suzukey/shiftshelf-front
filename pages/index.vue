@@ -42,6 +42,11 @@ export default {}
 </script>
 
 <style scoped>
+.home {
+  height: 100%;
+  width: 100%;
+}
+
 .container {
   height: 100%;
   margin: 0 auto;

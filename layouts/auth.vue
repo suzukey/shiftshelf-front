@@ -39,9 +39,9 @@ export default {
 .auth {
   background-color: #00897b;
   color: #fff;
-  min-height: 100vh;
-  min-width: 100%;
+  min-height: 100%;
   user-select: none;
+  width: 100%;
 }
 
 .container {

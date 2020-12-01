@@ -20,8 +20,7 @@ body {
 html,
 body,
 #__nuxt,
-#__layout,
-#__layout > div {
+#__layout {
   width: 100%;
   height: 100%;
 }
