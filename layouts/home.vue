@@ -40,4 +40,10 @@ main {
   right: 0;
   top: 0;
 }
+
+@media screen and (max-width: 1023px) {
+  main {
+    left: 0;
+  }
+}
 </style>
