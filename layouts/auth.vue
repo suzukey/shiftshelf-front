@@ -40,6 +40,7 @@ export default {
   background-color: #00897b;
   color: #fff;
   min-height: 100%;
+  overflow-x: hidden;
   user-select: none;
   width: 100%;
 }
