@@ -74,7 +74,9 @@ export default {
 
 <style scoped>
 .home {
-  height: calc(100% - 65px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
 }
 
@@ -119,7 +121,6 @@ export default {
 }
 
 .calendar-canvas {
-  height: 100%;
-  /* max-height: calc(100vh - 70px - 65px); */
+  flex: 1;
 }
 </style>
