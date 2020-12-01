@@ -42,20 +42,18 @@ export default {}
 </script>
 
 <style scoped>
-.home {
-  text-align: center;
-}
-
 .container {
   height: 100%;
   margin: 0 auto;
+  overflow: hidden;
   width: 90%;
 }
 
 .top {
   color: #fff;
-  height: 100vh;
+  height: 100%;
   position: relative;
+  text-align: center;
   width: 100%;
   z-index: 0;
 }
@@ -66,14 +64,14 @@ export default {}
   background-size: cover;
   background-position: 50%;
   border-radius: inherit;
+  bottom: 0;
   content: '';
   filter: brightness(0.9);
-  height: 100%;
   left: 0;
   pointer-events: none;
   position: absolute;
+  right: 0;
   top: 0;
-  width: 100%;
   z-index: -2;
 }
 
@@ -138,7 +136,7 @@ export default {}
 }
 
 .about {
-  height: 200vh;
+  height: 200%;
 }
 
 .about header {
@@ -161,6 +159,7 @@ header .content {
   display: flex;
   height: 100%;
   justify-content: space-between;
+  overflow: hidden;
   padding: 0 20px;
   width: 100%;
 }
