@@ -73,6 +73,11 @@ export default {
 </script>
 
 <style scoped>
+.home {
+  height: calc(100% - 65px);
+  width: 100%;
+}
+
 .main-header .center-actions {
   align-items: center;
   display: flex;
@@ -114,7 +119,7 @@ export default {
 }
 
 .calendar-canvas {
-  height: 100vh;
-  max-height: calc(100vh - 70px - 65px);
+  height: 100%;
+  /* max-height: calc(100vh - 70px - 65px); */
 }
 </style>
