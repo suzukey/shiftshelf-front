@@ -18,18 +18,16 @@ export default {
 
 <style scoped>
 .base {
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  position: relative;
   width: 100%;
 }
 
 .content {
-  bottom: 0;
   display: flex;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 70px;
+  flex: 1;
+  position: relative;
 }
 
 main {
@@ -39,5 +37,11 @@ main {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  main {
+    left: 0;
+  }
 }
 </style>

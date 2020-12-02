@@ -66,6 +66,12 @@ export default {
   z-index: 4;
 }
 
+@media screen and (max-width: 1023px) {
+  .sidemenu {
+    display: none;
+  }
+}
+
 .sidemenu-content {
   flex: 1;
   width: 100%;

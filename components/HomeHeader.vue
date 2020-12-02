@@ -92,7 +92,7 @@ header {
 }
 
 .title {
-  font-size: 1.85em;
+  font-size: 1.75em;
   font-weight: 700;
   letter-spacing: 2px;
   margin: 0;
