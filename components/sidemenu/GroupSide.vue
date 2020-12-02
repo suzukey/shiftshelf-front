@@ -1,5 +1,5 @@
 <template>
-  <div class="sidemenu group-sidemenu">
+  <nav class="sidemenu group-sidemenu">
     <div class="sidemenu-content">
       <SideProfile />
       <div class="group">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <SideFooter />
-  </div>
+  </nav>
 </template>
 
 <script>

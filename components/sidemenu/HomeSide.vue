@@ -1,5 +1,5 @@
 <template>
-  <div class="sidemenu home-sidemenu">
+  <nav class="sidemenu home-sidemenu">
     <div class="sidemenu-content">
       <SideProfile />
       <SideDivider />
@@ -20,7 +20,7 @@
       </div>
     </div>
     <SideFooter />
-  </div>
+  </nav>
 </template>
 
 <script>
