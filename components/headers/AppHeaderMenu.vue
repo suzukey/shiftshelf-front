@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { auth } from '../plugins/firebase'
+import { auth } from '~/plugins/firebase'
 
 export default {
   props: {

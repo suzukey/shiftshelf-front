@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <MainHeader :is-side="true">
+    <ContentHeader :is-side="true">
       <div class="center-actions">
         <div class="arrow" @click="prevMonth">
           <i class="mdi mdi-chevron-left" />
@@ -15,7 +15,7 @@
       <!-- <div class="print">
         <i class="mdi mdi-printer" />
       </div> -->
-    </MainHeader>
+    </ContentHeader>
     <div class="calendar-canvas">
       <FullCalendar
         :target="target"
