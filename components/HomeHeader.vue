@@ -19,17 +19,11 @@
           <i class="mdi mdi-menu-up" />
         </span>
       </div>
-
-      <HomeHeaderMenu :is-active="isActive" />
-
-      <transition name="dropdown-bg">
-        <div
-          v-if="isActive"
-          class="dropdown-bg"
-          @click="isActive = false"
-        ></div>
-      </transition>
     </div>
+    <HomeHeaderMenu :is-active="isActive" />
+    <transition name="dropdown-bg">
+      <div v-if="isActive" class="dropdown-bg" @click="isActive = false"></div>
+    </transition>
   </header>
 </template>
 
@@ -49,7 +43,6 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   color: #fff;
   height: 70px;
-  overflow: hidden;
   position: relative;
   width: 100%;
   z-index: 5;
@@ -61,6 +54,7 @@ header {
   height: 100%;
   justify-content: space-between;
   margin: 0 20px;
+  overflow: hidden;
 }
 
 .left-side {
@@ -105,6 +99,7 @@ header {
 
 .menu {
   cursor: pointer;
+  display: flex;
   user-select: none;
 }
 
