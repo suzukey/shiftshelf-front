@@ -23,7 +23,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@mdi/font/css/materialdesignicons.css'],
+  css: [
+    // 'modern-css-reset',
+    '@mdi/font/css/materialdesignicons.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
