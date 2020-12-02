@@ -216,6 +216,7 @@ export default {
   color: #fff;
   font-size: 13px;
   margin-top: 3px;
+  overflow: hidden;
   padding: 5px;
   text-overflow: ellipsis;
   white-space: nowrap;

@@ -49,6 +49,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   color: #fff;
   height: 70px;
+  overflow: hidden;
   position: relative;
   width: 100%;
   z-index: 5;
@@ -72,7 +73,7 @@ header {
   border-radius: 50%;
   cursor: pointer;
   display: flex;
-  font-size: 26px;
+  font-size: 1.75em;
   height: 50px;
   justify-content: center;
   margin-right: 10px;
@@ -91,7 +92,7 @@ header {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 1.85em;
   font-weight: 700;
   letter-spacing: 2px;
   margin: 0;
