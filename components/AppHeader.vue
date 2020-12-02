@@ -20,7 +20,7 @@
         </span>
       </div>
     </div>
-    <HomeHeaderMenu :is-active="isActive" />
+    <AppHeaderMenu :is-active="isActive" />
     <transition name="dropdown-bg">
       <div v-if="isActive" class="dropdown-bg" @click="isActive = false"></div>
     </transition>

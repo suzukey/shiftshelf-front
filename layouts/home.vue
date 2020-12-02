@@ -1,6 +1,6 @@
 <template>
   <div class="base">
-    <HomeHeader />
+    <AppHeader />
     <div class="content">
       <HomeSide />
       <main>
