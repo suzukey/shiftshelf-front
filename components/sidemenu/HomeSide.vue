@@ -1,6 +1,6 @@
 <template>
-  <nav class="sidemenu home-sidemenu">
-    <div class="sidemenu-content">
+  <div class="sidemenu home-sidemenu">
+    <nav class="sidemenu-content">
       <SideProfile />
       <SideDivider />
       <div class="payroll">
@@ -18,9 +18,9 @@
           <SideIconMenu :title="group.name" />
         </nuxt-link>
       </div>
-    </div>
+    </nav>
     <SideFooter />
-  </nav>
+  </div>
 </template>
 
 <script>

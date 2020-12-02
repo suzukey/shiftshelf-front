@@ -1,6 +1,6 @@
 <template>
-  <nav class="sidemenu group-sidemenu">
-    <div class="sidemenu-content">
+  <div class="sidemenu group-sidemenu">
+    <nav class="sidemenu-content">
       <SideProfile />
       <div class="group">
         <nuxt-link to="/home"><i class="icon mdi mdi-arrow-left" /></nuxt-link>
@@ -18,9 +18,9 @@
           <SideIconMenu title="管理画面" icon="mdi-clipboard-account" />
         </nuxt-link>
       </div>
-    </div>
+    </nav>
     <SideFooter />
-  </nav>
+  </div>
 </template>
 
 <script>
