@@ -8,7 +8,8 @@
           </h1>
           <div class="intro">
             <p>
-              シフト管理をもっと楽に。
+              ようこそ、SHIFSHELへ。<br />
+              従来のシフト管理方法に加え、便利機能を追加しました。
             </p>
           </div>
           <div class="buttons">
@@ -181,5 +182,11 @@ header .title {
 .demo-img {
   padding-top: 50px;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
 }
 </style>
