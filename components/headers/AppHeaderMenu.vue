@@ -45,7 +45,7 @@ export default {
   padding: 10px 0;
   position: absolute;
   right: 20px;
-  top: 65px;
+  top: 50px;
   width: 275px;
   z-index: 10;
 }
@@ -82,5 +82,17 @@ export default {
 .menu-list-leave-to {
   opacity: 0;
   transform: translateY(-10px);
+}
+
+@media screen and (min-width: 768px) {
+  .list-items {
+    top: 55px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list-items {
+    top: 65px;
+  }
 }
 </style>

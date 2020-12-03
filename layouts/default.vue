@@ -10,7 +10,7 @@ export default {
 
 <style>
 html {
-  font-size: 16px;
+  font-size: 13px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -59,5 +59,17 @@ body,
   --font-base: 'Lato', 'Helvetica Neue', Arial, 'Noto Sans JP',
     'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
 }
 </style>

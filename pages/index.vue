@@ -8,7 +8,7 @@
           </h1>
           <div class="intro">
             <p>
-              このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキスト
+              シフト管理をもっと楽に。
             </p>
           </div>
           <div class="buttons">
@@ -32,7 +32,9 @@
           <div class="buttons"></div>
         </div>
       </header>
-      <div class="container"></div>
+      <div class="container">
+        <img class="demo-img" src="~/assets/top_demo.png" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -174,5 +176,10 @@ header .title {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.2em;
+}
+
+.demo-img {
+  padding-top: 50px;
+  width: 100%;
 }
 </style>

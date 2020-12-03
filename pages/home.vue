@@ -84,17 +84,17 @@ export default {
   align-items: center;
   display: flex;
   flex: 1;
-  font-size: 20px;
+  font-size: 1.3rem;
   justify-content: center;
 }
 
 .main-header .center-actions .calendar-month {
-  margin: 0 75px;
+  margin: 0 20px;
 }
 
 .main-header .arrow,
 .main-header .print {
-  font-size: 24px;
+  font-size: 1.5rem;
   transition: 300ms;
 }
 
@@ -103,7 +103,7 @@ export default {
   display: flex;
   height: 35px;
   justify-content: center;
-  width: 70px;
+  width: 50px;
 }
 
 .main-header .print {
@@ -122,5 +122,21 @@ export default {
 
 .calendar-canvas {
   flex: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .center-actions .calendar-month {
+    margin: 0 50px;
+  }
+
+  .main-header .arrow {
+    width: 70px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-header .center-actions .calendar-month {
+    margin: 0 75px;
+  }
 }
 </style>
