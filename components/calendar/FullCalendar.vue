@@ -170,7 +170,7 @@ export default {
 }
 
 .day:last-child {
-  border: none;
+  border-right-color: rgba(255, 255, 255, 0);
 }
 
 .day .date {
