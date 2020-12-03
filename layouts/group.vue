@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  name: 'GroupLayout',
   middleware: ['authenticatable'],
 }
 </script>

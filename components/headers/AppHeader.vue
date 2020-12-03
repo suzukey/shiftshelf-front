@@ -42,7 +42,7 @@ header {
   background-color: #00675b;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   color: #fff;
-  height: 70px;
+  height: 55px;
   position: relative;
   width: 100%;
   z-index: 5;
@@ -53,13 +53,14 @@ header {
   display: flex;
   height: 100%;
   justify-content: space-between;
-  margin: 0 20px;
+  margin: 0 10px;
   overflow: hidden;
 }
 
 .left-side {
   align-items: center;
   display: flex;
+  margin-right: 10px;
 }
 
 .side-menu {
@@ -67,26 +68,20 @@ header {
   border-radius: 50%;
   cursor: pointer;
   display: flex;
-  font-size: 1.75em;
-  height: 50px;
+  font-size: 1.75rem;
+  height: 35px;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 5px;
   transition: 300ms;
-  width: 50px;
+  width: 35px;
 }
 
 .side-menu:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (min-width: 1024px) {
-  .side-menu {
-    display: none;
-  }
-}
-
 .title {
-  font-size: 1.75em;
+  font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 2px;
   margin: 0;
@@ -104,7 +99,7 @@ header {
 }
 
 .menu .chevron {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .dropdown-bg {
@@ -114,5 +109,32 @@ header {
   right: 0;
   top: 0;
   z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 60px;
+  }
+
+  .side-menu {
+    height: 45px;
+    margin-right: 10px;
+    width: 45px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    height: 70px;
+  }
+
+  .hwrapper {
+    margin: 0 20px;
+  }
+
+  .side-menu {
+    display: none;
+    margin-right: 10px;
+  }
 }
 </style>

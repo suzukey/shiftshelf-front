@@ -8,7 +8,7 @@
           </nuxt-link>
         </div>
         <div class="subtitle">
-          シフト管理をもっと楽に
+          シフト管理をもっと楽に。
         </div>
       </div>
       <div class="auth-form">
@@ -31,6 +31,7 @@
 
 <script>
 export default {
+  name: 'AuthLayout',
   middleware: ['unauthenticated'],
 }
 </script>

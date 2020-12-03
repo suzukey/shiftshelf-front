@@ -1,37 +1,39 @@
 <template>
   <div class="calendar">
-    <div class="day-of-week">
-      <div class="sun">日</div>
-      <div class="mon">月</div>
-      <div class="tue">火</div>
-      <div class="wed">水</div>
-      <div class="thu">木</div>
-      <div class="fri">金</div>
-      <div class="sat">土</div>
-    </div>
-    <div class="weeks" :class="{ long: weeks.length > 5 }">
-      <div v-for="(week, weekIdx) in weeks" :key="weekIdx" class="week">
-        <div
-          v-for="(day, dayIdx) in week"
-          :key="dayIdx"
-          class="day"
-          :class="{
-            prev: day.prevMonth,
-            next: day.nextMonth,
-            today: day.isToday,
-          }"
-          @click="selectDay(day)"
-        >
-          <div class="date">
-            <span>{{ day.date.get('date') }}</span>
-          </div>
-          <div class="datas">
-            <div
-              v-for="(data, idx) in getDatasOfDay(day.date)"
-              :key="idx"
-              class="data"
-            >
-              {{ data.group_name }}
+    <div class="calendar-wrapper">
+      <div class="day-of-week">
+        <div class="sun">日</div>
+        <div class="mon">月</div>
+        <div class="tue">火</div>
+        <div class="wed">水</div>
+        <div class="thu">木</div>
+        <div class="fri">金</div>
+        <div class="sat">土</div>
+      </div>
+      <div class="weeks" :class="{ long: weeks.length > 5 }">
+        <div v-for="(week, weekIdx) in weeks" :key="weekIdx" class="week">
+          <div
+            v-for="(day, dayIdx) in week"
+            :key="dayIdx"
+            class="day"
+            :class="{
+              prev: day.prevMonth,
+              next: day.nextMonth,
+              today: day.isToday,
+            }"
+            @click="selectDay(day)"
+          >
+            <div class="date">
+              <span>{{ day.date.get('date') }}</span>
+            </div>
+            <div class="datas">
+              <div
+                v-for="(data, idx) in getDatasOfDay(day.date)"
+                :key="idx"
+                class="data"
+              >
+                {{ data.group_name }}
+              </div>
             </div>
           </div>
         </div>
@@ -118,10 +120,20 @@ export default {
 <style scoped>
 .calendar {
   color: #373737;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.calendar-wrapper {
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  left: 0;
+  overflow: hidden auto;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .day-of-week {
@@ -170,7 +182,7 @@ export default {
 }
 
 .day:last-child {
-  border: none;
+  border-right-color: rgba(255, 255, 255, 0);
 }
 
 .day .date {
