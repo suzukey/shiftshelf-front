@@ -31,6 +31,7 @@
 
 <script>
 export default {
+  name: 'AuthLayout',
   middleware: ['unauthenticated'],
 }
 </script>

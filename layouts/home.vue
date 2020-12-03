@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  name: 'HomeLayout',
   middleware: ['authenticatable'],
 }
 </script>
