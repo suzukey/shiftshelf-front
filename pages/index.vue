@@ -133,18 +133,18 @@ export default {}
 }
 
 .catchphrase {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .title {
+  font-size: 5rem;
   font-weight: 700;
-  font-size: 72px;
   letter-spacing: 0.05em;
 }
 
 .intro {
-  font-size: 15px;
-  margin-top: 40px;
+  font-size: 1.2rem;
+  margin-top: 20px;
   max-width: 500px;
 }
 
@@ -300,6 +300,18 @@ footer .copyright {
 
   .demo-img {
     padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title {
+    font-size: 5.75rem;
   }
 }
 </style>
