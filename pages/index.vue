@@ -44,27 +44,31 @@
         </div>
       </div>
       <div class="letsbegin">
-        <div class="copy">
-          <h2>新たなシフト管理を始めましょう</h2>
-        </div>
-        <div class="sub">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div>
-          <nuxt-link to="/register" class="register-btn">新規登録</nuxt-link>
+        <div class="container">
+          <div class="copy">
+            <h2>新たなシフト管理を始めましょう</h2>
+          </div>
+          <div class="sub">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div>
+            <nuxt-link to="/register" class="register-btn">新規登録</nuxt-link>
+          </div>
         </div>
       </div>
       <footer>
-        <div class="title">
-          <h3>SHIFSHEL</h3>
-        </div>
-        <div class="links">
-          <nuxt-link to="/terms">利用規約</nuxt-link>
-          <nuxt-link to="/privacy">プライバシーポリシー</nuxt-link>
-          <nuxt-link to="/contact">お問い合わせ</nuxt-link>
-        </div>
-        <div class="copyright">
-          <span>&copy; 2020 SHIFSHEL</span>
+        <div class="container">
+          <div class="title">
+            <h3>SHIFSHEL</h3>
+          </div>
+          <div class="links">
+            <nuxt-link to="/terms">利用規約</nuxt-link>
+            <nuxt-link to="/privacy">プライバシーポリシー</nuxt-link>
+            <nuxt-link to="/contact">お問い合わせ</nuxt-link>
+          </div>
+          <div class="copyright">
+            <span>&copy; 2020 SHIFSHEL</span>
+          </div>
         </div>
       </footer>
     </div>
@@ -218,12 +222,15 @@ header .title {
 }
 
 .letsbegin {
-  align-items: center;
   background-color: #00897b;
   color: #fff;
+  height: 350px;
+}
+
+.letsbegin .container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  height: 350px;
   justify-content: center;
 }
 
@@ -232,7 +239,7 @@ header .title {
 }
 
 .letsbegin .copy h2 {
-  font-size: 36px;
+  font-size: 1.75rem;
   font-weight: 700;
   margin: 0;
 }
@@ -242,7 +249,7 @@ header .title {
 }
 
 .letsbegin .sub p {
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: 400;
 }
 
@@ -307,11 +314,23 @@ footer .copyright {
   .title {
     font-size: 6rem;
   }
+
+  .letsbegin .copy h2 {
+    font-size: 2rem;
+  }
+
+  .letsbegin .sub p {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .title {
     font-size: 5.75rem;
+  }
+
+  .letsbegin .copy h2 {
+    font-size: 2.75rem;
   }
 }
 </style>
