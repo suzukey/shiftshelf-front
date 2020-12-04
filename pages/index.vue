@@ -184,11 +184,10 @@ export default {}
 
 .about header {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.4) 0%,
     rgba(0, 0, 0, 0.35) 19%,
     rgba(0, 0, 0, 0.05) 87%,
-    rgba(0, 0, 0, 0)
+    rgba(0, 0, 0, 0) 100%
   );
   height: 70px;
   position: fixed;
