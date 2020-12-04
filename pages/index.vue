@@ -3,6 +3,11 @@
     <div class="top">
       <div class="container">
         <div class="infomations">
+          <div class="catchphrase">
+            <p>
+              シフト管理をもっと楽に。
+            </p>
+          </div>
           <h1 class="title">
             SHIFSHEL
           </h1>
@@ -33,9 +38,35 @@
           <div class="buttons"></div>
         </div>
       </header>
-      <div class="container">
-        <img class="demo-img" src="~/assets/top_demo.png" alt="" />
+      <div class="descriotion">
+        <div class="container">
+          <img class="demo-img" src="~/assets/top_demo.png" alt="" />
+        </div>
       </div>
+      <div class="letsbegin">
+        <div class="copy">
+          <h2>新たなシフト管理を始めましょう</h2>
+        </div>
+        <div class="sub">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+          <nuxt-link to="/register" class="register-btn">新規登録</nuxt-link>
+        </div>
+      </div>
+      <footer>
+        <div class="title">
+          <h3>SHIFSHEL</h3>
+        </div>
+        <div class="links">
+          <nuxt-link to="/terms">利用規約</nuxt-link>
+          <nuxt-link to="/privacy">プライバシーポリシー</nuxt-link>
+          <nuxt-link to="/contact">お問い合わせ</nuxt-link>
+        </div>
+        <div class="copyright">
+          <span>&copy; 2020 SHIFSHEL</span>
+        </div>
+      </footer>
     </div>
   </div>
 </template>
@@ -101,8 +132,12 @@ export default {}
   margin-top: -80px;
 }
 
+.catchphrase {
+  font-size: 20px;
+}
+
 .title {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 72px;
   letter-spacing: 0.05em;
 }
@@ -143,10 +178,6 @@ export default {}
   font-size: 24px;
 }
 
-.about {
-  height: 200%;
-}
-
 .about header {
   background: linear-gradient(
     rgba(0, 0, 0, 0.3),
@@ -156,6 +187,7 @@ export default {}
     rgba(0, 0, 0, 0)
   );
   height: 70px;
+  position: fixed;
   position: sticky;
   top: 0;
   width: 100%;
@@ -174,9 +206,10 @@ header .content {
 
 header .title {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 1.75rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 2px;
+  margin: 0;
 }
 
 .demo-img {
@@ -184,9 +217,89 @@ header .title {
   width: 100%;
 }
 
+.letsbegin {
+  align-items: center;
+  background-color: #00897b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: center;
+}
+
+.letsbegin .copy {
+  margin: 15px 0;
+}
+
+.letsbegin .copy h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.letsbegin .sub {
+  margin: 15px 0;
+}
+
+.letsbegin .sub p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.letsbegin .register-btn {
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 15px 50px;
+}
+
+footer {
+  background-color: #00675b;
+  color: #fff;
+}
+
+footer .title {
+  padding: 30px 0 10px 0;
+  text-align: center;
+}
+
+footer .title h3 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+footer .links {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  justify-content: center;
+}
+
+footer .links a {
+  color: inherit;
+  margin: 0 10px;
+}
+
+footer .copyright {
+  align-items: center;
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: 300;
+  height: 50px;
+  justify-content: center;
+}
+
 @media screen and (max-width: 767px) {
   .container {
     width: 100%;
+  }
+
+  .demo-img {
+    padding-top: 20px;
   }
 }
 </style>
