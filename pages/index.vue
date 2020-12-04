@@ -224,7 +224,8 @@ header .title {
 .letsbegin {
   background-color: #00897b;
   color: #fff;
-  height: 350px;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 .letsbegin .container {
