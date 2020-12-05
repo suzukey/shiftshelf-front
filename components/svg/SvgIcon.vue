@@ -1,5 +1,5 @@
 <template>
-  <component :is="targetIcon" />
+  <component :is="targetIcon" :class="className" />
 </template>
 
 <script>
@@ -18,15 +18,30 @@ export default {
   },
 
   computed: {
+    className() {
+      return `icon-${this.name}`
+    },
     loader() {
       return () => import(`~/assets/svg/icons/${this.name}.svg?inline`)
     },
   },
 
+  watch: {
+    name() {
+      this.changeIcon()
+    },
+  },
+
   created() {
-    this.loader().then((res) => {
-      this.targetIcon = res
-    })
+    this.changeIcon()
+  },
+
+  methods: {
+    changeIcon() {
+      this.loader().then((res) => {
+        this.targetIcon = res
+      })
+    },
   },
 }
 </script>
