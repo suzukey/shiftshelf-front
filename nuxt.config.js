@@ -28,7 +28,6 @@ export default {
    */
   css: [
     // 'modern-css-reset',
-    '@mdi/font/css/materialdesignicons.css',
   ],
   /*
    ** Plugins to load before mounting the App
@@ -53,6 +52,7 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/svg',
   ],
   /*
    ** Nuxt.js modules
@@ -74,7 +74,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {
-    extractCSS: true,
+    extractCSS: process.env.NODE_ENV === 'production',
   },
   generate: {
     fallback: true,

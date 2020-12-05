@@ -12,11 +12,9 @@
 
       <div class="menu" @click="isActive = !isActive">
         <b-avatar></b-avatar>
-        <span v-if="!isActive" class="chevron">
-          <i class="mdi mdi-menu-down" />
-        </span>
-        <span v-else class="chevron">
-          <i class="mdi mdi-menu-up" />
+        <span class="chevron">
+          <SvgIcon v-if="!isActive" name="menu-down" />
+          <SvgIcon v-else name="menu-up" />
         </span>
       </div>
     </div>
@@ -99,6 +97,7 @@ header {
 }
 
 .menu .chevron {
+  fill: currentColor;
   font-size: 1.5rem;
 }
 

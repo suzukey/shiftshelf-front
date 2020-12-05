@@ -7,7 +7,7 @@
             <div class="date">
               <div class="actions">
                 <div class="prev-btn" @click="prevDay">
-                  <i class="mdi mdi-chevron-left"></i>
+                  <SvgIcon name="chevron-left" />
                 </div>
               </div>
               <time :datetime="getDateTime(target)">{{
@@ -15,13 +15,13 @@
               }}</time>
               <div class="actions">
                 <div class="next-btn" @click="nextDay">
-                  <i class="mdi mdi-chevron-right"></i>
+                  <SvgIcon name="chevron-right" />
                 </div>
               </div>
             </div>
             <div class="actions">
               <div class="close-btn" @click="close">
-                <i class="mdi mdi-close"></i>
+                <SvgIcon name="close" />
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default {
   border-bottom: 2px solid #cfcfcf;
   color: #707070;
   align-items: center;
-  /* height: 50px; */
+  height: 50px;
   display: flex;
   justify-content: space-between;
   padding: 8px 16px;
@@ -140,13 +140,26 @@ export default {
 
 .day-card .header .prev-btn,
 .day-card .header .next-btn {
+  align-items: center;
   cursor: pointer;
+  display: flex;
+  fill: currentColor;
   font-size: 26px;
 }
 
 .day-card .header .close-btn {
+  align-items: center;
   cursor: pointer;
+  display: flex;
+  fill: currentColor;
   font-size: 26px;
+}
+
+.prev-btn svg,
+.next-btn svg,
+.close-btn svg {
+  height: 24px;
+  width: 24px;
 }
 
 .card-body {

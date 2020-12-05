@@ -25,7 +25,9 @@
         </div>
         <div class="down">
           <div class="desc">SHIFSHELとは</div>
-          <div class="icon"><i class="mdi mdi-arrow-down" /></div>
+          <div class="icon">
+            <SvgIcon name="arrow-down" />
+          </div>
         </div>
       </div>
     </div>
@@ -40,6 +42,17 @@
       </header>
       <div class="descriotion">
         <div class="container">
+          <img class="demo-img" src="~/assets/top_demo.png" alt="" />
+          <img
+            src="~/assets/svg/team_work.svg"
+            alt=""
+            style="
+              display: block;
+              padding: 2.5rem 0;
+              width: 50%;
+              margin: 0 auto;
+            "
+          />
           <img class="demo-img" src="~/assets/top_demo.png" alt="" />
         </div>
       </div>
@@ -179,6 +192,7 @@ export default {}
 }
 
 .down .icon {
+  fill: currentColor;
   font-size: 24px;
 }
 

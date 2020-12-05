@@ -3,13 +3,13 @@
     <ContentHeader :is-side="true">
       <div class="center-actions">
         <div class="arrow" @click="prevMonth">
-          <i class="mdi mdi-chevron-left" />
+          <SvgIcon name="chevron-left" />
         </div>
         <div class="calendar-month">
           {{ targetMonth }}
         </div>
         <div class="arrow" @click="nextMonth">
-          <i class="mdi mdi-chevron-right" />
+          <SvgIcon name="chevron-right" />
         </div>
       </div>
       <!-- <div class="print">
@@ -94,6 +94,7 @@ export default {
 
 .main-header .arrow,
 .main-header .print {
+  fill: currentColor;
   font-size: 1.5rem;
   transition: 300ms;
 }

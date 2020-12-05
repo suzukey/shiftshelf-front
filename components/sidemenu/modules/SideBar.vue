@@ -1,6 +1,6 @@
 <template>
   <div class="side-bar">
-    <i class="mdi icon" :class="icon" />
+    <SvgIcon class="icon" :name="icon" />
     <div class="title">
       <span>{{ title }}</span>
     </div>
@@ -35,7 +35,10 @@ export default {
 }
 
 .side-bar .icon {
+  fill: currentColor;
   font-size: 20px;
+  height: 18px;
+  width: 18px;
 }
 
 .side-bar .title {
