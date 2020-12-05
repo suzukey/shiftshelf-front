@@ -1,7 +1,7 @@
 <template>
   <div class="side-icon-menu">
     <div class="icon">
-      <i v-if="icon" class="mdi" :class="icon" />
+      <SvgIcon v-if="icon" :name="icon" />
       <b-avatar v-else></b-avatar>
     </div>
 
@@ -47,9 +47,11 @@ export default {
   width: 75px;
 }
 
-.side-icon-menu .icon i {
+.side-icon-menu .icon svg {
   color: #8e8e8e;
-  font-size: 32px;
+  fill: currentColor;
+  height: 28px;
+  width: 28px;
 }
 
 .side-icon-menu .menu {

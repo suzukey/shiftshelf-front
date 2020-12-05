@@ -3,19 +3,21 @@
     <div class="group-sidemenu">
       <SideProfile />
       <div class="group">
-        <nuxt-link to="/home"><i class="icon mdi mdi-arrow-left" /></nuxt-link>
+        <nuxt-link to="/home">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         <span class="group-name">{{ group.name }}</span>
       </div>
-      <SideBar title="メニュー" icon="mdi-apps" />
+      <SideBar title="メニュー" icon="apps" />
       <div class="menus">
         <nuxt-link :to="`/groups/${groupId}`">
-          <SideIconMenu title="シフト" icon="mdi-calendar-range" />
+          <SideIconMenu title="シフト" icon="calendar-range" />
         </nuxt-link>
         <nuxt-link :to="`/groups/${groupId}/posts`">
-          <SideIconMenu title="シフト希望提出" icon="mdi-file" />
+          <SideIconMenu title="シフト希望提出" icon="file" />
         </nuxt-link>
         <nuxt-link :to="`/groups/${groupId}/admin`">
-          <SideIconMenu title="管理画面" icon="mdi-clipboard-account" />
+          <SideIconMenu title="管理画面" icon="clipboard-account" />
         </nuxt-link>
       </div>
     </div>
@@ -66,7 +68,15 @@ export default {
 }
 
 .group a {
+  align-items: center;
+  display: flex;
   font-size: 24px;
+}
+
+.group .icon {
+  fill: currentColor;
+  height: 22px;
+  width: 22px;
 }
 
 .group .group-name {

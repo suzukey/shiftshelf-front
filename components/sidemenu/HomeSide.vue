@@ -5,10 +5,10 @@
       <SideDivider />
       <div class="payroll">
         <nuxt-link to="/payroll">
-          <SideIconMenu title="給与計算" icon="mdi-chart-box" />
+          <SideIconMenu title="給与計算" icon="chart-box" />
         </nuxt-link>
       </div>
-      <SideBar title="グループ" icon="mdi-account-multiple" />
+      <SideBar title="グループ" icon="account-multiple" />
       <div class="groups">
         <nuxt-link
           v-for="group in groups"
