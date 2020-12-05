@@ -21,7 +21,14 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
+      },
+    ],
   },
   /*
    ** Global CSS
@@ -61,7 +68,6 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxt-webfontloader',
     '@nuxtjs/dayjs',
   ],
   /*
@@ -76,15 +82,6 @@ export default {
   build: {},
   generate: {
     fallback: true,
-  },
-  webfontloader: {
-    google: {
-      families: [
-        'Lato:300,400,700&display=swap',
-        'Noto+Sans+JP:300,400,500,700&display=swap',
-      ],
-    },
-    classes: false,
   },
   dayjs: {
     locales: ['en', 'ja'],

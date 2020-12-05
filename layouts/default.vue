@@ -56,9 +56,9 @@ body,
 }
 
 :root {
-  --font-base: 'Lato', 'Helvetica Neue', Arial, 'Noto Sans JP',
-    'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-base: 'Lato', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 @media screen and (min-width: 768px) {
