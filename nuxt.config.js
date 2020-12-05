@@ -21,14 +21,7 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
-      },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Global CSS
@@ -59,6 +52,7 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-fonts',
   ],
   /*
    ** Nuxt.js modules
@@ -87,5 +81,11 @@ export default {
     locales: ['en', 'ja'],
     defaultLocale: 'ja',
     plugins: [], // Day.js plugin
+  },
+  googleFonts: {
+    families: {
+      Lato: [300, 400, 700],
+    },
+    display: 'swap',
   },
 }
