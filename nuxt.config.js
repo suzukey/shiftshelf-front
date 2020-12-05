@@ -18,7 +18,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: 'シフト管理WEBアプリケーション',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -26,10 +26,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    // 'modern-css-reset',
-    '@mdi/font/css/materialdesignicons.css',
-  ],
+  css: ['modern-css-reset', '@mdi/font/css/materialdesignicons.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -73,7 +70,9 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    extractCSS: true,
+  },
   generate: {
     fallback: true,
   },
