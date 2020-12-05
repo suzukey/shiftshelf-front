@@ -9,6 +9,9 @@ export default {
    */
   head: {
     title: 'SHIFSHEL',
+    htmlAttrs: {
+      lang: 'ja',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -76,7 +79,10 @@ export default {
   },
   webfontloader: {
     google: {
-      families: ['Lato:300,400,700', 'Noto+Sans+JP:300,400,500,700'],
+      families: [
+        'Lato:300,400,700&display=swap',
+        'Noto+Sans+JP:300,400,500,700&display=swap',
+      ],
     },
     classes: false,
   },
