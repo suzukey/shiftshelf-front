@@ -52,6 +52,7 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/svg',
   ],
   /*
    ** Nuxt.js modules
