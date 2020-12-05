@@ -3,7 +3,7 @@
     <div class="hwrapper">
       <div class="left-side">
         <div class="side-menu">
-          <i class="mdi mdi-menu"></i>
+          <SvgIcon name="menu" />
         </div>
         <h1 class="title">
           <nuxt-link to="/home">SHIFSHEL</nuxt-link>
@@ -66,6 +66,7 @@ header {
   border-radius: 50%;
   cursor: pointer;
   display: flex;
+  fill: currentColor;
   font-size: 1.75rem;
   height: 35px;
   justify-content: center;
