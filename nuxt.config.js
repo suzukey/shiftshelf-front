@@ -28,7 +28,6 @@ export default {
    */
   css: [
     // 'modern-css-reset',
-    '@mdi/font/css/materialdesignicons.css',
   ],
   /*
    ** Plugins to load before mounting the App
