@@ -272,7 +272,8 @@ header .title {
   border: 1px solid #fff;
   border-radius: 5px;
   color: #fff;
-  padding: 15px 50px;
+  padding: 1rem 3rem;
+  text-decoration: none;
 }
 
 footer {
