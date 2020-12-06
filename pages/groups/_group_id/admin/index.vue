@@ -69,19 +69,18 @@ export default {
 
 .links {
   color: #616161;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 20px;
-  font-weight: 700;
-  justify-content: space-between;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   padding: 30px;
 }
 
 .links .link {
   align-items: center;
   display: flex;
+  font-size: 20px;
+  font-weight: 700;
   justify-content: center;
-  width: calc(100% / 3);
 }
 
 .links a {
@@ -91,7 +90,6 @@ export default {
   display: flex;
   height: 135px;
   justify-content: center;
-  margin-top: 45px;
   text-decoration: none;
   transition: 300ms;
   width: 240px;
