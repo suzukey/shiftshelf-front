@@ -37,7 +37,10 @@
           <h1 class="title">
             SHIFSHEL
           </h1>
-          <div class="buttons"></div>
+          <div class="hd-buttons">
+            <nuxt-link to="/login" class="login-link">ログイン</nuxt-link>
+            <nuxt-link to="/register" class="register-link">新規登録</nuxt-link>
+          </div>
         </div>
       </header>
       <div class="descriotion">
@@ -227,6 +230,27 @@ header .title {
   font-weight: 700;
   letter-spacing: 2px;
   margin: 0;
+}
+
+header .hd-buttons {
+  margin: 0;
+}
+
+header .hd-buttons a {
+  color: inherit;
+  font-size: 0.9rem;
+  margin-left: 0.3rem;
+  text-decoration: none;
+}
+
+.hd-buttons .login-link {
+  padding: 0.7rem 1.5rem;
+}
+
+.hd-buttons .register-link {
+  background-color: #00897b;
+  border-radius: 3px;
+  padding: 0.7rem 1.5rem;
 }
 
 .demo-img {
