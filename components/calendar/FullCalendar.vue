@@ -34,6 +34,9 @@
               >
                 {{ data.group_name }}
               </div>
+              <div v-if="getDatasOfDay(day.date).length > 0" class="count">
+                {{ getDatasOfDay(day.date).length }}件
+              </div>
             </div>
           </div>
         </div>
@@ -236,5 +239,23 @@ export default {
 
 .day .datas .data:first-child {
   margin-top: 0;
+}
+
+.datas .count {
+  background-color: #8e8e8e;
+  border-radius: 10rem;
+  color: #fff;
+}
+
+@media screen and (max-height: 719px), screen and (max-width: 767px) {
+  .datas .data {
+    display: none;
+  }
+}
+
+@media screen and (min-height: 720px) and (min-width: 768px) {
+  .datas .count {
+    display: none;
+  }
 }
 </style>
