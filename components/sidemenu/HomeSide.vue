@@ -1,25 +1,23 @@
 <template>
-  <CoreSide>
-    <div class="home-sidemenu">
-      <SideProfile />
-      <SideDivider />
-      <div class="payroll">
-        <nuxt-link to="/payroll">
-          <SideIconMenu title="給与計算" icon="chart-box" />
-        </nuxt-link>
-      </div>
-      <SideBar title="グループ" icon="account-multiple" />
-      <div class="groups">
-        <nuxt-link
-          v-for="group in groups"
-          :key="group.id"
-          :to="`/groups/${group.id}`"
-        >
-          <SideIconMenu :title="group.name" />
-        </nuxt-link>
-      </div>
+  <div class="home-sidemenu">
+    <SideProfile />
+    <SideDivider />
+    <div class="payroll">
+      <nuxt-link to="/payroll">
+        <SideIconMenu title="給与計算" icon="chart-box" />
+      </nuxt-link>
     </div>
-  </CoreSide>
+    <SideBar title="グループ" icon="account-multiple" />
+    <div class="groups">
+      <nuxt-link
+        v-for="group in groups"
+        :key="group.id"
+        :to="`/groups/${group.id}`"
+      >
+        <SideIconMenu :title="group.name" />
+      </nuxt-link>
+    </div>
+  </div>
 </template>
 
 <script>

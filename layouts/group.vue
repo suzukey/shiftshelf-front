@@ -1,8 +1,10 @@
 <template>
   <div class="base">
-    <AppHeader />
+    <AppHeader @toggleSide="activeSide = !activeSide" />
     <div class="content">
-      <GroupSide />
+      <CoreSide :active="activeSide" @toggle="activeSide = !activeSide">
+        <GroupSide />
+      </CoreSide>
       <main>
         <Nuxt />
       </main>
@@ -14,6 +16,11 @@
 export default {
   name: 'GroupLayout',
   middleware: ['authenticatable'],
+  data() {
+    return {
+      activeSide: false,
+    }
+  },
 }
 </script>
 

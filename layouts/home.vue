@@ -1,8 +1,10 @@
 <template>
   <div class="base">
-    <AppHeader />
+    <AppHeader @toggleSide="activeSide = !activeSide" />
     <div class="content">
-      <HomeSide />
+      <CoreSide :active="activeSide" @toggle="activeSide = !activeSide">
+        <HomeSide />
+      </CoreSide>
       <main>
         <Nuxt />
       </main>
@@ -14,6 +16,11 @@
 export default {
   name: 'HomeLayout',
   middleware: ['authenticatable'],
+  data() {
+    return {
+      activeSide: false,
+    }
+  },
 }
 </script>
 

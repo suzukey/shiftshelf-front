@@ -27,7 +27,7 @@ export default {
   position: relative;
   white-space: nowrap;
   width: 100%;
-  z-index: 3;
+  z-index: 30;
 }
 
 .main-header .main-header-wrapper {

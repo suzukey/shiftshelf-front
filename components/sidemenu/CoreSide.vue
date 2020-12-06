@@ -1,14 +1,34 @@
 <template>
-  <div class="sidemenu">
-    <nav class="sidemenu-content">
-      <slot></slot>
-    </nav>
-    <SideFooter />
+  <div>
+    <div class="sidemenu" :class="{ active: active }">
+      <nav class="sidemenu-content">
+        <slot></slot>
+      </nav>
+      <SideFooter />
+    </div>
+
+    <div
+      class="side-overlay"
+      :class="{ active: active }"
+      @click="toggleActive"
+    />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    active: {
+      type: Boolean,
+      required: true,
+    },
+  },
+  methods: {
+    toggleActive() {
+      this.$emit('toggle')
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -23,18 +43,35 @@ export default {}
   overflow-y: auto;
   position: absolute;
   top: 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 300ms;
   width: 350px;
-  z-index: 4;
+  z-index: 40;
 }
 
-@media screen and (max-width: 1023px) {
-  .sidemenu {
-    display: none;
-  }
+.sidemenu.active {
+  transform: translate3d(0, 0, 0);
 }
 
 .sidemenu-content {
   flex: 1;
   width: 100%;
+}
+
+.side-overlay.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 35;
+}
+
+@media screen and (min-width: 1024px) {
+  .sidemenu {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0ms;
+  }
 }
 </style>

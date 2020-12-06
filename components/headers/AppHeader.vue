@@ -2,7 +2,7 @@
   <header>
     <div class="hwrapper">
       <div class="left-side">
-        <div class="side-menu">
+        <div class="side-menu" @click="toggleSide">
           <SvgIcon name="menu" />
         </div>
         <h1 class="title">
@@ -32,6 +32,11 @@ export default {
       isActive: false,
     }
   },
+  methods: {
+    toggleSide() {
+      this.$emit('toggleSide')
+    },
+  },
 }
 </script>
 
@@ -43,7 +48,7 @@ header {
   height: 55px;
   position: relative;
   width: 100%;
-  z-index: 5;
+  z-index: 50;
 }
 
 .hwrapper {
@@ -108,7 +113,7 @@ header {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 45;
 }
 
 @media screen and (min-width: 768px) {
