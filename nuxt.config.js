@@ -73,9 +73,7 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {
-    extractCSS: process.env.NODE_ENV === 'production',
-  },
+  build: {},
   generate: {
     fallback: true,
   },
