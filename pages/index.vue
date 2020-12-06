@@ -45,7 +45,12 @@
       </header>
       <div class="descriotion">
         <div class="container">
-          <img class="demo-img" src="~/assets/top_demo.png" alt="" />
+          <img
+            class="demo-img"
+            src="~/assets/top_demo.png"
+            alt=""
+            loading="lazy"
+          />
           <img
             src="~/assets/svg/team_work.svg"
             alt=""
@@ -55,8 +60,14 @@
               width: 50%;
               margin: 0 auto;
             "
+            loading="lazy"
           />
-          <img class="demo-img" src="~/assets/top_demo.png" alt="" />
+          <img
+            class="demo-img"
+            src="~/assets/top_demo.png"
+            alt=""
+            loading="lazy"
+          />
         </div>
       </div>
       <div class="letsbegin">
