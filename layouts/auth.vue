@@ -100,24 +100,27 @@ footer {
   color: #fff;
   display: flex;
   flex-direction: column;
-  height: 100px;
-  justify-content: center;
+  height: 80px;
+  justify-content: space-evenly;
+  margin: 10px 0;
 }
 
 footer .links {
+  align-items: center;
   display: flex;
-  font-size: 16px;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
-  width: 440px;
+  font-size: 1rem;
+  font-weight: 300;
+  justify-content: center;
 }
 
 footer .links a {
   color: inherit;
+  margin: 0 10px;
 }
 
 footer .copyright {
-  font-size: 14px;
+  font-size: 0.9rem;
+  font-weight: 300;
   text-align: center;
 }
 </style>
