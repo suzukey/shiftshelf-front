@@ -47,10 +47,11 @@ export default {
   right: 20px;
   top: 50px;
   width: 275px;
-  z-index: 10;
+  z-index: 50;
 }
 
 .list-item {
+  cursor: pointer;
   color: #555;
   display: block;
   font-size: 18px;
