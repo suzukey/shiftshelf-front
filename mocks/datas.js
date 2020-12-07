@@ -1,6 +1,6 @@
 export const profile = {
   user_name: '電波太郎',
-  email: 'aaa@aaa.email',
+  email: 'test@example.com',
   icon_url: 'https://placehold.jp/150x150.png',
 }
 
