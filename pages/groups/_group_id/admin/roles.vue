@@ -96,6 +96,11 @@ export default {
 </script>
 
 <style scoped>
+.home {
+  height: 100%;
+  width: 100%;
+}
+
 .doraM {
   display: flex;
   flex-direction: column;
