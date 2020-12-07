@@ -1,24 +1,44 @@
 <template>
-  <div id="app">
-    <!-- ボックス -->
-    <table>
-      <tr>
-        <th>名前</th>
-        <td v-for="time in times" :key="time">
-          {{ time }}
-        </td>
-      </tr>
-      <tr v-for="(shift, user_idx) in shifts" :key="user_idx">
-        <th>{{ shift.user }}</th>
-        <td
-          v-for="(user_shift, shift_idx) in shift.shift"
-          :key="shift_idx"
-          :class="{ wht: !user_shift, red: user_shift }"
-          class="timebox"
-          @click="toggle_switch(user_idx, shift_idx)"
-        ></td>
-      </tr>
-    </table>
+  <div class="doraM">
+    <div class="majime">
+      <div id="app">
+        <!-- ボックス -->
+        <table>
+          <tr>
+            <th>
+              名&nbsp;&nbsp;前&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </th>
+            <td v-for="time in times" :key="time">
+              {{ time }}
+            </td>
+          </tr>
+          <tr v-for="(shift, user_idx) in shifts" :key="user_idx">
+            <th>
+              {{ shift.user }}
+            </th>
+            <td
+              v-for="(user_shift, shift_idx) in shift.shift"
+              :key="shift_idx"
+              :class="{ wht: !user_shift, red: user_shift }"
+              class="timebox"
+              @click="toggle_switch(user_idx, shift_idx)"
+            ></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="teMto">
+      <div class="right">
+        <div class="ppap">保存していない変更があります</div>
+
+        <a href="/home" class="ppap">
+          リセット
+        </a>
+        <a href="/home" class="kakunin">
+          確定
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -81,7 +101,7 @@ export default {
       ],
       shifts: [
         {
-          user: '上野天夢人',
+          user: '加藤創',
           shift: [
             false,
             false,
@@ -135,6 +155,59 @@ export default {
         },
         {
           user: '上野天夢人',
+          shift: [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+          ],
+        },
+        {
+          user: '大宮永遠',
           shift: [
             false,
             false,
@@ -199,6 +272,16 @@ export default {
 </script>
 
 <style scoped>
+.doraM {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.majime {
+  flex: 1;
+}
+
 .red {
   background-color: red;
 }
@@ -216,13 +299,38 @@ th,
 td {
   border: 1px solid #ccc;
   user-select: none;
+  padding: 0.1em;
+  /* isplay: inline-block; */
 }
 .td1 {
   border: 1px solid #ccc;
   user-select: none;
 }
-
-.timebox {
+s .timebox {
   height: 30px;
+  flex: 1;
+}
+.teMto {
+  background-color: #616161;
+  font-size: 1vw;
+}
+.kakunin {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #00675b;
+  color: #fff;
+  padding: 10px 30px;
+  background-color: #00675b;
+  font-size: 1vw;
+}
+.right {
+  text-align: right;
+}
+
+.ppap {
+  text-align: left;
+  display: inline-block;
+  font-size: 1vw;
+  color: #fff;
 }
 </style>

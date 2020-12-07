@@ -1,63 +1,78 @@
 <template>
-  <div class="survey">
-    <!-- 一段目 -->
-    <div class="kuhaku">
-      <div class="inline-block">
-        <div class="start">希望調査名</div>
-        <input type="text" />
+  <div class="doraM">
+    <div class="survey">
+      <!-- 一段目 -->
+      <div class="kuhaku">
+        <div class="inline-block">
+          <div class="start">希望調査名</div>
+          <input type="text" />
+        </div>
+      </div>
+      <!-- 二段目 -->
+      <div class="kuhaku">
+        <div class="inline-block">
+          <div class="start">開始日</div>
+          <input type="date" name="calendar" max="9999-12-31" />
+        </div>
+        ~
+        <div class="inline-block">
+          <div class="start">終了日</div>
+          <input type="date" name="calendar" max="9999-12-31" />
+        </div>
+      </div>
+      <!-- 三段目 -->
+      <div class="kuhaku">
+        <div class="inline-block">
+          <div class="start">締切日時</div>
+          <input type="date" name="calendar" max="9999-12-31" />
+        </div>
+      </div>
+      <div id="mini-calendar">
+        <div class="calendar-head">
+          <p class="calendar-year-month"></p>
+        </div>
+        <table>
+          <!-- <thead>
+            <tr>
+              <th class="calendar-sun">日</th>
+              <th>月</th>
+              <th>火</th>
+              <th>水</th>
+              <th>木</th>
+              <th>金</th>
+              <th class="calendar-sat">土</th>
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr v-for="day in days" :key="day">
+              <td class="calendar-none">&nbsp;</td>
+              <td>
+                <i class="calendar-day-number">{{ day.day }}</i>
+                <div
+                  v-for="event in day.events"
+                  :key="event"
+                  class="calendar-labels"
+                >
+                  <span class="calender-label-blue">{{ event }}</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    <!-- 二段目 -->
-    <div class="kuhaku">
-      <div class="inline-block">
-        <div class="start">開始日</div>
-        <input type="date" name="calendar" max="9999-12-31" />
+
+    <div class="teMto">
+      <div class="right">
+        <div class="ppap">保存していない変更があります</div>
+
+        <a href="/home" class="ppap">
+          リセット
+        </a>
+        <a href="/home" class="kakunin">
+          確定
+        </a>
       </div>
-      ~
-      <div class="inline-block">
-        <div class="start">終了日</div>
-        <input type="date" name="calendar" max="9999-12-31" />
-      </div>
-    </div>
-    <!-- 三段目 -->
-    <div class="kuhaku">
-      <div class="inline-block">
-        <div class="start">締切日時</div>
-        <input type="date" name="calendar" max="9999-12-31" />
-      </div>
-    </div>
-    <div id="mini-calendar">
-      <div class="calendar-head">
-        <p class="calendar-year-month"></p>
-      </div>
-      <table>
-        <!-- <thead>
-          <tr>
-            <th class="calendar-sun">日</th>
-            <th>月</th>
-            <th>火</th>
-            <th>水</th>
-            <th>木</th>
-            <th>金</th>
-            <th class="calendar-sat">土</th>
-          </tr>
-        </thead> -->
-        <tbody>
-          <tr v-for="day in days" :key="day">
-            <td class="calendar-none">&nbsp;</td>
-            <td>
-              <i class="calendar-day-number">{{ day.day }}</i>
-              <div
-                v-for="event in day.events"
-                :key="event"
-                class="calendar-labels"
-              >
-                <span class="calender-label-blue">{{ event }}</span>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </template>
@@ -68,12 +83,14 @@ export default {
   data() {
     return {
       days: [
-        { day: '1', events: ['〇'] },
-        { day: '2', events: ['✕'] },
-        { day: '3', events: ['〇'] },
-        { day: '4', events: ['✕'] },
-        { day: '5', events: ['〇'] },
-        { day: '6', events: ['〇'] },
+        { day: '12月1日(火)', events: ['10:00~23:00'] },
+        { day: '12月2日(水)', events: ['定休日'] },
+        { day: '12月3日(木)', events: ['10:00~23:00'] },
+        { day: '12月4日(金)', events: ['10:00~23:00'] },
+        { day: '12月4日(土)', events: ['10:00~23:00'] },
+        { day: '12月5日(日)', events: ['10:00~23:00'] },
+        { day: '12月6日(月)', events: ['10:00~23:00'] },
+        { day: '(祝日)', events: ['定休日'] },
       ],
     }
   },
@@ -81,52 +98,24 @@ export default {
 </script>
 
 <style scoped>
-.content {
+.doraM {
   display: flex;
-  height: calc(100vh - 70px);
-}
-
-.list-group-item {
-  height: 75px;
-}
-
-.sidemenu {
+  flex-direction: column;
   height: 100%;
-  width: 350px;
-  background-color: #9b9b9b;
-}
-
-.sidemenu-content {
-  height: calc(100% - 76px);
-}
-
-.sidemenu-content .profile {
-  border-bottom: 1px solid #9b9b9b;
-}
-
-.sidemenu-content .profile .list-group-item {
-  height: 100px;
-}
-
-.sidemenu-content .groups {
-  height: 30px;
-  background-color: #616161;
-}
-
-main {
   width: 100%;
 }
 
-.rinc-rowson {
-  background-color: #373737;
+.survey {
+  flex: 1;
 }
+
 .inline-block {
   display: inline-block; /* インラインブロック要素にする */
 }
 .kuhaku {
   padding: 2%;
   padding-left: 4%;
-  font-size: 2vw;
+  /* font-size: 2vw; */
 }
 #mini-calendar thead {
   display: none;
@@ -168,7 +157,7 @@ main {
   display: block;
   background: #f2e6cd;
   margin-bottom: 0;
-  width: 75px;
+  width: 120px;
   height: auto;
 }
 #mini-calendar td.calendar-holiday .calendar-day-number,
@@ -177,5 +166,28 @@ main {
 }
 #mini-calendar td.calendar-sat .calendar-day-number {
   background: #c8ebfe;
+}
+.teMto {
+  background-color: #616161;
+  font-size: 1vw;
+}
+.kakunin {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #00675b;
+  color: #fff;
+  padding: 10px 30px;
+  background-color: #00675b;
+  font-size: 1vw;
+}
+.right {
+  text-align: right;
+}
+
+.ppap {
+  text-align: left;
+  display: inline-block;
+  font-size: 1vw;
+  color: #fff;
 }
 </style>

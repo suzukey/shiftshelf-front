@@ -3,7 +3,7 @@
     <div class="Locustman">
       <div>
         <div class="mb-2">
-          <b-avatar src="~/assets/ojisn_aka.png" size="6rem"></b-avatar>
+          <b-avatar size="6rem"></b-avatar>
         </div>
         <div>
           <div class="m">

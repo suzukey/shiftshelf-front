@@ -32,31 +32,31 @@
         </tr>
         <tr>
           <td>大宮</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>12-18</td>
+          <td>休</td>
+          <td>休</td>
+          <td>10-15</td>
+          <td>12-14</td>
+          <td>12-18</td>
+          <td>16-23</td>
+          <td>休</td>
+          <td>11-15</td>
+          <td>17-22</td>
+          <td>12-18</td>
+          <td>休</td>
+          <td>休</td>
+          <td>14-19</td>
+          <td>12-20</td>
+          <td>16-23</td>
+          <td>休</td>
+          <td>12-18</td>
+          <td>12-18</td>
+          <td>休</td>
+          <td>10-18</td>
+          <td>12-18</td>
+          <td>休</td>
+          <td>10-18</td>
+          <td>10-18</td>
         </tr>
         <tr>
           <td>上野</td>
@@ -325,6 +325,6 @@ table {
 }
 td {
   border: solid 1px;
-  padding: 1.3em;
+  padding: 1.5em;
 }
 </style>

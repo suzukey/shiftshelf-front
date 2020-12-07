@@ -15,6 +15,10 @@ export default {
           shift_wish_id: 3,
           shift_wish_name: '12月3週',
         },
+        {
+          shift_wish_id: 4,
+          shift_wish_name: '12月4週',
+        },
       ],
     ]
   },

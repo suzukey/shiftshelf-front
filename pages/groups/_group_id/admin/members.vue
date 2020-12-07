@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="doraM">
     <div class="mana">
       <div class="kana">
         <div class="box scrolly">
@@ -96,6 +96,12 @@ export default {
 </script>
 
 <style scoped>
+.doraM {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
 #contents {
   background-color: cadetblue;
 }
@@ -121,16 +127,16 @@ p {
 }
 .mana {
   display: flex;
-  padding-bottom: 342px;
+  flex: 1;
 }
 .example {
-  font-size: 50px;
+  font-size: 30px;
+  padding-left: 100px;
+  line-height: 250%;
 }
 .teMto {
   background-color: #616161;
-  font-size: 3vw;
 }
-
 .kakunin {
   display: inline-block;
   border-radius: 4px;

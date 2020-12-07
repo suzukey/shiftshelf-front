@@ -2,13 +2,13 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
-        管理メニュー
+        管理画面
       </div>
     </div>
     <div class="links">
       <div class="link">
         <nuxt-link :to="`/groups/${groupId}/admin/surveys`">
-          シフト希望調査
+          シフト希望調査作成
         </nuxt-link>
       </div>
       <div class="link">

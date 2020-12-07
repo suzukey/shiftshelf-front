@@ -1,73 +1,75 @@
 <template>
   <div class="home">
-    <div class="mana">
-      <div class="kana">
-        役割
-        <div class="box scrolly">
-          <b-list-group style="max-width: 300px;">
-            <div class="midori">
-              <span class="mr-auto"><p>管理者</p></span>
-              <span class="mr-auto"><p>社員</p></span>
-            </div>
-            <div class="kiiro">
-              <span class="mr-auto"><p>アルバイト</p></span>
-              <span class="mr-auto"><p>アルバイト</p></span>
-              <span class="mr-auto"><p>アルバイト</p></span>
-              <span class="mr-auto"><p>アルバイト</p></span>
-              <span class="mr-auto"><p>アルバイト</p></span>
-              <span class="mr-auto"><p>アルバイト</p></span>
-              <span class="mr-auto"><p>アルバイト</p></span>
-              <span class="mr-auto"><p>アルバイト</p></span>
-              <span class="mr-auto"><p>アルバイト</p></span>
-              <span class="mr-auto"><p>アルバイト</p></span>
-            </div>
-            <span class="mr-auto"><p>デフォルト</p></span>
-          </b-list-group>
+    <div class="doraM">
+      <div class="mana">
+        <div class="kana">
+          役割
+          <div class="box scrolly">
+            <b-list-group style="max-width: 300px;">
+              <div class="midori">
+                <span class="mr-auto"><p>管理者</p></span>
+                <span class="mr-auto"><p>社員</p></span>
+              </div>
+              <div class="kiiro">
+                <span class="mr-auto"><p>アルバイト</p></span>
+                <span class="mr-auto"><p>アルバイト</p></span>
+                <span class="mr-auto"><p>アルバイト</p></span>
+                <span class="mr-auto"><p>アルバイト</p></span>
+                <span class="mr-auto"><p>アルバイト</p></span>
+                <span class="mr-auto"><p>アルバイト</p></span>
+                <span class="mr-auto"><p>アルバイト</p></span>
+                <span class="mr-auto"><p>アルバイト</p></span>
+                <span class="mr-auto"><p>アルバイト</p></span>
+                <span class="mr-auto"><p>アルバイト</p></span>
+              </div>
+              <span class="mr-auto"><p>デフォルト</p></span>
+            </b-list-group>
+          </div>
+        </div>
+        <div class="example">
+          <p>役割名</p>
+          <div>
+            <p>
+              <b-form-input v-model="text"></b-form-input>
+            </p>
+          </div>
+          <div class="border-big"></div>
+          <p>役割の設定</p>
+
+          <b-form-checkbox-group
+            v-model="selected"
+            :options="options"
+            plain
+            stacked
+          ></b-form-checkbox-group>
+          <div class="border-big"></div>
+          <p>管理メニュー</p>
+          <b-form-checkbox-group
+            v-model="selected"
+            :options="options2"
+            plain
+            stacked
+          ></b-form-checkbox-group>
+          <div>
+            <b-button variant="outline-secondary"
+              >メンバーの役割を初期化</b-button
+            >
+            <b-button variant="outline-danger">役割を削除</b-button>
+          </div>
         </div>
       </div>
-      <div class="example">
-        <p>役割名</p>
-        <div>
-          <p>
-            <b-form-input v-model="text"></b-form-input>
-          </p>
+
+      <div class="teMto">
+        <div class="right">
+          <div class="ppap">保存していない変更があります</div>
+
+          <a href="/home" class="ppap">
+            リセット
+          </a>
+          <a href="/home" class="kakunin">
+            確定
+          </a>
         </div>
-        <div class="border-big"></div>
-        <p>役割の設定</p>
-
-        <b-form-checkbox-group
-          v-model="selected"
-          :options="options"
-          plain
-          stacked
-        ></b-form-checkbox-group>
-        <div class="border-big"></div>
-        <p>管理メニュー</p>
-        <b-form-checkbox-group
-          v-model="selected"
-          :options="options2"
-          plain
-          stacked
-        ></b-form-checkbox-group>
-        <div>
-          <b-button variant="outline-secondary"
-            >メンバーの役割を初期化</b-button
-          >
-          <b-button variant="outline-danger">役割を削除</b-button>
-        </div>
-      </div>
-    </div>
-
-    <div class="teMto">
-      <div class="right">
-        <div class="ppap">保存していない変更があります</div>
-
-        <a href="/home" class="ppap">
-          リセット
-        </a>
-        <a href="/home" class="kakunin">
-          確定
-        </a>
       </div>
     </div>
   </div>
@@ -94,6 +96,13 @@ export default {
 </script>
 
 <style scoped>
+.doraM {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 #contents {
   background-color: cadetblue;
 }
@@ -119,7 +128,7 @@ p {
 }
 .mana {
   display: flex;
-  padding-bottom: 342px;
+  flex: 1;
 }
 .midori {
   color: #0097a7;
@@ -137,9 +146,7 @@ p {
 
 .teMto {
   background-color: #616161;
-  font-size: 3vw;
 }
-
 .kakunin {
   display: inline-block;
   border-radius: 4px;
