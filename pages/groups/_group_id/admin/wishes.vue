@@ -84,7 +84,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .inline-block {
   display: inline-block; /* インラインブロック要素にする */
 }

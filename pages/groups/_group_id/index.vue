@@ -319,7 +319,7 @@ export default {
   layout: 'group',
 }
 </script>
-<style>
+<style scoped>
 table {
   border-collapse: collapse;
 }
