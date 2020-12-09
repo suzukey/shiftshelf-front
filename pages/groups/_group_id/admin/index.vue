@@ -98,4 +98,10 @@ export default {
 .links a:hover {
   background-color: #f6f6f6;
 }
+
+@media screen and (min-width: 1180px) {
+  .links {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+  }
+}
 </style>
