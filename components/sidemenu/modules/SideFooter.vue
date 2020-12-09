@@ -8,10 +8,20 @@
       </div>
     </div>
     <div class="copyright">
-      <p>&copy; 2020 SHIFSHEL</p>
+      <p>&copy; {{ currentYear }} SHIFSHEL</p>
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  computed: {
+    currentYear() {
+      return this.$dayjs().get('year')
+    },
+  },
+}
+</script>
 
 <style scoped>
 .sidefooter {

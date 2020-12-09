@@ -23,7 +23,7 @@
           <nuxt-link to="privacy">プライバシーポリシー</nuxt-link>
           <nuxt-link to="contact">お問い合わせ</nuxt-link>
         </div>
-        <div class="copyright">&copy; 2020 SHIFSHEL</div>
+        <div class="copyright">&copy; {{ currentYear }} SHIFSHEL</div>
       </footer>
     </div>
   </div>
@@ -33,6 +33,11 @@
 export default {
   name: 'AuthLayout',
   middleware: ['unauthenticated'],
+  computed: {
+    currentYear() {
+      return this.$dayjs().get('year')
+    },
+  },
 }
 </script>
 

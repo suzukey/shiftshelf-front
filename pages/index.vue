@@ -94,7 +94,7 @@
             <nuxt-link to="/contact">お問い合わせ</nuxt-link>
           </div>
           <div class="copyright">
-            <span>&copy; 2020 SHIFSHEL</span>
+            <span>&copy; {{ currentYear }} SHIFSHEL</span>
           </div>
         </div>
       </footer>
@@ -103,7 +103,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    currentYear() {
+      return this.$dayjs().get('year')
+    },
+  },
+}
 </script>
 
 <style scoped>
