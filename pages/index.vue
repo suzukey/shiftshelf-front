@@ -23,7 +23,7 @@
             </nuxt-link>
           </div>
         </div>
-        <div class="down">
+        <div class="down" @click="scrollToAbout">
           <div class="desc">SHIFSHELとは</div>
           <div class="icon">
             <SvgIcon name="arrow-down" />
@@ -107,6 +107,14 @@ export default {
   computed: {
     currentYear() {
       return this.$dayjs().get('year')
+    },
+  },
+  methods: {
+    scrollToAbout() {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth',
+      })
     },
   },
 }
@@ -209,11 +217,25 @@ export default {
 
 .down .desc {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .down .icon {
+  animation: bounce 1s infinite;
   fill: currentColor;
   font-size: 24px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 
 .about header {
