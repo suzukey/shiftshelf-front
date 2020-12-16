@@ -170,6 +170,7 @@ export default {
 
 .top .down {
   align-items: center;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 80px;
