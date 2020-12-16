@@ -3,63 +3,57 @@
     <div class="mana">
       <div class="kana">
         <div class="box scrolly">
-          <b-list-group style="max-width: 300px;">
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-            <b-list-group-item class="d-flex align-items-center">
-              <b-avatar class="mr-3"></b-avatar>
-              <span class="mr-auto">じゅーるふとし</span>
-            </b-list-group-item>
-          </b-list-group>
+          <div class="membersList" style="max-width: 300px;">
+            <div class="memberListItem">
+              <Avatar />
+              <span>じゅーるふとし</span>
+            </div>
+            <div class="memberListItem">
+              <Avatar />
+              <span>じゅーるふとし</span>
+            </div>
+            <div class="memberListItem">
+              <Avatar />
+              <span>じゅーるふとし</span>
+            </div>
+            <div class="memberListItem">
+              <Avatar />
+              <span>じゅーるふとし</span>
+            </div>
+            <div class="memberListItem">
+              <Avatar />
+              <span>じゅーるふとし</span>
+            </div>
+            <div class="memberListItem">
+              <Avatar />
+              <span>じゅーるふとし</span>
+            </div>
+            <div class="memberListItem">
+              <Avatar />
+              <span>じゅーるふとし</span>
+            </div>
+            <div class="memberListItem">
+              <Avatar />
+              <span>じゅーるふとし</span>
+            </div>
+            <div class="memberListItem">
+              <Avatar />
+              <span>じゅーるふとし</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="example">
-        <b-form-group label="  役割">
-          <b-form-radio-group
-            v-model="selected"
-            name="radios-stacked"
-            stacked
-            :options="options"
-          ></b-form-radio-group>
-        </b-form-group>
+        <div class="form" label="役割">
+          <div class="radios">
+            <div v-for="option in options" :key="option" class="radio">
+              <input type="radio" />
+              <label>{{ option.text }}</label>
+            </div>
+          </div>
+        </div>
         <div>
-          <b-button variant="outline-secondary"
-            >メンバーの役割を初期化</b-button
-          >
+          <button>メンバーの役割を初期化</button>
         </div>
       </div>
     </div>

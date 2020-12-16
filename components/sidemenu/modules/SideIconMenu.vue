@@ -2,7 +2,6 @@
   <div class="side-icon-menu">
     <div class="icon">
       <SvgIcon v-if="icon" :name="icon" />
-      <b-avatar v-else></b-avatar>
     </div>
 
     <div class="menu">

@@ -1,7 +1,7 @@
 <template>
   <div class="side-profile">
     <div class="icon">
-      <b-avatar></b-avatar>
+      <Avatar />
     </div>
 
     <div class="info">

@@ -11,7 +11,7 @@
       </div>
 
       <div class="menu" @click="isActive = !isActive">
-        <b-avatar></b-avatar>
+        <Avatar />
         <span class="chevron">
           <SvgIcon v-if="!isActive" name="menu-down" />
           <SvgIcon v-else name="menu-up" />
@@ -97,6 +97,7 @@ header {
 }
 
 .menu {
+  align-items: center;
   cursor: pointer;
   display: flex;
   user-select: none;

@@ -2,40 +2,35 @@
   <div class="home">
     <div class="Locustman">
       <div>
-        <div class="mb-2">
-          <b-avatar size="6rem"></b-avatar>
+        <div class="groupIcon">
+          <SvgIcon name="domain" />
         </div>
         <div>
           <div class="m">
             グループ名 {{ group }}
             <div class="m1">
-              <b-form-input
-                v-model="group"
-                placeholder="グループ名"
-              ></b-form-input>
+              <input type="text" v-model="group" placeholder="グループ名" />
             </div>
           </div>
         </div>
         <div class="m">
           始業時間 {{ start }}
-          <b-form-input v-model="start" placeholder="00:00"></b-form-input>
+          <input type="time" v-model="start" />
         </div>
         ～
         <div class="m">
           終業時間{{ end }}
-          <b-form-input v-model="end" placeholder="24:00"></b-form-input>
+          <input type="time" v-model="end" />
         </div>
       </div>
       <div>
         定休日
-        <b-form-checkbox-group
-          v-model="selected"
-          :options="options"
-          class="mb-3"
-          value-field="item"
-          text-field="name"
-          disabled-field="notEnabled"
-        ></b-form-checkbox-group>
+        <div class="checkboxes">
+          <div v-for="option in options" :key="option.item" class="checkbox">
+            <input type="checkbox" />
+            <label>{{ option.item }}</label>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -82,11 +77,19 @@ export default {
   flex-direction: column;
 }
 .Locustman {
+  align-items: center;
   flex: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.groupIcon svg {
+  color: #8e8e8e;
+  fill: currentColor;
+  height: 100px;
+  width: 100px;
 }
 
 .m {
@@ -118,5 +121,14 @@ export default {
   display: inline-block;
   font-size: 1vw;
   color: #fff;
+}
+
+.checkboxes {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox {
+  padding: 10px 20px;
 }
 </style>

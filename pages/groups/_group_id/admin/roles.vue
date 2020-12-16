@@ -5,7 +5,7 @@
         <div class="kana">
           役割
           <div class="box scrolly">
-            <b-list-group style="max-width: 300px;">
+            <div class="role-list" style="max-width: 300px;">
               <div class="midori">
                 <span class="mr-auto"><p>管理者</p></span>
                 <span class="mr-auto"><p>社員</p></span>
@@ -23,38 +23,39 @@
                 <span class="mr-auto"><p>アルバイト</p></span>
               </div>
               <span class="mr-auto"><p>デフォルト</p></span>
-            </b-list-group>
+            </div>
           </div>
         </div>
         <div class="example">
           <p>役割名</p>
           <div>
             <p>
-              <b-form-input v-model="text"></b-form-input>
+              <input v-model="text" />
             </p>
           </div>
           <div class="border-big"></div>
           <p>役割の設定</p>
 
-          <b-form-checkbox-group
-            v-model="selected"
-            :options="options"
-            plain
-            stacked
-          ></b-form-checkbox-group>
+          <div class="checkboxes">
+            <div v-for="option in options1" :key="option.value">
+              <input type="checkbox" />
+              <label>{{ option.text }}</label>
+            </div>
+          </div>
+
           <div class="border-big"></div>
           <p>管理メニュー</p>
-          <b-form-checkbox-group
-            v-model="selected"
-            :options="options2"
-            plain
-            stacked
-          ></b-form-checkbox-group>
+
+          <div class="checkboxes">
+            <div v-for="option in options2" :key="option.value">
+              <input type="checkbox" />
+              <label>{{ option.text }}</label>
+            </div>
+          </div>
+
           <div>
-            <b-button variant="outline-secondary"
-              >メンバーの役割を初期化</b-button
-            >
-            <b-button variant="outline-danger">役割を削除</b-button>
+            <button>メンバーの役割を初期化</button>
+            <button>役割を削除</button>
           </div>
         </div>
       </div>
@@ -81,11 +82,11 @@ export default {
     return {
       text: '',
       selected: [], // Must be an array reference!
-      options: [{ text: 'シフト募集対象に含める', value: 'A' }],
+      options1: [{ text: 'シフト募集対象に含める', value: 'A' }],
       options2: [
         { text: 'グループ情報の管理', value: 'B' },
         { text: '参加者の管理', value: 'C' },
-        { text: '役割んの管理', value: 'D' },
+        { text: '役割の管理', value: 'D' },
         { text: 'シフトの編集', value: 'E' },
         { text: 'シフト希望の募集', value: 'F' },
         { text: 'シフト希望の閲覧', value: 'G' },
