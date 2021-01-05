@@ -150,4 +150,21 @@ p {
   font-size: 1vw;
   color: #fff;
 }
+.memberListItem {
+  font-size: 20px;
+}
+button {
+  font-size: 20px;
+  height: 50px;
+}
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
 </style>
