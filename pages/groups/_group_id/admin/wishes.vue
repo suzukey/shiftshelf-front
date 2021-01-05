@@ -125,5 +125,6 @@ table th {
 
 table td {
   padding: 30px 100px;
+  border: 1px solid #616161;
 }
 </style>
