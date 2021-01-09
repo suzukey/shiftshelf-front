@@ -1,73 +1,81 @@
 <template>
-  <div class="doraM">
-    <div class="mana">
-      <div class="kana">
-        <div class="box scrolly">
-          <div class="membersList" style="max-width: 300px;">
-            <div class="memberListItem">
-              <Avatar />
-              <span>じゅーるふとし</span>
-            </div>
-            <div class="memberListItem">
-              <Avatar />
-              <span>じゅーるふとし</span>
-            </div>
-            <div class="memberListItem">
-              <Avatar />
-              <span>じゅーるふとし</span>
-            </div>
-            <div class="memberListItem">
-              <Avatar />
-              <span>じゅーるふとし</span>
-            </div>
-            <div class="memberListItem">
-              <Avatar />
-              <span>じゅーるふとし</span>
-            </div>
-            <div class="memberListItem">
-              <Avatar />
-              <span>じゅーるふとし</span>
-            </div>
-            <div class="memberListItem">
-              <Avatar />
-              <span>じゅーるふとし</span>
-            </div>
-            <div class="memberListItem">
-              <Avatar />
-              <span>じゅーるふとし</span>
-            </div>
-            <div class="memberListItem">
-              <Avatar />
-              <span>じゅーるふとし</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="example">
-        <div class="form" label="役割">
-          <div class="radios">
-            <div v-for="option in options" :key="option" class="radio">
-              <input type="radio" />
-              <label>{{ option.text }}</label>
-            </div>
-          </div>
-        </div>
-        <div>
-          <button>メンバーの役割を初期化</button>
-        </div>
+  <div class="admin">
+    <div class="main-header">
+      <div class="page-title">
+        メンバー画面
       </div>
     </div>
+    <div class="doraM">
+      <div class="mana">
+        <div class="kana">
+          <div class="box scrolly">
+            <div class="membersList" style="max-width: 300px;">
+              <div class="memberListItem">
+                <Avatar />
+                <span>じゅーるふとし</span>
+              </div>
+              <div class="memberListItem">
+                <Avatar />
+                <span>じゅーるふとし</span>
+              </div>
+              <div class="memberListItem">
+                <Avatar />
+                <span>じゅーるふとし</span>
+              </div>
+              <div class="memberListItem">
+                <Avatar />
+                <span>じゅーるふとし</span>
+              </div>
+              <div class="memberListItem">
+                <Avatar />
+                <span>じゅーるふとし</span>
+              </div>
+              <div class="memberListItem">
+                <Avatar />
+                <span>じゅーるふとし</span>
+              </div>
+              <div class="memberListItem">
+                <Avatar />
+                <span>じゅーるふとし</span>
+              </div>
+              <div class="memberListItem">
+                <Avatar />
+                <span>じゅーるふとし</span>
+              </div>
+              <div class="memberListItem">
+                <Avatar />
+                <span>じゅーるふとし</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example">
+          <div class="form" label="役割">
+            <div class="radios">
+              <div v-for="option in options" :key="option" class="radio">
+                <input type="radio" />
+                <label>{{ option.text }}</label>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div>
+            <button>メンバーの役割を初期化</button>
+          </div>
+        </div>
+      </div>
 
-    <div class="teMto">
-      <div class="right">
-        <div class="ppap">保存していない変更があります</div>
+      <div class="teMto">
+        <div class="right">
+          <div class="ppap">保存していない変更があります</div>
 
-        <a href="/home" class="ppap">
-          リセット
-        </a>
-        <a href="/home" class="kakunin">
-          確定
-        </a>
+          <a href="/home" class="ppap">
+            リセット
+          </a>
+          <a href="/home" class="kakunin">
+            確定
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -90,6 +98,21 @@ export default {
 </script>
 
 <style scoped>
+.main-header {
+  align-items: center;
+  background-color: #00897b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  height: 65px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.main-header .page-title {
+  font-size: 20px;
+}
 .doraM {
   display: flex;
   flex-direction: column;
@@ -124,13 +147,19 @@ p {
   flex: 1;
 }
 .example {
-  font-size: 30px;
-  padding-left: 100px;
+  font-size: 25px;
+  padding: 50px 10px 10px 150px;
   line-height: 250%;
 }
 .teMto {
   background-color: #616161;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 3vw;
 }
+
 .kakunin {
   display: inline-block;
   border-radius: 4px;
@@ -152,10 +181,9 @@ p {
 }
 .memberListItem {
   font-size: 20px;
-}
-button {
-  font-size: 20px;
-  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
 }
 .btn--orange,
 a.btn--orange {

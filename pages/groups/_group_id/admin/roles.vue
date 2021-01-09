@@ -1,9 +1,14 @@
 <template>
-  <div class="home">
-    <div class="doraM">
+  <div class="admin">
+    <div class="main-header">
+      <div class="page-title">
+        権限画面
+      </div>
+    </div>
+    <div class="home">
       <div class="mana">
         <div class="kana">
-          役割
+          <h1>役割</h1>
           <div class="box scrolly">
             <div class="role-list" style="max-width: 300px;">
               <div class="midori">
@@ -52,7 +57,7 @@
               <label>{{ option.text }}</label>
             </div>
           </div>
-
+          <br />
           <div>
             <button>メンバーの役割を初期化</button>
             <button>役割を削除</button>
@@ -97,14 +102,22 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  height: 100%;
-  width: 100%;
+.main-header {
+  align-items: center;
+  background-color: #00897b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  height: 65px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 3;
 }
 
-.doraM {
-  display: flex;
-  flex-direction: column;
+.main-header .page-title {
+  font-size: 20px;
+}
+.home {
   height: 100%;
   width: 100%;
 }
@@ -143,15 +156,22 @@ p {
   color: #e6c610;
 }
 .example {
+  padding: 50px 20px 20px 150px;
   font-size: 25px;
 }
 .border-big {
   padding: 5px 1px 5px 1px;
   border-bottom: 2px solid grey;
+  margin: 20px 1px 20px 1px;
 }
 
 .teMto {
   background-color: #616161;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 3vw;
 }
 .kakunin {
   display: inline-block;
@@ -165,11 +185,13 @@ p {
 .right {
   text-align: right;
 }
-
 .ppap {
   text-align: left;
   display: inline-block;
   font-size: 1vw;
   color: #fff;
+}
+.role-list {
+  font-size: 25px;
 }
 </style>

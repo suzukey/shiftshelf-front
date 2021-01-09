@@ -1,37 +1,44 @@
 <template>
-  <div>
-    <div class="selectTime"></div>
-    <table v-for="survay in survays" :key="survay">
-      <div class="a">
-        <tr>
-          <td>{{ toDate(survay.date) }}{{ toDay(survay.date) }}</td>
-          <td>
-            <div class="kuhaku">
-              <div class="time">
-                <div class="inline-block">
-                  <STime :time="survay.open_time" />
-                </div>
-                ~
-                <div class="inline-block">
-                  <STime :time="survay.close_time" />
+  <div class="admin">
+    <div class="main-header">
+      <div class="page-title">
+        シフト希望提出画面
+      </div>
+    </div>
+    <div>
+      <div class="selectTime"></div>
+      <table v-for="survay in survays" :key="survay">
+        <div class="a">
+          <tr>
+            <td>{{ toDate(survay.date) }}{{ toDay(survay.date) }}</td>
+            <td>
+              <div class="kuhaku">
+                <div class="time">
+                  <div class="inline-block">
+                    <STime :time="survay.open_time" />
+                  </div>
+                  ~
+                  <div class="inline-block">
+                    <STime :time="survay.close_time" />
+                  </div>
                 </div>
               </div>
-            </div>
-          </td>
-        </tr>
-      </div>
-    </table>
+            </td>
+          </tr>
+        </div>
+      </table>
 
-    <div class="teMto">
-      <div class="right">
-        <div class="ppap">保存していない変更があります</div>
+      <div class="teMto">
+        <div class="right">
+          <div class="ppap">保存していない変更があります</div>
 
-        <a href="/home" class="ppap">
-          リセット
-        </a>
-        <a href="/home" class="kakunin">
-          確定
-        </a>
+          <a href="/home" class="ppap">
+            リセット
+          </a>
+          <a href="/home" class="kakunin">
+            確定
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -116,6 +123,21 @@ export default {
 </script>
 
 <style scoped>
+.main-header {
+  align-items: center;
+  background-color: #00897b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  height: 65px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.main-header .page-title {
+  font-size: 20px;
+}
 .a {
   padding: 10px;
 }

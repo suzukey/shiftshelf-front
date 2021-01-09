@@ -1,43 +1,50 @@
 <template>
-  <div class="doraM">
-    12月{{ this.$route.params.day }}日
-    <div class="majime">
-      <div id="app">
-        <!-- ボックス -->
-        <table>
-          <tr>
-            <th>
-              名&nbsp;&nbsp;前&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </th>
-            <td v-for="time in times" :key="time">
-              {{ time }}
-            </td>
-          </tr>
-          <tr v-for="(shift, user_idx) in shifts" :key="user_idx">
-            <th>
-              {{ shift.user }}
-            </th>
-            <td
-              v-for="(user_shift, shift_idx) in shift.shift"
-              :key="shift_idx"
-              :class="{ wht: !user_shift, red: user_shift }"
-              class="timebox"
-              @click="toggle_switch(user_idx, shift_idx)"
-            ></td>
-          </tr>
-        </table>
+  <div class="admin">
+    <div class="main-header">
+      <div class="page-title">
+        シフト作成画面
       </div>
     </div>
-    <div class="teMto">
-      <div class="right">
-        <div class="ppap">保存していない変更があります</div>
+    <div class="doraM">
+      12月{{ this.$route.params.day }}日
+      <div class="majime">
+        <div id="app">
+          <!-- ボックス -->
+          <table>
+            <tr>
+              <th>
+                名&nbsp;&nbsp;前&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </th>
+              <td v-for="time in times" :key="time">
+                {{ time }}
+              </td>
+            </tr>
+            <tr v-for="(shift, user_idx) in shifts" :key="user_idx">
+              <th>
+                {{ shift.user }}
+              </th>
+              <td
+                v-for="(user_shift, shift_idx) in shift.shift"
+                :key="shift_idx"
+                :class="{ wht: !user_shift, red: user_shift }"
+                class="timebox"
+                @click="toggle_switch(user_idx, shift_idx)"
+              ></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="teMto">
+        <div class="right">
+          <div class="ppap">保存していない変更があります</div>
 
-        <a href="/home" class="ppap">
-          リセット
-        </a>
-        <a href="/home" class="kakunin">
-          確定
-        </a>
+          <a href="/home" class="ppap">
+            リセット
+          </a>
+          <a href="/home" class="kakunin">
+            確定
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -326,11 +333,20 @@ export default {
 </script>
 
 <style scoped>
-.doraM {
+.main-header {
+  align-items: center;
+  background-color: #00897b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+  height: 65px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.main-header .page-title {
+  font-size: 20px;
 }
 .majime {
   flex: 1;
@@ -366,8 +382,13 @@ s .timebox {
 }
 .teMto {
   background-color: #616161;
-  font-size: 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 3vw;
 }
+
 .kakunin {
   display: inline-block;
   border-radius: 4px;

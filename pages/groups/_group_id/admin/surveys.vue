@@ -1,5 +1,10 @@
 <template>
-  <div class="doraM">
+  <div class="admin">
+    <div class="main-header">
+      <div class="page-title">
+        シフト希望調査画面
+      </div>
+    </div>
     <div class="survey">
       <!-- 一段目 -->
       <div class="kuhaku">
@@ -43,21 +48,23 @@
               <th class="calendar-sat">土</th>
             </tr>
           </thead> -->
-          <tbody>
-            <tr v-for="day in days" :key="day">
-              <td class="calendar-none">&nbsp;</td>
-              <td>
-                <i class="calendar-day-number">{{ day.day }}</i>
-                <div
-                  v-for="event in day.events"
-                  :key="event"
-                  class="calendar-labels"
-                >
-                  <span class="calender-label-blue">{{ event }}</span>
-                </div>
-              </td>
-            </tr>
-          </tbody>
+          <div class="calendarpotision">
+            <tbody>
+              <tr v-for="day in days" :key="day">
+                <td class="calendar-none">&nbsp;</td>
+                <td>
+                  <i class="calendar-day-number">{{ day.day }}</i>
+                  <div
+                    v-for="event in day.events"
+                    :key="event"
+                    class="calendar-labels"
+                  >
+                    <span class="calender-label-blue">{{ event }}</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </div>
         </table>
       </div>
     </div>
@@ -98,11 +105,20 @@ export default {
 </script>
 
 <style scoped>
-.doraM {
+.main-header {
+  align-items: center;
+  background-color: #00897b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+  height: 65px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.main-header .page-title {
+  font-size: 20px;
 }
 
 .survey {
@@ -131,7 +147,6 @@ export default {
 }
 #mini-calendar td {
   height: auto;
-  display: -webkit-flex;
   display: flex;
 }
 #mini-calendar .calendar-none {
@@ -146,7 +161,7 @@ export default {
   padding: 5px;
   margin-top: 0;
   margin-right: 5px;
-  font-size: 12px;
+  font-size: 20px;
 }
 
 /* 日付 */
@@ -167,10 +182,18 @@ export default {
 #mini-calendar td.calendar-sat .calendar-day-number {
   background: #c8ebfe;
 }
+.calendarpotision {
+  padding: 3px 10px 10px 32px;
+}
 .teMto {
   background-color: #616161;
-  font-size: 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 3vw;
 }
+
 .kakunin {
   display: inline-block;
   border-radius: 4px;
