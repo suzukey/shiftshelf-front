@@ -5,7 +5,9 @@ export default ({ $axios }) => {
     auth.onAuthStateChanged((user) => {
       if (user) {
         user.getIdToken().then((accessToken) => {
-          config.headers.common.Authorization = `Bearer ${accessToken}`
+          if (config.headers.common) {
+            config.headers.common.Authorization = `Bearer ${accessToken}`
+          }
         })
       }
     })

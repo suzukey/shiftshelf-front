@@ -17,8 +17,6 @@
 </template>
 
 <script>
-import { auth } from '~/plugins/firebase'
-
 export default {
   props: {
     isActive: {
@@ -28,9 +26,7 @@ export default {
   },
   methods: {
     signOut() {
-      auth.signOut().then(() => {
-        this.$router.push({ path: '/' })
-      })
+      this.$store.dispatch('user/signOut')
     },
   },
 }
