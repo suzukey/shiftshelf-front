@@ -19,7 +19,10 @@
         に同意するものとします。
       </p>
     </div>
-    <button class="auth-btn" @click="register">登録する</button>
+    <button class="auth-btn" :disabled="loading" @click="register">
+      <SvgIcon v-if="loading" name="loading" />
+      登録する
+    </button>
   </div>
 </template>
 
@@ -33,14 +36,19 @@ export default {
       name: '',
       email: '',
       password: '',
+      loading: false,
     }
   },
   methods: {
     register() {
+      this.loading = true
+
       const email = this.email
       const password = this.password
 
       auth.createUserWithEmailAndPassword(email, password).catch(() => {})
+
+      this.loading = false
     },
   },
 }
@@ -85,16 +93,34 @@ export default {
 }
 
 .auth-btn {
+  align-items: center;
   background-color: #00897b;
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
   color: #fff;
+  display: flex;
   font-size: 20px;
   height: 55px;
+  justify-content: center;
   line-height: 55px;
   margin: 10px 0 20px 0;
-  text-align: center;
   width: 100%;
+}
+
+.auth-btn svg {
+  animation: spin 1s linear infinite;
+  color: #fff;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
