@@ -93,7 +93,7 @@ export default {
   max-width: 440px;
   min-height: 570px;
   padding: 50px 30px;
-  width: 100%;
+  width: 90%;
 }
 
 .spacer {

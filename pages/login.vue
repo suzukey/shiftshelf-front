@@ -50,9 +50,10 @@ export default {
             this.$router.replace({ path: '/home' }).catch(() => {})
           })
           .catch(() => {})
+          .finally(() => {
+            this.loading = false
+          })
       })
-
-      this.loading = false
     },
   },
 }
@@ -99,6 +100,7 @@ export default {
   border-radius: 5px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
   color: #fff;
+  cursor: pointer;
   display: flex;
   font-size: 20px;
   height: 55px;
