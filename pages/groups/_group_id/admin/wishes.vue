@@ -1,33 +1,40 @@
 <template>
-  <div>
-    <div class="selectTime"></div>
-    <div id="mitei_if">
-      <table>
-        <h2>未提出者</h2>
-        <tr v-for="menbar in mitei" :key="menbar.usarname">
-          <td>
-            {{ menbar.usarname }}
-          </td>
-        </tr>
-        <h2>提出者</h2>
-        <tr v-for="menbar in teitei" :key="menbar.usarname">
-          <td>
-            {{ menbar.usarname }}
-          </td>
-        </tr>
-      </table>
+  <div class="admin">
+    <div class="main-header">
+      <div class="page-title">
+        シフト希望閲覧画面
+      </div>
     </div>
-    <!-- 次回提出者と未提出者を横並びに -->
-    <div class="teMto">
-      <div class="right">
-        <div class="ppap">保存していない変更があります</div>
-        <button @click="members[1] == NULL">未提出者一覧</button>
-        <a href="/home" class="ppap">
-          リセット
-        </a>
-        <a href="/home" class="kakunin">
-          確定
-        </a>
+    <div>
+      <div class="selectTime"></div>
+      <div id="mitei_if">
+        <table>
+          <h2>未提出者</h2>
+          <tr v-for="menbar in mitei" :key="menbar.usarname">
+            <td>
+              {{ menbar.usarname }}
+            </td>
+          </tr>
+          <h2>提出者</h2>
+          <tr v-for="menbar in teitei" :key="menbar.usarname">
+            <td>
+              {{ menbar.usarname }}
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- 次回提出者と未提出者を横並びに -->
+      <div class="teMto">
+        <div class="right">
+          <div class="ppap">保存していない変更があります</div>
+          <button @click="members[1] == NULL">未提出者一覧</button>
+          <a href="/home" class="ppap">
+            リセット
+          </a>
+          <a href="/home" class="kakunin">
+            確定
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -85,6 +92,21 @@ export default {
 </script>
 
 <style scoped>
+.main-header {
+  align-items: center;
+  background-color: #00897b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  height: 65px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.main-header .page-title {
+  font-size: 20px;
+}
 .inline-block {
   display: inline-block; /* インラインブロック要素にする */
 }
