@@ -15,9 +15,15 @@
       <nuxt-link :to="`/groups/${groupId}/posts`">
         <SideIconMenu title="シフト希望提出" icon="file" />
       </nuxt-link>
-      <nuxt-link :to="`/groups/${groupId}/admin`">
-        <SideIconMenu title="管理画面" icon="clipboard-account" />
-      </nuxt-link>
+      <div>
+        <SideIconMenu
+          title="管理画面"
+          icon="clipboard-account"
+          :expand="true"
+          @toggleExpand="toggleAdminExpand"
+        />
+        <AdminMenus :expanded="adminExpanded" />
+      </div>
     </div>
   </div>
 </template>
@@ -39,11 +45,17 @@ export default {
       group: {
         name: '',
       },
+      adminExpanded: false,
     }
   },
   computed: {
     groupId() {
       return this.$route.params.group_id
+    },
+  },
+  methods: {
+    toggleAdminExpand() {
+      this.adminExpanded = !this.adminExpanded
     },
   },
 }
@@ -84,6 +96,7 @@ export default {
 
 .menus {
   flex: 1;
+  user-select: none;
 }
 
 .group a,

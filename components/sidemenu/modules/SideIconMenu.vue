@@ -1,11 +1,15 @@
 <template>
-  <div class="side-icon-menu">
+  <div class="side-icon-menu" @click="toggleExpand">
     <div class="icon">
       <SvgIcon v-if="icon" :name="icon" />
     </div>
 
     <div class="menu">
       {{ title }}
+    </div>
+
+    <div v-if="expand" class="icon">
+      <SvgIcon name="chevron-down" />
     </div>
   </div>
 </template>
@@ -20,6 +24,15 @@ export default {
     icon: {
       type: String,
       default: '',
+    },
+    expand: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    toggleExpand() {
+      return this.$emit('toggleExpand')
     },
   },
 }
