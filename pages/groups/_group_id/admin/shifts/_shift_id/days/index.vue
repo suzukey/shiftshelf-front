@@ -2,6 +2,9 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin/shifts">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         シフト作成画面
       </div>
     </div>

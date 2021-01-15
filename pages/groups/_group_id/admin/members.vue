@@ -2,6 +2,9 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         メンバー画面
       </div>
     </div>

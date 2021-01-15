@@ -2,13 +2,15 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         権限画面
       </div>
     </div>
     <div class="home">
       <div class="mana">
         <div class="kana">
-          <h1>役割</h1>
           <div class="box scrolly">
             <div class="role-list" style="max-width: 300px;">
               <div class="midori">
@@ -16,15 +18,6 @@
                 <span class="mr-auto"><p>社員</p></span>
               </div>
               <div class="kiiro">
-                <span class="mr-auto"><p>アルバイト</p></span>
-                <span class="mr-auto"><p>アルバイト</p></span>
-                <span class="mr-auto"><p>アルバイト</p></span>
-                <span class="mr-auto"><p>アルバイト</p></span>
-                <span class="mr-auto"><p>アルバイト</p></span>
-                <span class="mr-auto"><p>アルバイト</p></span>
-                <span class="mr-auto"><p>アルバイト</p></span>
-                <span class="mr-auto"><p>アルバイト</p></span>
-                <span class="mr-auto"><p>アルバイト</p></span>
                 <span class="mr-auto"><p>アルバイト</p></span>
               </div>
               <span class="mr-auto"><p>デフォルト</p></span>
@@ -59,7 +52,7 @@
           </div>
           <br />
           <div>
-            <button>メンバーの役割を初期化</button>
+            <button>役割を初期化</button>
             <button>役割を削除</button>
           </div>
         </div>

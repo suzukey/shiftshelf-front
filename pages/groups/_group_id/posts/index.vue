@@ -6,7 +6,7 @@
       </div>
     </div>
     <div>
-      <h2>[{{ group.name }}]&nbsp;&nbsp;シフト希望調査</h2>
+      <!-- <h2>[{{ group.name }}]&nbsp;&nbsp;シフト希望調査</h2> -->
       <div v-for="post in posts" :key="post" class="links">
         <div class="link">
           <nuxt-link :to="`/groups/1/posts/${post.shift_wish_id}`">{{

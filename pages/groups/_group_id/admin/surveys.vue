@@ -2,6 +2,9 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         シフト希望調査画面
       </div>
     </div>
@@ -123,6 +126,7 @@ export default {
 
 .survey {
   flex: 1;
+  padding-left: 500px;
 }
 
 .inline-block {
@@ -206,7 +210,6 @@ export default {
 .right {
   text-align: right;
 }
-
 .ppap {
   text-align: left;
   display: inline-block;
