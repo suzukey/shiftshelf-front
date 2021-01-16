@@ -1,14 +1,16 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+  <Nuxt />
 </template>
+
+<script>
+export default {
+  name: 'DefaultLayout',
+}
+</script>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -17,39 +19,57 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  font-family: var(--font-base);
+}
+
+html,
+body,
+#__nuxt,
+#__layout {
+  width: 100%;
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  scrollbar-width: thin;
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+::-webkit-scrollbar-track {
+  background: #fff;
+  border: solid 1px #ececec;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #fff;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+:root {
+  --font-base: 'Lato', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
 }
 </style>

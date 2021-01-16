@@ -1,27 +1,24 @@
 export default {
   /*
    ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'spa',
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
-  target: 'server',
+  ssr: false,
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'SHIFSHEL',
+    htmlAttrs: {
+      lang: 'ja',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: 'シフト管理WEBアプリケーション',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -29,12 +26,16 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['modern-css-reset'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [
+    '~/plugins/mock.js',
+    '~/plugins/initialize.js',
+    '~/plugins/axios.js',
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -48,15 +49,16 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/svg',
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/dayjs',
   ],
   /*
    ** Axios module configuration
@@ -68,4 +70,18 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  generate: {
+    fallback: true,
+  },
+  dayjs: {
+    locales: ['en', 'ja'],
+    defaultLocale: 'ja',
+    plugins: [], // Day.js plugin
+  },
+  googleFonts: {
+    families: {
+      Lato: [300, 400, 700],
+    },
+    display: 'swap',
+  },
 }
