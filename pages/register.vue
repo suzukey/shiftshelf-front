@@ -43,11 +43,11 @@ export default {
     register() {
       this.loading = true
 
-      const email = this.email
-      const password = this.password
-
       auth
-        .createUserWithEmailAndPassword(email, password)
+        .createUserWithEmailAndPassword(this.email, this.password)
+        .then((user) => {
+          auth.signOut()
+        })
         .catch(() => {})
         .finally(() => {
           this.loading = false
