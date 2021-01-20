@@ -1,6 +1,6 @@
 import { auth } from '../plugins/firebase'
 
-const middleware = ({ store, redirect }) => {
+const middleware = ({ redirect }) => {
   return new Promise((resolve) => {
     auth.onAuthStateChanged((user) => {
       if (user) {

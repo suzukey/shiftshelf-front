@@ -11,7 +11,10 @@
       <input id="remember" v-model="remember" type="checkbox" name="remember" />
       <label for="remember">ログインしたままにする</label>
     </div>
-    <button class="auth-btn" @click="signIn">ログイン</button>
+    <button class="auth-btn" :disabled="loading" @click="signIn">
+      <SvgIcon v-if="loading" name="loading" />
+      ログイン
+    </button>
     <div class="forgot-password">
       <nuxt-link to="/forgot">パスワードを忘れた場合</nuxt-link>
     </div>
@@ -19,7 +22,7 @@
 </template>
 
 <script>
-import { auth } from '../plugins/firebase'
+import { auth } from '~/plugins/firebase'
 
 export default {
   layout: 'auth',
@@ -28,19 +31,28 @@ export default {
       email: 'test@example.com',
       password: '1234567890',
       remember: false,
+      loading: false,
     }
   },
   methods: {
     signIn() {
+      this.loading = true
+
       const email = this.email
       const password = this.password
       const persistence = this.remember ? 'local' : 'session'
 
       auth.setPersistence(persistence).then(() => {
-        auth.signInWithEmailAndPassword(email, password).then((cred) => {
-          this.$store.dispatch('user/getProfile')
-          this.$router.replace({ path: '/home' }).catch(() => {})
-        })
+        auth
+          .signInWithEmailAndPassword(email, password)
+          .then((cred) => {
+            this.$store.dispatch('user/getProfile')
+            this.$router.replace({ path: '/home' }).catch(() => {})
+          })
+          .catch(() => {})
+          .finally(() => {
+            this.loading = false
+          })
       })
     },
   },
@@ -82,17 +94,27 @@ export default {
 }
 
 .auth-btn {
+  align-items: center;
   background-color: #00897b;
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
   color: #fff;
+  cursor: pointer;
+  display: flex;
   font-size: 20px;
   height: 55px;
+  justify-content: center;
   line-height: 55px;
   margin: 10px 0 20px 0;
-  text-align: center;
   width: 100%;
+}
+
+.auth-btn svg {
+  animation: spin 1s linear infinite;
+  color: #fff;
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .forgot-password {
@@ -106,5 +128,14 @@ export default {
 .forgot-password a {
   color: inherit;
   text-decoration: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
