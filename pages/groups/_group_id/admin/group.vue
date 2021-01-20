@@ -164,4 +164,8 @@ export default {
 .checkbox {
   padding: 10px 20px;
 }
+.icon {
+  color: #fff;
+  fill: currentColor;
+}
 </style>

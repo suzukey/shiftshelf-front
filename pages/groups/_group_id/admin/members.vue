@@ -198,4 +198,8 @@ a.btn--orange:hover {
   color: #fff;
   background: #f56500;
 }
+.icon {
+  color: #fff;
+  fill: currentColor;
+}
 </style>

@@ -2,6 +2,9 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin/shifts/_days">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         シフト作成画面
       </div>
     </div>
@@ -407,5 +410,9 @@ s .timebox {
   display: inline-block;
   font-size: 1vw;
   color: #fff;
+}
+.icon {
+  color: #fff;
+  fill: currentColor;
 }
 </style>

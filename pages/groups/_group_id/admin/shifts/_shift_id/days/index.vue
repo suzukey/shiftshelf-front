@@ -75,7 +75,6 @@ a {
   /* background-color: #a2f5bf; */
   color: #333;
   text-decoration: none;
-  display: block;
   font-size: 40px;
 }
 table th {
@@ -88,5 +87,9 @@ table td {
 }
 .box {
   display: flex;
+}
+.icon {
+  color: #fff;
+  fill: currentColor;
 }
 </style>

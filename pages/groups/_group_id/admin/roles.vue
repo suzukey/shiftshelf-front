@@ -187,4 +187,8 @@ p {
 .role-list {
   font-size: 25px;
 }
+.icon {
+  color: #fff;
+  fill: currentColor;
+}
 </style>

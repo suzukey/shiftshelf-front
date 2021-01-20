@@ -64,7 +64,6 @@ a {
   /* background-color: #a2f5bf; */
   color: #333;
   text-decoration: none;
-  display: block;
   font-size: 30px;
 }
 .links {
@@ -96,5 +95,9 @@ a {
 
 .links a:hover {
   background-color: #f6f6f6;
+}
+.icon {
+  color: #fff;
+  fill: currentColor;
 }
 </style>

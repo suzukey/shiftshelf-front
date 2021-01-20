@@ -152,4 +152,8 @@ table td {
   padding: 30px 100px;
   border: 1px solid #616161;
 }
+.icon {
+  color: #fff;
+  fill: currentColor;
+}
 </style>

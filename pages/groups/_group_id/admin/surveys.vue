@@ -216,4 +216,8 @@ export default {
   font-size: 1vw;
   color: #fff;
 }
+.icon {
+  color: #fff;
+  fill: currentColor;
+}
 </style>
