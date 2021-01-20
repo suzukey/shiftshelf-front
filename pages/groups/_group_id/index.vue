@@ -199,7 +199,7 @@
           <td></td>
         </tr>
         <tr>
-          <td>ナダル</td>
+          <td>英樹</td>
           <td></td>
           <td></td>
           <td></td>
