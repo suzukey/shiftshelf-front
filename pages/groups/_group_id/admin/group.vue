@@ -18,7 +18,11 @@
             <div class="m">
               グループ名 {{ group }}
               <div class="m1">
-                <input type="text" v-model="group" placeholder="グループ名" />
+                <input
+                  type="text"
+                  v-model="group"
+                  placeholder="グループ名変更"
+                />
               </div>
             </div>
           </div>

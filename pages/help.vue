@@ -1,9 +1,9 @@
 <template>
-  <h1>ヘルプページ</h1>
+  <div>
+    a
+  </div>
 </template>
 
 <script>
-export default {
-  layout: 'nocontent',
-}
+export default {}
 </script>
