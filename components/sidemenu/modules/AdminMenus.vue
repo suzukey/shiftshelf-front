@@ -1,7 +1,7 @@
 <template>
   <div v-if="expanded" class="expanded">
     <nuxt-link :to="`/groups/${groupId}/admin/surveys`">
-      <span>シフト希望調査作成</span>
+      <span>シフト募集</span>
     </nuxt-link>
     <nuxt-link :to="`/groups/${groupId}/admin/shifts`">
       <span>シフト作成</span>

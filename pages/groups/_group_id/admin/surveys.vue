@@ -5,14 +5,14 @@
         <nuxt-link to="/groups/_admin/admin">
           <SvgIcon name="arrow-left" class="icon" />
         </nuxt-link>
-        シフト希望調査画面
+        <!-- シフト希望調査画面 -->
       </div>
     </div>
     <div class="survey">
       <!-- 一段目 -->
       <div class="kuhaku">
         <div class="inline-block">
-          <div class="start">希望調査名</div>
+          <div class="start">募集名</div>
           <input type="text" />
         </div>
       </div>

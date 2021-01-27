@@ -8,7 +8,7 @@
     <div class="links">
       <div class="link">
         <nuxt-link :to="`/groups/${groupId}/admin/surveys`">
-          シフト希望調査作成
+          シフト募集
         </nuxt-link>
       </div>
       <div class="link">
