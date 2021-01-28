@@ -15,9 +15,9 @@
             <div class="role-list" style="max-width: 300px;">
               <div class="midori">
                 <span class="mr-auto"><p>管理者</p></span>
-                <span class="mr-auto"><p>社員</p></span>
               </div>
               <div class="kiiro">
+                <span class="mr-auto"><p>社員</p></span>
                 <span class="mr-auto"><p>アルバイト</p></span>
               </div>
               <span class="mr-auto"><p>デフォルト</p></span>

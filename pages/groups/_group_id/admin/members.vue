@@ -15,39 +15,39 @@
             <div class="membersList" style="max-width: 300px;">
               <div class="memberListItem">
                 <Avatar />
-                <span>じゅーるふとし</span>
+                <span>電波太郎</span>
               </div>
               <div class="memberListItem">
                 <Avatar />
-                <span>じゅーるふとし</span>
+                <span>大宮</span>
               </div>
               <div class="memberListItem">
                 <Avatar />
-                <span>じゅーるふとし</span>
+                <span>上野</span>
               </div>
               <div class="memberListItem">
                 <Avatar />
-                <span>じゅーるふとし</span>
+                <span>加藤</span>
               </div>
               <div class="memberListItem">
                 <Avatar />
-                <span>じゅーるふとし</span>
+                <span>宇都宮</span>
               </div>
               <div class="memberListItem">
                 <Avatar />
-                <span>じゅーるふとし</span>
+                <span>伊藤</span>
               </div>
               <div class="memberListItem">
                 <Avatar />
-                <span>じゅーるふとし</span>
+                <span>村井</span>
               </div>
               <div class="memberListItem">
                 <Avatar />
-                <span>じゅーるふとし</span>
+                <span>鈴木</span>
               </div>
               <div class="memberListItem">
                 <Avatar />
-                <span>じゅーるふとし</span>
+                <span>森田</span>
               </div>
             </div>
           </div>
