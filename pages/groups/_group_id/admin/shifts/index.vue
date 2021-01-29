@@ -2,6 +2,9 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         シフト作成画面
       </div>
     </div>
@@ -61,7 +64,6 @@ a {
   /* background-color: #a2f5bf; */
   color: #333;
   text-decoration: none;
-  display: block;
   font-size: 30px;
 }
 .links {
@@ -93,5 +95,9 @@ a {
 
 .links a:hover {
   background-color: #f6f6f6;
+}
+.icon {
+  color: #fff;
+  fill: currentColor;
 }
 </style>

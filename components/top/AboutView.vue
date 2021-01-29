@@ -7,10 +7,7 @@
           <h3>SHIFSHELとは</h3>
           <h2>共有・カレンダー機能のあるシフト管理</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            accusamus aliquam nobis non quas tenetur dolorem minima. Eius non
-            dignissimos eos asperiores, eaque assumenda harum, corrupti
-            laboriosam eligendi quis ut!
+            SHIFSHELはシフト管理をもっと楽にするお手伝いをします。
           </p>
         </div>
         <div class="strength">
@@ -20,12 +17,9 @@
             </div>
             <div class="strength-item_content">
               <div class="strength-item_lines">
-                <h3>シフト共有</h3>
+                <h3>あなただけのカレンダー</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur minus, nulla nemo tempore a mollitia nesciunt
-                  veniam ipsam, error rerum delectus excepturi dolores inventore
-                  praesentium quia veritatis animi non. Eius.
+                  これからの予定を確認できる場所。これで大事な予定を見逃しません。
                 </p>
               </div>
             </div>
@@ -39,10 +33,7 @@
               <div class="strength-item_lines">
                 <h3>シフト共有</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur minus, nulla nemo tempore a mollitia nesciunt
-                  veniam ipsam, error rerum delectus excepturi dolores inventore
-                  praesentium quia veritatis animi non. Eius.
+                  簡単にグループでシフトを共有できます。予定の調整も簡単に。
                 </p>
               </div>
             </div>
@@ -53,12 +44,9 @@
             </div>
             <div class="strength-item_content">
               <div class="strength-item_lines">
-                <h3>シフト共有</h3>
+                <h3>シフトを募集する</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur minus, nulla nemo tempore a mollitia nesciunt
-                  veniam ipsam, error rerum delectus excepturi dolores inventore
-                  praesentium quia veritatis animi non. Eius.
+                  簡単な操作でシフトを一斉に募集することができます。
                 </p>
               </div>
             </div>
@@ -70,12 +58,9 @@
             </div>
             <div class="strength-item_content">
               <div class="strength-item_lines">
-                <h3>シフト共有</h3>
+                <h3>シフト希望を提出</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur minus, nulla nemo tempore a mollitia nesciunt
-                  veniam ipsam, error rerum delectus excepturi dolores inventore
-                  praesentium quia veritatis animi non. Eius.
+                  いつでもどこでもシフトを提出することができます。
                 </p>
               </div>
             </div>

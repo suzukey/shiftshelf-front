@@ -2,6 +2,9 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin/shifts">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         シフト作成画面
       </div>
     </div>
@@ -72,7 +75,6 @@ a {
   /* background-color: #a2f5bf; */
   color: #333;
   text-decoration: none;
-  display: block;
   font-size: 40px;
 }
 table th {
@@ -85,5 +87,9 @@ table td {
 }
 .box {
   display: flex;
+}
+.icon {
+  color: #fff;
+  fill: currentColor;
 }
 </style>

@@ -2,31 +2,36 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/1/posts">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         シフト希望提出画面
       </div>
     </div>
     <div>
-      <div class="selectTime"></div>
-      <table v-for="survay in survays" :key="survay">
-        <div class="a">
-          <tr>
-            <td>{{ toDate(survay.date) }}{{ toDay(survay.date) }}</td>
-            <td>
-              <div class="kuhaku">
-                <div class="time">
-                  <div class="inline-block">
-                    <STime :time="survay.open_time" />
-                  </div>
-                  ~
-                  <div class="inline-block">
-                    <STime :time="survay.close_time" />
+      <div class="bracksouleater">
+        <div class="selectTime"></div>
+        <table v-for="survay in survays" :key="survay">
+          <div class="a">
+            <tr>
+              <td>{{ toDate(survay.date) }}{{ toDay(survay.date) }}</td>
+              <td>
+                <div class="kuhaku">
+                  <div class="time">
+                    <div class="inline-block">
+                      <STime :time="survay.open_time" />
+                    </div>
+                    ~
+                    <div class="inline-block">
+                      <STime :time="survay.close_time" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </td>
-          </tr>
-        </div>
-      </table>
+              </td>
+            </tr>
+          </div>
+        </table>
+      </div>
 
       <div class="teMto">
         <div class="right">
@@ -174,5 +179,8 @@ td {
   display: inline-block;
   font-size: 1vw;
   color: #fff;
+}
+.bracksouleater {
+  font-size: 30px;
 }
 </style>

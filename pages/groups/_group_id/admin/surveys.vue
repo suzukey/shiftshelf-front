@@ -2,14 +2,17 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
-        シフト希望調査画面
+        <nuxt-link to="/groups/_admin/admin">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
+        <!-- シフト希望調査画面 -->
       </div>
     </div>
     <div class="survey">
       <!-- 一段目 -->
       <div class="kuhaku">
         <div class="inline-block">
-          <div class="start">希望調査名</div>
+          <div class="start">募集名</div>
           <input type="text" />
         </div>
       </div>
@@ -123,6 +126,7 @@ export default {
 
 .survey {
   flex: 1;
+  padding-left: 500px;
 }
 
 .inline-block {
@@ -206,11 +210,14 @@ export default {
 .right {
   text-align: right;
 }
-
 .ppap {
   text-align: left;
   display: inline-block;
   font-size: 1vw;
   color: #fff;
+}
+.icon {
+  color: #fff;
+  fill: currentColor;
 }
 </style>

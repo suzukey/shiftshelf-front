@@ -2,6 +2,9 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         シフト希望閲覧画面
       </div>
     </div>
@@ -148,5 +151,9 @@ table th {
 table td {
   padding: 30px 100px;
   border: 1px solid #616161;
+}
+.icon {
+  color: #fff;
+  fill: currentColor;
 }
 </style>

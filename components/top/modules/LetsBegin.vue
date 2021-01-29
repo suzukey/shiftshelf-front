@@ -5,7 +5,7 @@
         <h2>新たなシフト管理を始めましょう</h2>
       </div>
       <div class="sub">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
       </div>
       <div>
         <nuxt-link to="/register" class="register-btn">新規登録</nuxt-link>

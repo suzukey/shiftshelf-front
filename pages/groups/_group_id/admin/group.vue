@@ -2,6 +2,9 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         グループ画面
       </div>
     </div>
@@ -15,7 +18,11 @@
             <div class="m">
               グループ名 {{ group }}
               <div class="m1">
-                <input type="text" v-model="group" placeholder="グループ名" />
+                <input
+                  type="text"
+                  v-model="group"
+                  placeholder="グループ名変更"
+                />
               </div>
             </div>
           </div>
@@ -160,5 +167,9 @@ export default {
 
 .checkbox {
   padding: 10px 20px;
+}
+.icon {
+  color: #fff;
+  fill: currentColor;
 }
 </style>

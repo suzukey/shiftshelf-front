@@ -14,7 +14,7 @@
       <select v-model="minutes" @change="onChange">
         <option></option>
         <option
-          v-for="(text, value) in options2(4)"
+          v-for="(text, value) in options2(60)"
           :key="text"
           :value="value"
           v-text="text"
@@ -59,9 +59,14 @@ export default {
     options2(limitValue) {
       const options2 = {}
       for (let i = 0; i < limitValue; i++) {
-        options2[i] = (i * 15).toString().padStart(2, '0')
+        options2[i] = i.toString().padStart(2, '0')
       }
       return options2
+      // options2(limitValue) {
+      //   const options2 = {}
+      //   for (let i = 0; i < limitValue; i++) {
+      //     options2[i] = (i * 15).toString().padStart(2, '0')
+      //   }
     },
   },
 }

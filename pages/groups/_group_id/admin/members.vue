@@ -2,6 +2,9 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin">
+          <SvgIcon name="arrow-left" class="icon" />
+        </nuxt-link>
         メンバー画面
       </div>
     </div>
@@ -194,5 +197,9 @@ a.btn--orange {
 a.btn--orange:hover {
   color: #fff;
   background: #f56500;
+}
+.icon {
+  color: #fff;
+  fill: currentColor;
 }
 </style>
