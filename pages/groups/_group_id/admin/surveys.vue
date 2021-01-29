@@ -2,10 +2,7 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
-        <nuxt-link to="/groups/_admin/admin">
-          <SvgIcon name="arrow-left" class="icon" />
-        </nuxt-link>
-        <!-- シフト希望調査画面 -->
+        シフト募集画面
       </div>
     </div>
     <div class="survey">

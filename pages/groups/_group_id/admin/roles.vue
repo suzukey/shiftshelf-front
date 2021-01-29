@@ -2,9 +2,6 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
-        <nuxt-link to="/groups/_admin/admin">
-          <SvgIcon name="arrow-left" class="icon" />
-        </nuxt-link>
         権限画面
       </div>
     </div>
@@ -57,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="footerkun">
+      <div class="teMto">
         <div class="right">
           <div class="ppap">保存していない変更があります</div>
           <a href="/home" class="ppap">
@@ -165,6 +162,15 @@ p {
   background-color: #00675b;
   font-size: 1vw;
 }
+.teMto {
+  background-color: #616161;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 3vw;
+}
+
 .right {
   text-align: right;
 }
@@ -180,17 +186,5 @@ p {
 .icon {
   color: #fff;
   fill: currentColor;
-}
-.footerkun {
-  background-color: #616161;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  height: 120px;
-  justify-content: space-between;
-  min-height: 120px;
-  padding: 25px 20px 15px 20px;
-  text-align: center;
-  width: 100%;
 }
 </style>
