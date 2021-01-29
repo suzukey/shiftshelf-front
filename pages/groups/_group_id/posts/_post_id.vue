@@ -37,10 +37,10 @@
         <div class="right">
           <div class="ppap">保存していない変更があります</div>
 
-          <a href="/home" class="ppap">
+          <a :href="`/groups/${groupId}`" class="ppap">
             リセット
           </a>
-          <a href="/home" class="kakunin">
+          <a :href="`/groups/${groupId}`" class="kakunin">
             確定
           </a>
         </div>
@@ -122,6 +122,11 @@ export default {
         case 6:
           return '（土）'
       }
+    },
+  },
+  computed: {
+    groupId() {
+      return this.$route.params.group_id
     },
   },
 }

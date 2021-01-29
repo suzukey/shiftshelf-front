@@ -10,22 +10,22 @@
       <div class="links">
         <div class="link">
           <nuxt-link :to="`/groups/1/admin/shifts/1/days`">
-            12月1週目
+            2月1週目
           </nuxt-link>
         </div>
         <div class="link">
           <nuxt-link :to="`/groups/1/admin/shifts/1/days`">
-            12月2週目
+            2月2週目
           </nuxt-link>
         </div>
         <div class="link">
           <nuxt-link :to="`/groups/1/admin/shifts/1/days`">
-            12月3週目
+            2月3週目
           </nuxt-link>
         </div>
         <div class="link">
           <nuxt-link :to="`/groups/1/admin/shifts/1/days`">
-            12月4週目
+            2月4週目
           </nuxt-link>
         </div>
       </div>
