@@ -76,10 +76,10 @@
       <div class="right">
         <div class="ppap">保存していない変更があります</div>
 
-        <a href="/home" class="ppap">
+        <a :href="`/groups/${groupId}`" class="ppap">
           リセット
         </a>
-        <a href="/home" class="kakunin">
+        <a :href="`/groups/${groupId}`" class="kakunin">
           確定
         </a>
       </div>
@@ -93,16 +93,21 @@ export default {
   data() {
     return {
       days: [
-        { day: '12月1日(火)', events: ['10:00~23:00'] },
-        { day: '12月2日(水)', events: ['定休日'] },
-        { day: '12月3日(木)', events: ['10:00~23:00'] },
-        { day: '12月4日(金)', events: ['10:00~23:00'] },
-        { day: '12月4日(土)', events: ['10:00~23:00'] },
-        { day: '12月5日(日)', events: ['10:00~23:00'] },
-        { day: '12月6日(月)', events: ['10:00~23:00'] },
+        { day: '2月1日(月)', events: ['10:00~23:00'] },
+        { day: '2月2日(火)', events: ['定休日'] },
+        { day: '2月3日(水)', events: ['10:00~23:00'] },
+        { day: '2月4日(木)', events: ['10:00~23:00'] },
+        { day: '2月4日(金)', events: ['10:00~23:00'] },
+        { day: '2月5日(土)', events: ['10:00~23:00'] },
+        { day: '2月6日(日)', events: ['10:00~23:00'] },
         { day: '(祝日)', events: ['定休日'] },
       ],
     }
+  },
+  computed: {
+    groupId() {
+      return this.$route.params.group_id
+    },
   },
 }
 </script>

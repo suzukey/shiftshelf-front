@@ -15,9 +15,9 @@
             <div class="role-list" style="max-width: 300px;">
               <div class="midori">
                 <span class="mr-auto"><p>管理者</p></span>
-                <span class="mr-auto"><p>社員</p></span>
               </div>
               <div class="kiiro">
+                <span class="mr-auto"><p>社員</p></span>
                 <span class="mr-auto"><p>アルバイト</p></span>
               </div>
               <span class="mr-auto"><p>デフォルト</p></span>
@@ -60,10 +60,10 @@
       <div class="footerkun">
         <div class="right">
           <div class="ppap">保存していない変更があります</div>
-          <a href="/home" class="ppap">
+          <a :href="`/groups/${groupId}`" class="ppap">
             リセット
           </a>
-          <a href="/home" class="kakunin">
+          <a :href="`/groups/${groupId}`" class="kakunin">
             確定
           </a>
         </div>
@@ -88,6 +88,11 @@ export default {
         { text: 'シフト希望の閲覧', value: 'G' },
       ],
     }
+  },
+  computed: {
+    groupId() {
+      return this.$route.params.group_id
+    },
   },
 }
 </script>

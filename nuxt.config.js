@@ -21,7 +21,10 @@ export default {
         content: 'シフト管理WEBアプリケーション',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+    ],
   },
   /*
    ** Global CSS
