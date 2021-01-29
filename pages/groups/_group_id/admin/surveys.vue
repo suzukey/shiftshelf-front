@@ -131,7 +131,6 @@ export default {
 
 .survey {
   flex: 1;
-  padding-left: 500px;
 }
 
 .inline-block {
