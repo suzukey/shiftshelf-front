@@ -2,6 +2,7 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
+        <nuxt-link to="/groups/_admin/admin"> </nuxt-link>
         シフト作成画面
       </div>
     </div>

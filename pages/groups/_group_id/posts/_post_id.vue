@@ -56,43 +56,43 @@ export default {
     return {
       survays: [
         {
-          date: '2020/11/01',
+          date: '2021/2/01',
           open_time: '9:00',
           close_time: '22:00',
           holiday_flag: false,
         },
         {
-          date: '2020/11/02',
+          date: '2021/2/02',
           open_time: '9:00',
           close_time: '22:00',
           holiday_flag: false,
         },
         {
-          date: '2020/11/03',
+          date: '2021/2/03',
           open_time: '9:00',
           close_time: '22:00',
           holiday_flag: true,
         },
         {
-          date: '2020/11/04',
+          date: '2021/2/04',
           open_time: '9:00',
           close_time: '22:00',
           holiday_flag: false,
         },
         {
-          date: '2020/11/05',
+          date: '2021/2/05',
           open_time: '9:00',
           close_time: '22:00',
           holiday_flag: false,
         },
         {
-          date: '2020/11/06',
+          date: '2021/2/06',
           open_time: '9:00',
           close_time: '22:00',
           holiday_flag: false,
         },
         {
-          date: '2020/11/07',
+          date: '2021/2/07',
           open_time: '9:00',
           close_time: '22:00',
           holiday_flag: false,
