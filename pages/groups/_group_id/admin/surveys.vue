@@ -2,10 +2,7 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
-        <nuxt-link to="/groups/_admin/admin">
-          <SvgIcon name="arrow-left" class="icon" />
-        </nuxt-link>
-        <!-- シフト希望調査画面 -->
+        シフト募集画面
       </div>
     </div>
     <div class="survey">
@@ -130,8 +127,10 @@ export default {
 }
 
 .survey {
-  flex: 1;
-  padding-left: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
 .inline-block {
@@ -194,9 +193,10 @@ export default {
 .calendarpotision {
   padding: 3px 10px 10px 32px;
 }
+
 .teMto {
   background-color: #616161;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
