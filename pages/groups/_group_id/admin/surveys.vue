@@ -195,9 +195,10 @@ export default {
 .calendarpotision {
   padding: 3px 10px 10px 32px;
 }
+
 .teMto {
   background-color: #616161;
-  position: absolute;
+  position: sticky;
   bottom: 0;
   right: 0;
   left: 0;
