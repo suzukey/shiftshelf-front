@@ -12,34 +12,34 @@
       <div class="box">
         <table>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/1">12月1日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/1">2月1日</a></td>
           </tr>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/2">12月2日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/2">2月2日</a></td>
           </tr>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/3">12月3日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/3">2月3日</a></td>
           </tr>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/4">12月4日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/4">2月4日</a></td>
           </tr>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/5">12月5日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/5">2月5日</a></td>
           </tr>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/6">12月6日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/6">2月6日</a></td>
           </tr>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/7">12月7日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/7">2月7日</a></td>
           </tr>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/8">12月8日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/8">2月8日</a></td>
           </tr>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/9">12月9日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/9">2月9日</a></td>
           </tr>
           <tr>
-            <td><a href="/groups/1/admin/shifts/1/days/10">12月10日</a></td>
+            <td><a href="/groups/1/admin/shifts/1/days/10">2月10日</a></td>
           </tr>
         </table>
       </div>

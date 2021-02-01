@@ -2,14 +2,14 @@
   <div class="admin">
     <div class="main-header">
       <div class="page-title">
-        <nuxt-link to="/groups/_admin/admin/shifts/_days">
+        <nuxt-link to="/groups/_admin/admin/shifts/">
           <SvgIcon name="arrow-left" class="icon" />
         </nuxt-link>
         シフト作成画面
       </div>
     </div>
     <div class="doraM">
-      12月{{ this.$route.params.day }}日
+      2月{{ this.$route.params.day }}日
       <div class="majime">
         <div id="app">
           <!-- ボックス -->
