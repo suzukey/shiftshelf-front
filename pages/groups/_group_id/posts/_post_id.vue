@@ -188,4 +188,8 @@ td {
 .bracksouleater {
   font-size: 30px;
 }
+.icon {
+  color: #fff;
+  fill: currentColor;
+}
 </style>
