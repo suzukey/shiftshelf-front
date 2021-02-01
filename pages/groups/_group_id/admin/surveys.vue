@@ -130,6 +130,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .inline-block {
@@ -195,7 +196,7 @@ export default {
 
 .teMto {
   background-color: #616161;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
